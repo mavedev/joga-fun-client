@@ -9,7 +9,7 @@ import './App.css';
 
 const App = () => (
   <Router>
-    <div className="App">
+    <div className='App'>
       <Switch>
         <Route path='/' exact component={Home} />
       </Switch>
