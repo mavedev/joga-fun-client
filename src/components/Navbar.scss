@@ -1,0 +1,24 @@
+$BG_DEFAULT: #4c2974;
+$BG_HIGHLIGHT: #c0392b;
+
+.navbar {
+  background-color: $BG_DEFAULT;
+  border-color: $BG_HIGHLIGHT;
+  -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
+  min-height: 80px;
+}
+
+.navbar__link {
+  &, &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+nav {
+  a {
+    font-size: 2rem;
+  }
+}
