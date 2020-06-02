@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import Home from './views/Home';
+import Home from 'views/Home';
 import './App.css';
 
 const App = () => (
