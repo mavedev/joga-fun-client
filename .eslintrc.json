@@ -8,6 +8,25 @@
     "plugin:react/recommended",
     "airbnb"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "./node_modules",
+          "./src"
+        ],
+        "extensions": [
+          ".js",
+          ".ts",
+          ".jsx",
+          ".tsx",
+          ".css",
+          ".sass",
+          ".scss"
+        ]
+      }
+    }
+  },
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
@@ -42,6 +61,8 @@
     ],
     "comma-dangle": "off",
     "import/extensions": "off",
-    "import/no-unresolved": "off"
+    "import/no-absolute-path": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-named-as-default": "off"
   }
 }
