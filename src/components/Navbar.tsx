@@ -5,7 +5,7 @@ import {
   NavbarBrand,
   Nav
 } from 'react-bootstrap';
-// import 'assets/styles/Navbar.scss';
+import 'styles/Navbar.scss';
 
 const Navbar = () => (
   <BNavbar className='navbar' expand='lg' bg='dark' sticky='top'>
