@@ -18,19 +18,19 @@ const Navbar = () => (
       <Nav className='ml-auto navbar-nav'>
         <ul className='nav navbar-nav navbar-right ml-auto'>
           <li className='nav-item'>
-            <Link to='/' className='nav-link'>
-              <i className='fa fa-facebook' />
-            </Link>
+            <Nav.Link href='/' className='nav-link'>
+              <i className='fa fa-facebook navbar__link' />
+            </Nav.Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className='nav-link'>
-              <i className='fa fa-twitter' />
-            </Link>
+            <Nav.Link href='/' className='nav-link'>
+              <i className='fa fa-twitter navbar__link' />
+            </Nav.Link>
           </li>
           <li className='nav-item'>
-            <Link to='/' className='nav-link'>
-              <i className='fa fa-vk' />
-            </Link>
+            <Nav.Link href='/' className='nav-link'>
+              <i className='fa fa-vk navbar__link' />
+            </Nav.Link>
           </li>
         </ul>
       </Nav>
