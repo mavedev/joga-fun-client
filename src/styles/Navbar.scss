@@ -1,7 +1,12 @@
 @import './variables';
 @import '~assets/styles/font-awesome.min.css';
 
+/*
+  Media query for centering toggled social buttons icons
+  in the navbar.
+*/
 @media only screen and (max-width: $width_nav_toggle) {
+  /* Bootstrap class. */
   .navbar {
     .navbar__nav {
       display: inline-block;
@@ -9,16 +14,19 @@
     }
   }
   
+  /* Centering icons within the toggler. */
   .navbar-collapse {
     text-align: center;
   }
 }
 
+/* Custom font for the brand text. */
 @font-face {
   font-family: 'Pacifico-Regular';
   src: url(~assets/fonts/Pacifico-Regular.ttf) format('truetype');
 }
 
+/* Bootstrap class. */
 .navbar {
   background-color: $color_background;
   background-image: url(~assets/images/navbar-background-min.jpg);
@@ -29,6 +37,7 @@
   min-height: 80px;
 }
 
+/* Links in Bootstrap navbar. */
 .navbar__link {
   font-size: 2rem;
 
@@ -38,6 +47,18 @@
   }
 }
 
+/* Special links style. */
 .navbar__link_curved {
   font-family: 'Pacifico-Regular', serif;
+}
+
+/* Override Bootstrap color for the toggler. */
+button.navbar-toggler {
+  border-color: #fff !important;
+}
+
+/* Override Bootstrap color for the toggler icon. */
+.navbar-light span.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  color: white;
 }

@@ -19,7 +19,7 @@ const Navbar = () => (
     <BNavbar.Toggle aria-controls='basic-navbar-nav' />
 
     {/* Center-aligned nav items. */}
-    <BNavbar.Collapse className='navbar__navbar-collapse'>
+    <BNavbar.Collapse className='navbar__collapse'>
       {/* Bootstrap navbar link wrapper. */}
       {/* Third-party classes: navbar-nav, ml-auto. */}
       <BNav className='navbar__nav navbar-nav ml-auto'>
