@@ -1,7 +1,7 @@
 @import './variables';
 @import '~assets/styles/font-awesome.min.css';
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: $width_nav_toggle) {
   .navbar {
     .navbar__nav {
       display: inline-block;
@@ -20,9 +20,9 @@
 }
 
 .navbar {
-  background-color: $BG_DEFAULT;
+  background-color: $color_background;
   background-image: url(~assets/images/navbar-background-min.jpg);
-  border-color: $BG_HIGHLIGHT;
+  border-color: $color_highlight;
   -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
@@ -30,15 +30,14 @@
 }
 
 .navbar__link {
+  font-size: 2rem;
+
   &, &:hover {
     color: #fff;
     text-decoration: none;
   }
 }
 
-nav {
-  a {
-    font-family: 'Pacifico-Regular', serif;
-    font-size: 2rem;
-  }
+.navbar__link_curved {
+  font-family: 'Pacifico-Regular', serif;
 }

@@ -12,7 +12,7 @@ const Navbar = () => (
 
     {/* Bootstrap logo-like site name. */}
     <BNavbarBrand>
-      <Link className='navbar__link' to='/'>Joga.fun</Link>
+      <Link className='navbar__link navbar__link_curved' to='/'>Joga.fun</Link>
     </BNavbarBrand>
 
     {/* The 'show/hide' button of the navbar. */}
