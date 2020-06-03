@@ -1,0 +1,41 @@
+/* Custom font for the header. */
+@font-face {
+  font-family: 'Lobster-Regular';
+  src: url(~assets/fonts/Lobster-Regular.ttf) format('truetype');
+}
+
+/* Top-lever block wrapper. */
+.header-wrapper {
+  background: url(~assets/images/header-background-min.jpg);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 85% 85% / 30%;
+}
+
+/* The header overlay. */
+.header-wrapper__overlay {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient(135deg, #9f05ff69 10%, #fd5e086b 100%);
+}
+
+/* Title style. */
+.header-wrapper__title {
+  font-family: 'Lobster-Regular', cursive;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+/* Simple text style. */
+.header-wrapper__text {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30px;
+}
