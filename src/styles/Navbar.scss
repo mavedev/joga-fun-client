@@ -1,14 +1,27 @@
 @import './variables';
 @import '~assets/styles/font-awesome.min.css';
 
+@media only screen and (max-width: 991px) {
+  .navbar {
+    .navbar__nav {
+      display: inline-block;
+      float: none;
+    }
+  }
+  
+  .navbar-collapse {
+    text-align: center;
+  }
+}
+
 @font-face {
   font-family: 'Pacifico-Regular';
-  src: url('~assets/fonts/Pacifico-Regular.ttf') format('truetype');
+  src: url(~assets/fonts/Pacifico-Regular.ttf) format('truetype');
 }
 
 .navbar {
   background-color: $BG_DEFAULT;
-  background-image: url('~assets/images/navbar-background-min.jpg');
+  background-image: url(~assets/images/navbar-background-min.jpg);
   border-color: $BG_HIGHLIGHT;
   -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
