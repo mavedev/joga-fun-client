@@ -8,6 +8,18 @@
 .footer-wrapper__main {
   background-color: $color_blackout_lighter;
   height: 70%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-wrapper__card {
+  color: white;
+}
+
+.footer-wrapper__card_important {
+  font-size: 1.5em;
 }
 
 .footer-wrapper__copiright-wrapper {
@@ -17,6 +29,10 @@
   justify-content: center;
   align-items: center;
   color: $color_blackout_text;
+}
+
+.footer-wrapper__span-wrapper {
+  padding: $width_minimum;
 }
 
 .footer-wrapper__text-important {

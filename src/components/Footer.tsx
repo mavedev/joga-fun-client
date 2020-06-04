@@ -3,16 +3,31 @@ import 'styles/Footer.scss';
 
 const Footer = () => (
   <div className='footer-wrapper'>
+    {/* The main block with info. */}
     <div className='footer-wrapper__main'>
-      <p>MainF</p>
-    </div>
-    <div className='footer-wrapper__copiright-wrapper'>
-      <span className='footer-wrapper__copiright'>
-        &copy; 2020 Copiright:
-      </span>
-      <span className='footer-wrapper__text-important'>
+      <div className='footer-wrapper__card footer-wrapper__card_important'>
         JogaFun
-      </span>
+      </div>
+      <div className='footer-wrapper__card footer-wrapper__card_contacts'>
+        Связаться: [почта]
+      </div>
+    </div>
+    {/* Copiright info. */}
+    <div className='footer-wrapper__copiright-wrapper'>
+      <div className='footer-wrapper__span-wrapper'>
+        <span className='footer-wrapper__copiright'>
+          &copy;
+          {' '}
+          {new Date().getFullYear()}
+          {' '}
+          Copiright:
+        </span>
+      </div>
+      <div className='footer-wrapper__span-wrapper'>
+        <span className='footer-wrapper__text-important'>
+          JogaFun
+        </span>
+      </div>
     </div>
   </div>
 );
