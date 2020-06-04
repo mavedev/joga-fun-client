@@ -1,7 +1,8 @@
 import React from 'react';
+import Calendar from 'react-calendar';
 
 const HomeContent = () => (
-  <div />
+  <Calendar />
 );
 
 export default HomeContent;
