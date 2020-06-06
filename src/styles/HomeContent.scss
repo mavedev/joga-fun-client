@@ -1,5 +1,9 @@
 @import './variables';
 
+.content {
+  min-height: calc(100vh - #{$height_content});
+}
+
 .content__title {
   color: white;
 }

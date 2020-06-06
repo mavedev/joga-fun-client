@@ -7,11 +7,13 @@ import HomeContent from 'components/HomeContent';
 import 'styles/Home.scss';
 
 const Home = () => (
-  <div className='home-area--gradient-hot-cold'>
-    <Navbar />
-    <Header />
-    <HomeContent />
-    <Footer />
+  <div className='page-wrapper'>
+    <div className='home-area home-area--gradient-hot-cold'>
+      <Navbar />
+      <Header />
+      <HomeContent />
+      <Footer />
+    </div>
   </div>
 );
 
