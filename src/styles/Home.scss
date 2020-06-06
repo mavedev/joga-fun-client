@@ -1,11 +1,15 @@
 @import './variables';
 
-.home-area {
-  height: 100%;
+/*
+  Chrome has a bug with a space below the footer at 100% scale.
+  A workaround for that bug is to wrap the footer separately
+  so that it has its own background and then give it background color
+  same as its lower part background color. 
+*/
+.footer-wrapper {
+  background-color: $color_blackout_darker;
 }
 
 .home-area--gradient-hot-cold {
-  background: linear-gradient(
-    to left, $color_background_colder, $color_background_hotter
-  );
+  background: linear-gradient(to left, $color_background_colder, $color_background_hotter);
 }

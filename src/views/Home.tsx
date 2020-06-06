@@ -12,6 +12,8 @@ const Home = () => (
       <Navbar />
       <Header />
       <HomeContent />
+    </div>
+    <div className='footer-wrapper'>
       <Footer />
     </div>
   </div>
