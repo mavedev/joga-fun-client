@@ -1,0 +1,7 @@
+@import './variables';
+
+.home-area--gradient-hot-cold {
+  background: linear-gradient(
+    to left, $color_background_colder, $color_background_hotter
+  );
+}

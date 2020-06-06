@@ -16,9 +16,11 @@ const category = 'Категория 1';
 const HomeContent = () => (
   <BContainer className='content'>
     <BRow>
-      {/* Posts column. */}
-      <BCol md='8'>
-        <h1 className='my-4'>
+      {/* Posts column. 8/12 of the page width. */}
+      <BCol md='8' className='content__column'>
+        {/* The publications block title. */}
+        {/* Third-party classes: my-4. */}
+        <h1 className='content__title my-4'>
           Публикации
           <small>
             {' '}
@@ -31,8 +33,8 @@ const HomeContent = () => (
         </div>
       </BCol>
 
-      {/* Sidebar column. */}
-      <BCol>
+      {/* Sidebar column. 4/12 of the page width. */}
+      <BCol md='4' className='content__column'>
         <Categories />
         <Calendar locale='ru-ru' />
         <Socials />
