@@ -1,6 +1,7 @@
 import React from 'react';
 import Calendar from 'react-calendar';
 import Socials from 'components/Socials';
+import Categories from 'components/Categories';
 import {
   Container as BContainer,
   Row as BRow,
@@ -32,6 +33,7 @@ const HomeContent = () => (
 
       {/* Sidebar column. */}
       <BCol>
+        <Categories />
         <Calendar locale='ru-ru' />
         <Socials />
       </BCol>
