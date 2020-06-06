@@ -13,7 +13,7 @@ import 'react-calendar/dist/Calendar.css';
 const category = 'Категория 1';
 
 const HomeContent = () => (
-  <BContainer>
+  <BContainer className='content'>
     <BRow>
       {/* Posts column. */}
       <BCol md='8'>
@@ -25,6 +25,9 @@ const HomeContent = () => (
             {' '}
           </small>
         </h1>
+        <div>
+          <p>Текст Публикации</p>
+        </div>
       </BCol>
 
       {/* Sidebar column. */}
