@@ -1,38 +1,37 @@
 import React from 'react';
+import {
+  Card as BCard,
+  Row as BRow
+} from 'react-bootstrap';
 
 const Categories = () => (
-  <div className='card my-4'>
-    <h5 className='card-header'>Категории</h5>
-    <div className='card-body'>
-      <div className='row'>
-        <div className='col-lg-6'>
-          <ul className='list-unstyled mb-0'>
-            <li>
-              <a href='#'>Web Design</a>
-            </li>
-            <li>
-              <a href='#'>HTML</a>
-            </li>
-            <li>
-              <a href='#'>Freebies</a>
-            </li>
-          </ul>
-        </div>
-        <div className='col-lg-6'>
-          <ul className='list-unstyled mb-0'>
-            <li>
-              <a href='#'>JavaScript</a>
-            </li>
-            <li>
-              <a href='#'>CSS</a>
-            </li>
-            <li>
-              <a href='#'>Tutorials</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div>
+    {/* Third-party classes: my-4. */}
+    <BCard className='my-4'>
+      {/* Third-party classes: card-header. */}
+      <h5 className='card-header'>Категории</h5>
+      {/* The content of the card. */}
+      <BCard.Body>
+        <BRow>
+          {/* Full-width centered list. */}
+          {/* Third-party classes: col-lg-12. */}
+          <div className='col-lg-12'>
+            {/* Third-party classes: list-unstyled mb-0. */}
+            <ul className='list-unstyled mb-0'>
+              <li>
+                <a href='/'>Категория 1</a>
+              </li>
+              <li>
+                <a href='/'>Категория 2</a>
+              </li>
+              <li>
+                <a href='/'>Категория 3</a>
+              </li>
+            </ul>
+          </div>
+        </BRow>
+      </BCard.Body>
+    </BCard>
   </div>
 );
 
