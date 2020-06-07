@@ -4,6 +4,10 @@
   min-height: calc(100vh - #{$height_content});
 }
 
+.row-wrapper {
+  padding-bottom: $spacing_default;
+}
+
 .content__title {
   color: white;
 }
