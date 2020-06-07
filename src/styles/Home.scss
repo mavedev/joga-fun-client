@@ -10,6 +10,9 @@
   background-color: $color_blackout_darker;
 }
 
+/* The main background for the webpage. */
 .home-area--gradient-hot-cold {
-  background: linear-gradient(to left, $color_background_colder, $color_background_hotter);
+  background: linear-gradient(
+    to left, $color_background_colder, $color_background_hotter
+  );
 }

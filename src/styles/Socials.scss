@@ -21,6 +21,7 @@ a.socials__button {
   width: 54px;
 }
 
+/* Buttons style (Bootstrap override + Font awesome). */
 .socials__button {
   border-radius: 50%;
   color: #ffffff !important;
@@ -89,18 +90,23 @@ a.socials__button {
   }
 }
 
+/* Facebook button style (Bootstrap override + Font awesome). */
 .socials__button--facebook {
   background-color: #3b5998;
   &:hover {
     background-color: #4c70ba;
   }
 }
+
+/* Twitter button style (Bootstrap override + Font awesome). */
 .socials__button--twitter {
   background-color: #55acee;
   &:hover {
     background-color: #83c3f3;
   }
 }
+
+/* VK button style (Bootstrap override + Font awesome). */
 .socials__button--vk {
   background-color: #45668e;
   &:hover {

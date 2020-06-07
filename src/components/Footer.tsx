@@ -6,7 +6,7 @@ const Footer = () => (
   <div className='footer-wrapper'>
     {/* The main block with info. */}
     <div className='footer-wrapper__main'>
-      <div className='footer-wrapper__card footer-wrapper__card_important'>
+      <div className='footer-wrapper__card footer-wrapper__card--important'>
         JogaFun
       </div>
       <div className='footer-wrapper__card footer-wrapper__card_contacts'>
@@ -25,7 +25,7 @@ const Footer = () => (
         </span>
       </div>
       <div className='footer-wrapper__span-wrapper'>
-        <span className='footer-wrapper__text-important'>
+        <span className='footer-wrapper__text--important'>
           JogaFun
         </span>
       </div>
