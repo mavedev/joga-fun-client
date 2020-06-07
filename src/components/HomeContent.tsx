@@ -37,7 +37,11 @@ const HomeContent = () => (
         {/* Sidebar column. 4/12 of the page width. */}
         <BCol md='4' className='content__column'>
           <Categories />
-          <Calendar locale='ru-ru' />
+
+          <div className='calendar-wrapper my-4'>
+            <Calendar locale='ru-ru' />
+          </div>
+
           <Socials />
         </BCol>
       </BRow>
