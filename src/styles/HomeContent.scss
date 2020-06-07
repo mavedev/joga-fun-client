@@ -1,13 +1,23 @@
 @import './variables';
 
+/* Bottom-pressed footer styling. */
 .content {
   min-height: calc(100vh - #{$height_content});
 }
 
+/* Separation of the content from the footer. */
 .row-wrapper {
   padding-bottom: $spacing_default;
 }
 
+/* Title styling. */
 .content__title {
   color: white;
+}
+
+/* Modification for third-party class: react-calendar. */
+.calendar-wrapper .react-calendar {
+  width: auto;
+  border: none;
+  border-radius: $border_radius_default;
 }

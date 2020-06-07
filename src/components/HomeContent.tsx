@@ -38,7 +38,7 @@ const HomeContent = () => (
         <BCol md='4' className='content__column'>
           <Categories />
 
-          <div className='calendar-wrapper my-4'>
+          <div className='calendar-wrapper'>
             <Calendar locale='ru-ru' />
           </div>
 
