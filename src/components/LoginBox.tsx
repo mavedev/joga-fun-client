@@ -1,5 +1,7 @@
 import React from 'react';
 
+import 'styles/LoginBox.scss';
+
 const LoginBox = () => (
   <div className='filler'>
     <div className='container col-lg-4'>
