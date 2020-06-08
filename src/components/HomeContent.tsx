@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 import Calendar from 'react-calendar';
 import Socials from 'components/Socials';
 import Categories from 'components/Categories';
@@ -15,13 +16,17 @@ const category = 'Категория 1';
 
 const HomeContent = () => (
   <BContainer className={styles['content']}>
-    <div className='row-wrapper'>
+    <div className={styles['row-wrapper']}>
       <BRow>
         {/* Posts column. 8/12 of the page width. */}
-        <BCol md='8' className='content__column'>
+        <BCol md='8'>
           {/* The publications block title. */}
           {/* Third-party classes: my-4. */}
-          <h1 className='content__title my-4'>
+          <h1 className={cx(
+            styles['content__title'],
+            'my-4'
+          )}
+          >
             Публикации
             <small>
               {' '}
@@ -35,13 +40,14 @@ const HomeContent = () => (
         </BCol>
 
         {/* Sidebar column. 4/12 of the page width. */}
-        <BCol md='4' className='content__column'>
+        <BCol md='4'>
+          {/* Posts categories list. */}
           <Categories />
 
-          <div className='calendar-wrapper'>
-            <Calendar locale='ru-ru' />
-          </div>
+          {/* React Calendar instance. */}
+          <Calendar className={styles['adopted-calendar']} locale='ru-ru' />
 
+          {/* Owner's social buttons. */}
           <Socials />
         </BCol>
       </BRow>

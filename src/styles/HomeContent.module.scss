@@ -16,8 +16,7 @@
 }
 
 /* Modification for third-party class: react-calendar. */
-.calendar-wrapper .react-calendar {
-  width: auto;
-  border: none;
+.adopted-calendar {
+  width: auto !important; // Override default fixed width.
   border-radius: $border_radius_default;
 }
