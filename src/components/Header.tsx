@@ -1,12 +1,12 @@
 import React from 'react';
-import 'styles/Header.scss';
+import styles from 'styles/Header.module.scss';
 
 const Header = () => (
-  <div className='header-wrapper'>
-    <div className='header-wrapper__overlay'>
-      <h1 className='header-wrapper__title'>Мир йоги</h1>
-      <h3 className='header-wrapper__text'>[Описание]</h3>
-      <p className='header-wrapper__text'>[Развёрнутое описание]</p>
+  <div className={styles['header-wrapper']}>
+    <div className={styles['header-wrapper__overlay']}>
+      <h1 className={styles['header-wrapper__title']}>Мир йоги</h1>
+      <h3 className={styles['header-wrapper__text']}>[Описание]</h3>
+      <p className={styles['header-wrapper__text']}>[Развёрнутое описание]</p>
     </div>
   </div>
 );
