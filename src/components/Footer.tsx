@@ -5,7 +5,8 @@ import styles from 'styles/Footer.module.scss';
 const Footer = () => (
   <div className={styles.footerWrapper}>
     {/* The main block with info. */}
-    <div className='footer-wrapper__main'>
+    <div className={styles.footerWrapper__main}>
+      {/* footer-wrapper__card footer-wrapper__card--important */}
       <div className='footer-wrapper__card footer-wrapper__card--important'>
         JogaFun
       </div>
