@@ -60,6 +60,7 @@
       "error",
       "prefer-single"
     ],
+    "dot-notation": "off",
     "comma-dangle": "off",
     "import/extensions": "off",
     "import/no-absolute-path": "off",

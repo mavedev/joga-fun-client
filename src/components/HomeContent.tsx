@@ -8,13 +8,13 @@ import {
   Col as BCol
 } from 'react-bootstrap';
 
-import 'styles/HomeContent.scss';
+import styles from 'styles/HomeContent.module.scss';
 import 'react-calendar/dist/Calendar.css';
 
 const category = 'Категория 1';
 
 const HomeContent = () => (
-  <BContainer className='content'>
+  <BContainer className={styles['content']}>
     <div className='row-wrapper'>
       <BRow>
         {/* Posts column. 8/12 of the page width. */}
