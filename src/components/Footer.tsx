@@ -1,9 +1,9 @@
 import React from 'react';
 
-import 'styles/Footer.scss';
+import styles from 'styles/Footer.module.scss';
 
 const Footer = () => (
-  <div className='footer-wrapper'>
+  <div className={styles.footerWrapper}>
     {/* The main block with info. */}
     <div className='footer-wrapper__main'>
       <div className='footer-wrapper__card footer-wrapper__card--important'>
