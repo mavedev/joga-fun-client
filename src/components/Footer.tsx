@@ -1,23 +1,31 @@
 import React from 'react';
+import cx from 'classnames';
 
 import styles from 'styles/Footer.module.scss';
 
 const Footer = () => (
-  <div className={styles.footerWrapper}>
+  <div className={styles['footer-wrapper']}>
     {/* The main block with info. */}
-    <div className={styles.footerWrapper__main}>
-      {/* footer-wrapper__card footer-wrapper__card--important */}
-      <div className='footer-wrapper__card footer-wrapper__card--important'>
+    <div className={styles['footer-wrapper__main']}>
+      <div className={cx(
+        styles['footer-wrapper__card'],
+        styles['footer-wrapper__card--important']
+      )}
+      >
         JogaFun
       </div>
-      <div className='footer-wrapper__card footer-wrapper__card_contacts'>
+      <div className={cx(
+        styles['footer-wrapper__card'],
+        styles['footer-wrapper__card_contacts']
+      )}
+      >
         Связаться: [почта]
       </div>
     </div>
     {/* Copiright info. */}
-    <div className='footer-wrapper__copiright-wrapper'>
-      <div className='footer-wrapper__span-wrapper'>
-        <span className='footer-wrapper__copiright'>
+    <div className={styles['footer-wrapper__copiright-wrapper']}>
+      <div className={styles['footer-wrapper__span-wrapper']}>
+        <span className={styles['footer-wrapper__copiright']}>
           &copy;
           {' '}
           {new Date().getFullYear()}
@@ -25,8 +33,8 @@ const Footer = () => (
           Copiright:
         </span>
       </div>
-      <div className='footer-wrapper__span-wrapper'>
-        <span className='footer-wrapper__text--important'>
+      <div className={styles['footer-wrapper__span-wrapper']}>
+        <span className={styles['footer-wrapper__text--important']}>
           JogaFun
         </span>
       </div>
