@@ -26,7 +26,12 @@ const LoginBox = () => (
           </div>
           {/* The submit button. */}
           {/* Third=party classes: btn, btn-primary, form-control. */}
-          <button type='submit' className='btn btn-primary form-control'>Вход</button>
+          <button
+            type='submit'
+            className={cx('btn', 'btn-primary', 'form-control')}
+          >
+            Вход
+          </button>
         </form>
       </div>
     </div>
