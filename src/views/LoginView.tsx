@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from 'components/Navbar';
 import LoginBox from 'components/LoginBox';
 
-const Home = () => (
+const LoginView = () => (
   <div className='page-wrapper'>
     <div className='home-area home-area--gradient-hot-cold'>
       <Navbar />
@@ -11,4 +11,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default LoginView;

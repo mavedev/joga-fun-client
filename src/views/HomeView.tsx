@@ -6,7 +6,7 @@ import HomeContent from 'components/HomeContent';
 
 import 'styles/Home.scss';
 
-const Home = () => (
+const HomeView = () => (
   <div className='page-wrapper'>
     <div className='home-area home-area--gradient-hot-cold'>
       <Navbar />
@@ -19,4 +19,4 @@ const Home = () => (
   </div>
 );
 
-export default Home;
+export default HomeView;
