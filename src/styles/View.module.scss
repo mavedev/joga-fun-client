@@ -11,8 +11,13 @@
 }
 
 /* The main background for the webpage. */
-.home-area--gradient-hot-cold {
+.view-area--gradient-hot-cold {
   background: linear-gradient(
     to left, $color_background_colder, $color_background_hotter
   );
+}
+
+/* Full-height view styles (for footerless views). */
+.view-area--full-height {
+  height: 100vh;
 }

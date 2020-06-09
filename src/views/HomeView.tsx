@@ -5,13 +5,13 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import HomeContent from 'components/HomeContent';
 
-import styles from 'styles/HomeView.module.scss';
+import styles from 'styles/View.module.scss';
 
 const HomeView = () => (
   <div className={styles['page-wrapper']}>
     <div className={cx(
-      styles['home-area'],
-      styles['home-area--gradient-hot-cold']
+      styles['view-area'],
+      styles['view-area--gradient-hot-cold']
     )}
     >
       <Navbar />
