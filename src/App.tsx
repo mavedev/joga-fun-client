@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import HomeView from 'views/HomeView';
 import LoginView from 'views/LoginView';
-import './App.css';
+import './App.scss';
 
 const App = () => (
   <Router>

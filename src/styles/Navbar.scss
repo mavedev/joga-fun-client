@@ -1,5 +1,4 @@
 @import './variables';
-@import '~assets/styles/font-awesome.min.css';
 
 /*
   Media query for centering toggled social buttons icons
@@ -39,7 +38,7 @@
 
 /* Links in Bootstrap navbar. */
 .navbar__link {
-  font-size: 2rem;
+  font-size: 2rem !important;
 
   &, &:hover {
     color: #fff;
