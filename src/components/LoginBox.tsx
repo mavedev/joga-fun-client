@@ -9,7 +9,7 @@ const LoginBox = () => (
     <div className={styles['box-wrapper']}>
       {/* The main container. */}
       {/* Third-party classes: container, jumbotron, col-lg-4. */}
-      <div className={cx('container', 'jumbotron', 'col-lg-4')}>
+      <div className={cx('container', 'jumbotron')}>
         {/* The title. */}
         <h3 className='text-center'>Вход администратора</h3>
         {/* The login form. */}
@@ -28,7 +28,12 @@ const LoginBox = () => (
           {/* Third=party classes: btn, btn-primary, form-control. */}
           <button
             type='submit'
-            className={cx('btn', 'btn-primary', 'form-control')}
+            className={cx(
+              styles['btn--uppercased'],
+              'btn',
+              'btn-primary',
+              'form-control'
+            )}
           >
             Вход
           </button>

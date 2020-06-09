@@ -6,7 +6,7 @@ import LoginBox from 'components/LoginBox';
 import styles from 'styles/View.module.scss';
 
 const LoginView = () => (
-  <div className={styles['page-wrapper']}>
+  <div>
     <div className={cx(
       styles['view-area'],
       styles['view-area--gradient-hot-cold'],

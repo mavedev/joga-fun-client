@@ -1,7 +1,17 @@
 @import './variables';
 
+/* The main box styles. */
 .box-wrapper {
   height: 50vh;
-  margin-top: 50px;
-  padding-bottom: 400px;
+  width: 30vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -25vh 0 0 -15vw;
+}
+
+/* Uppercase style for inner buttons. */
+.btn--uppercased {
+  text-transform: uppercase;
 }
