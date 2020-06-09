@@ -1,19 +1,24 @@
 import React from 'react';
+import cx from 'classnames';
 import Navbar from 'components/Navbar';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import HomeContent from 'components/HomeContent';
 
-import 'styles/Home.scss';
+import styles from 'styles/HomeView.module.scss';
 
 const HomeView = () => (
-  <div className='page-wrapper'>
-    <div className='home-area home-area--gradient-hot-cold'>
+  <div className={styles['page-wrapper']}>
+    <div className={cx(
+      styles['home-area'],
+      styles['home-area--gradient-hot-cold']
+    )}
+    >
       <Navbar />
       <Header />
       <HomeContent />
     </div>
-    <div className='footer-wrapper'>
+    <div className={styles['footer-wrapper']}>
       <Footer />
     </div>
   </div>
