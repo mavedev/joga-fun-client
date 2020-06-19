@@ -3,10 +3,17 @@ import {
   Card as BCard
 } from 'react-bootstrap';
 
+import cx from 'classnames';
+import styles from 'styles/Post.module.scss';
+
 const Post = () => (
   <div className='MainWrapper'>
     <BCard>
-      <img className='card-img-top' src='http://placehold.it/750x300' alt='Card cap' />
+      <img
+        className='card-img-top'
+        src='https://magic-online.ru/wp-content/cache/thumb/c1/123bd2d06e004c1_750x300.jpg'
+        alt='Card cap'
+      />
       <div className='card-body'>
         <h2 className='card-title'>Будущая первая статья</h2>
         <p
@@ -14,7 +21,16 @@ const Post = () => (
         >
           Краткое описание будущей первой статьи.
         </p>
-        <a href='/' className='btn btn-primary'>Читать полностью &rarr;</a>
+        <a
+          href='/'
+          className={cx(
+            'btn',
+            'btn-primary',
+            styles['disabled-link']
+          )}
+        >
+          Читать полностью &rarr;
+        </a>
       </div>
       <div className='card-footer text-muted'>
         <p>19 июня 2020</p>
