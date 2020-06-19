@@ -20,3 +20,14 @@
   width: auto !important; // Override default fixed width.
   border-radius: $border_radius_default;
 }
+
+.PostsAreaWrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.PaginationWrapper {
+  margin: 20px 0;
+}

@@ -21,7 +21,7 @@ const HomeContent = () => (
     <div className={styles['row-wrapper']}>
       <BRow>
         {/* Posts column. 8/12 of the page width. */}
-        <BCol md='8'>
+        <BCol md='8' className={styles['PostsAreaWrapper']}>
           {/* The publications block title. */}
           {/* Third-party classes: my-4. */}
           <h1 className={cx(
@@ -37,7 +37,9 @@ const HomeContent = () => (
             </small>
           </h1>
           <Post />
-          <Pagination />
+          <div className={styles['PaginationWrapper']}>
+            <Pagination />
+          </div>
         </BCol>
 
         {/* Sidebar column. 4/12 of the page width. */}
