@@ -4,6 +4,8 @@ import {
   Row as BRow
 } from 'react-bootstrap';
 
+import styles from 'styles/Categories.module.scss';
+
 const Categories = () => (
   <div>
     {/* Third-party classes: my-4. */}
@@ -11,7 +13,7 @@ const Categories = () => (
       {/* Third-party classes: card-header. */}
       <h5 className='card-header'>Категории</h5>
       {/* The content of the card. */}
-      <BCard.Body>
+      <BCard.Body className={styles['ListWrapper--Centered']}>
         <BRow>
           {/* Full-width centered list. */}
           {/* Third-party classes: col-lg-12. */}
