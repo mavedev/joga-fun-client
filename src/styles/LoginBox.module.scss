@@ -1,5 +1,12 @@
 @import './variables';
 
+@media only screen and (max-width: $width_nav_toggle) {
+}
+
+.login-box__title {
+  font-size: 1.5em;
+}
+
 /* The main box styles. */
 .box-wrapper {
   height: 50vh;

@@ -4,14 +4,21 @@ import cx from 'classnames';
 import styles from 'styles/LoginBox.module.scss';
 
 const LoginBox = () => (
-  <div>
+  <div className='login-box'>
     {/* Additional wrapper for paddings. */}
     <div className={styles['box-wrapper']}>
       {/* The main container. */}
-      {/* Third-party classes: container, jumbotron, col-lg-4. */}
-      <div className={cx('container', 'jumbotron')}>
+      {/* Third-party classes: container, jumbotron. */}
+      <div className={cx(
+        styles['login-box__content'],
+        'container',
+        'jumbotron'
+      )}
+      >
         {/* The title. */}
-        <h3 className='text-center'>Вход администратора</h3>
+        <h3 className={cx('text-center', styles['login-box__title'])}>
+          Вход администратора
+        </h3>
         {/* The login form. */}
         <form>
           {/* Third=party classes: form-group. */}
