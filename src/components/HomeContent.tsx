@@ -4,6 +4,7 @@ import Calendar from 'react-calendar';
 import Socials from 'components/Socials';
 import Categories from 'components/Categories';
 import Post from 'components/Post';
+import Pagination from 'components/Pagination';
 import {
   Container as BContainer,
   Row as BRow,
@@ -36,6 +37,7 @@ const HomeContent = () => (
             </small>
           </h1>
           <Post />
+          <Pagination />
         </BCol>
 
         {/* Sidebar column. 4/12 of the page width. */}
