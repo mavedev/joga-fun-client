@@ -13,7 +13,7 @@ const App = () => (
     <div className='App'>
       <Switch>
         <Route path='/' exact component={HomeView} />
-        <Route path='/manage' exact component={LoginView} />
+        <Route path='/login' exact component={LoginView} />
       </Switch>
     </div>
   </Router>
