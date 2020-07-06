@@ -2,9 +2,14 @@ import React from 'react';
 
 import { Dropdown } from 'react-bootstrap';
 
+import cn from 'styles/CategoryChooser.module.scss';
+
 const CategoryChooser = () => (
-  <div className='MainWrapper'>
-    <p>Категория:</p>
+  <div className={cn['MainWrapper']}>
+    <div className={cn['CategoryTextHintWrapper']}>
+      <p className={cn['CategoryTextHint']}>Категория:</p>
+    </div>
+
     <Dropdown>
       <Dropdown.Toggle variant='light' id='dropdown-basic'>
         Dropdown Button
