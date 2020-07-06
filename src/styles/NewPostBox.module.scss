@@ -1,0 +1,10 @@
+@import './variables';
+
+.MainWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.EditorWrapper {
+  margin-top: $spacing_default;
+}

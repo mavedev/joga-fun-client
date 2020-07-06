@@ -1,7 +1,19 @@
 import React from 'react';
+import ReactQuill from 'react-quill';
 
-const NewPostBox = () => (
-  <div className='MainWrapper' />
-);
+import cn from 'styles/NewPostBox.module.scss';
+import 'react-quill/dist/quill.snow.css';
+import 'styles/overrides/Quill.scss';
+
+const NewPostBox = () => {
+  const quillInstance = React.createRef<ReactQuill>();
+  return (
+    <div className={cn['MainWrapper']}>
+      <div className={cn['EditorWrapper']}>
+        <ReactQuill ref={quillInstance} />
+      </div>
+    </div>
+  );
+};
 
 export default NewPostBox;
