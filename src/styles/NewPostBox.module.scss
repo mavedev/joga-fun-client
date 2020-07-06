@@ -2,7 +2,10 @@
 
 .MainWrapper {
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
+  align-items: center;
+  margin-top: $spacing_default;
 }
 
 .EditorWrapper {
