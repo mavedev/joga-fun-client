@@ -6,7 +6,7 @@ import ReactQuill from 'react-quill';
 import styles from 'styles/View.module.scss';
 import 'react-quill/dist/quill.snow.css';
 
-const ManageView = () => {
+const NewPostView = () => {
   const quillInstance = React.createRef<ReactQuill>();
   return (
     <div>
@@ -23,4 +23,4 @@ const ManageView = () => {
   );
 };
 
-export default ManageView;
+export default NewPostView;
