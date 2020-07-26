@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
-import CategoryChooser from 'components/CategoryChooser';
+import CategoryChooser from 'components/CategoryChooser/CategoryChooser';
 
 import cn from 'styles/NewPostBox.module.scss';
 import 'react-quill/dist/quill.snow.css';

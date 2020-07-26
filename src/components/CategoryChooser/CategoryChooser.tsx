@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
-
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
 import cn from 'styles/CategoryChooser.module.scss';
 
 const CategoryChooser = () => {
   const [title, setTitle] = useState('');
-  const categories = ['A', 'B', 'C'];
+  // const categoriesRef = useRef(null);
+
+  // useEffect(() => {
+  //   axios.get('http://localhost:5000/api/v1.0/categories/50')
+  //     .then((result) => {
+  //       const categories = result.data;
+  //       alert(JSON.stringify(categories));
+  //     });
+  // }, []);
+
+
   return (
     <div className={cn['MainWrapper']}>
       <div className={cn['CategoryTextHintWrapper']}>
@@ -18,10 +27,10 @@ const CategoryChooser = () => {
         alignRight
         title={title}
         id='dropdown-menu-align-right'
-        onSelect={(eventKey: number) => { setTitle(categories[+eventKey]); }}
+        onSelect={() => { setTitle('categories[+eventKey]'); }}
       >
         {
-          categories.map((value: string, index: number) => (
+          ['he'].map((value: string, index: number) => (
             <Dropdown.Item key={value} eventKey={`${index}`}>
               {value}
             </Dropdown.Item>
