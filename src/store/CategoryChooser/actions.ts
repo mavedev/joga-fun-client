@@ -6,12 +6,12 @@ import {
 
 type CAType = CategoriesActionType;
 
-export const setCategories = (categories: string[]): CAType => ({
+export const createSetCategories = (categories: string[]): CAType => ({
   type: SET_CATEGORIES,
   payload: categories
 });
 
-export const setCurrentCategory = (category: string): CAType => ({
+export const createSetCurrentCategory = (category: string): CAType => ({
   type: SET_CURRENT_CATEGORY,
   payload: category
 });

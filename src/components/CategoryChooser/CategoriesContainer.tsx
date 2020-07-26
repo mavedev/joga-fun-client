@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 import {
   AppState,
-  setCategories,
-  setCurrentCategory
+  createSetCategories,
+  createSetCurrentCategory
 } from 'store';
 
 import CategoryChooser from './CategoryChooser';
@@ -28,13 +28,21 @@ const mapStateToProps = (state: AppState): MapStatePropsType => ({
 });
 
 const mapDispatchToProps: MapDispatchPropsType = ({
-  setCategories,
-  setCurrentCategory
+  setCategories: createSetCategories,
+  setCurrentCategory: createSetCurrentCategory
 });
 
-const CategoriesContainer: React.FC<AllProps> = (props) => (
+const CategoriesContainer: React.FC<AllProps> = ({
+  categories,
+  currentCategory,
+  setCurrentCategory
+}: AllProps) => (
   <>
-    <CategoryChooser />
+    <CategoryChooser
+      categories={categories}
+      currentCategory={currentCategory}
+      setCurrentCategory={setCurrentCategory}
+    />
   </>
 );
 

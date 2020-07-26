@@ -1,21 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes, { InferProps } from 'prop-types';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
 import cn from 'styles/CategoryChooser.module.scss';
 
-const CategoryChooser = () => {
-  const [title, setTitle] = useState('');
-  // const categoriesRef = useRef(null);
-
-  // useEffect(() => {
-  //   axios.get('http://localhost:5000/api/v1.0/categories/50')
-  //     .then((result) => {
-  //       const categories = result.data;
-  //       alert(JSON.stringify(categories));
-  //     });
-  // }, []);
-
-
+function CategoryChooser({
+  categories,
+  currentCategory,
+  setCurrentCategory
+}: InferProps<typeof CategoryChooser.propTypes>) {
   return (
     <div className={cn['MainWrapper']}>
       <div className={cn['CategoryTextHintWrapper']}>
@@ -25,12 +18,12 @@ const CategoryChooser = () => {
       <DropdownButton
         variant='light'
         alignRight
-        title={title}
+        title={currentCategory}
         id='dropdown-menu-align-right'
-        onSelect={() => { setTitle('categories[+eventKey]'); }}
+        onSelect={(eventKey: number) => { alert(eventKey); }}
       >
         {
-          ['he'].map((value: string, index: number) => (
+          categories.map((value: string, index: number) => (
             <Dropdown.Item key={value} eventKey={`${index}`}>
               {value}
             </Dropdown.Item>
@@ -39,6 +32,12 @@ const CategoryChooser = () => {
       </DropdownButton>
     </div>
   );
+}
+
+CategoryChooser.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  currentCategory: PropTypes.string.isRequired,
+  setCurrentCategory: PropTypes.func.isRequired
 };
 
 export default CategoryChooser;
