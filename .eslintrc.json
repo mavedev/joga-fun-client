@@ -6,9 +6,6 @@
     "jest": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "airbnb"
   ],
@@ -65,11 +62,15 @@
     ],
     "dot-notation": "off",
     "comma-dangle": "off",
+    "max-classes-per-file": "off",
+    "prefer-destructuring": "off",
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
+    "no-unused-vars": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "import/no-absolute-path": "off",
     "import/no-extraneous-dependencies": "off",
-    "import/no-named-as-default": "off",
-    "@typescript-eslint/no-explicit-any": "off"
+    "import/no-named-as-default": "off"
   }
 }
