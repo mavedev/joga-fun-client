@@ -40,11 +40,12 @@ const CategoriesContainer: React.FC<AllProps> = ({
   currentCategory,
   setCurrentCategory
 }: AllProps) => {
+  const stringifiedCategories = JSON.stringify(categories);
   useEffect(() => {
     API.getCategories().then((response) => {
       setCategories(retrieve(response.data, [] as string[]));
     });
-  }, [JSON.stringify(categories)]);
+  }, [stringifiedCategories, setCategories]);
 
   return (
     <>
