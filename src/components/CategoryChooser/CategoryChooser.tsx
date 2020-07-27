@@ -9,6 +9,10 @@ function CategoryChooser({
   currentCategory,
   setCurrentCategory
 }: InferProps<typeof CategoryChooser.propTypes>) {
+  const onSelectCategory = (eventKey: number): void => {
+    setCurrentCategory(categories[eventKey]);
+  };
+
   return (
     <div className={cn['MainWrapper']}>
       <div className={cn['CategoryTextHintWrapper']}>
@@ -20,7 +24,7 @@ function CategoryChooser({
         alignRight
         title={currentCategory}
         id='dropdown-menu-align-right'
-        onSelect={(eventKey: number) => { alert(eventKey); }}
+        onSelect={onSelectCategory}
       >
         {
           categories.map((value: string, index: number) => (
