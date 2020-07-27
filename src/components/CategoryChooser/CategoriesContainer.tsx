@@ -7,6 +7,7 @@ import {
   createSetCurrentCategory
 } from 'store';
 import API from 'api';
+import { retrieve } from 'dal';
 
 import CategoryChooser from './CategoryChooser';
 
@@ -41,7 +42,7 @@ const CategoriesContainer: React.FC<AllProps> = ({
 }: AllProps) => {
   useEffect(() => {
     API.getCategories().then((response) => {
-      alert(JSON.stringify(response.data));
+      setCategories(retrieve(response.data));
     });
   }, [categories]);
 
