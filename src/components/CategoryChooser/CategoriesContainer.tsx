@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import {
@@ -6,6 +6,7 @@ import {
   createSetCategories,
   createSetCurrentCategory
 } from 'store';
+import API from 'api';
 
 import CategoryChooser from './CategoryChooser';
 
@@ -34,17 +35,26 @@ const mapDispatchToProps: MapDispatchPropsType = ({
 
 const CategoriesContainer: React.FC<AllProps> = ({
   categories,
+  setCategories,
   currentCategory,
   setCurrentCategory
-}: AllProps) => (
-  <>
-    <CategoryChooser
-      categories={categories}
-      currentCategory={currentCategory}
-      setCurrentCategory={setCurrentCategory}
-    />
-  </>
-);
+}: AllProps) => {
+  useEffect(() => {
+    API.getCategories().then((response) => {
+      alert(JSON.stringify(response.data));
+    });
+  }, [categories]);
+
+  return (
+    <>
+      <CategoryChooser
+        categories={categories}
+        currentCategory={currentCategory}
+        setCurrentCategory={setCurrentCategory}
+      />
+    </>
+  );
+};
 
 export default connect(
   mapStateToProps,
