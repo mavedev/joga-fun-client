@@ -42,9 +42,9 @@ const CategoriesContainer: React.FC<AllProps> = ({
 }: AllProps) => {
   useEffect(() => {
     API.getCategories().then((response) => {
-      setCategories(retrieve(response.data));
+      setCategories(retrieve(response.data, [] as string[]));
     });
-  }, [categories]);
+  }, [JSON.stringify(categories)]);
 
   return (
     <>
