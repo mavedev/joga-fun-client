@@ -9,7 +9,10 @@ import {
 import API from 'api';
 import { retrieve } from 'dal';
 
+import cn from 'styles/NewPostView/TopLevelBar/TopLevelContainer.module.scss';
 import CategoryChooser from './CategoryChooser';
+import PublishButton from './PublishButton';
+
 
 type MapStatePropsType = {
   categories: string[];
@@ -34,7 +37,7 @@ const mapDispatchToProps: MapDispatchPropsType = ({
   setCurrentCategory: createSetCurrentCategory
 });
 
-const CategoriesContainer: React.FC<AllProps> = ({
+const TopLevelContainer: React.FC<AllProps> = ({
   categories,
   setCategories,
   currentCategory,
@@ -48,17 +51,22 @@ const CategoriesContainer: React.FC<AllProps> = ({
   }, [stringifiedCategories, setCategories]);
 
   return (
-    <>
-      <CategoryChooser
-        categories={categories}
-        currentCategory={currentCategory}
-        setCurrentCategory={setCurrentCategory}
-      />
-    </>
+    <div className={cn['MainWrapper']}>
+      <div className={cn['CategoryChooserWrapper']}>
+        <CategoryChooser
+          categories={categories}
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+        />
+      </div>
+      <div className={cn['PublishButtonWrapper']}>
+        <PublishButton />
+      </div>
+    </div>
   );
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CategoriesContainer);
+)(TopLevelContainer);

@@ -17,7 +17,9 @@ function CategoryChooser({
     <div className={cn['MainWrapper']}>
       <div className={cn['Body']}>
         <div className={cn['CategoryTextHintWrapper']}>
-          <p className={cn['CategoryTextHint']}>Категория:</p>
+          <p className={cn['CategoryTextHint']}>
+            Определить в категорию:
+          </p>
         </div>
 
         <DropdownButton

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
-import CategoriesContainer from 'components/CategoryChooser/CategoriesContainer';
+import TopLevelContainer from 'components/NewPostView/TopLevelBar';
 
 import cn from 'styles/NewPostBox.module.scss';
 import 'react-quill/dist/quill.snow.css';
@@ -10,7 +10,7 @@ const NewPostBox = () => {
   const quillInstance = React.createRef<ReactQuill>();
   return (
     <div className={cn['MainWrapper']}>
-      <CategoriesContainer />
+      <TopLevelContainer />
       <div className={cn['EditorWrapper']}>
         <ReactQuill ref={quillInstance} />
       </div>
