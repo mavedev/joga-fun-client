@@ -7,13 +7,13 @@
   same as its lower part background color. 
 */
 .footer-wrapper {
-  background-color: $color_blackout_darker;
+  background-color: $color-blackout-darker;
 }
 
 /* The main background for the webpage. */
 .view-area--gradient-hot-cold {
   background: linear-gradient(
-    to left, $color_background_colder, $color_background_hotter
+    to left, $color-background-colder, $color-background-hotter
   );
 }
 

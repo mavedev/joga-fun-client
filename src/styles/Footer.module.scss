@@ -8,7 +8,7 @@
 
 /* The main part of the footer content. */
 .footer-wrapper__main {
-  background-color: $color_blackout_lighter;
+  background-color: $color-blackout-lighter;
   height: 70%;
   display: flex;
   flex-flow: column wrap;
@@ -28,20 +28,20 @@
 
 /* The copiright text styling. */
 .footer-wrapper__copiright-wrapper {
-  background-color: $color_blackout_darker;
+  background-color: $color-blackout-darker;
   height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: $color_blackout_text;
+  color: $color-blackout-text;
 }
 
 /* Space between the copiright text and the webpage name. */
 .footer-wrapper__span-wrapper {
-  padding: $width_minimum;
+  padding: $width-minimum;
 }
 
 /* The webpage name styling. */
 .footer-wrapper__text--important {
-  color: white;
+  color: $color-background-empty;
 }

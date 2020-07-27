@@ -4,7 +4,7 @@
   Media query for centering toggled social buttons icons
   in the navbar.
 */
-@media only screen and (max-width: $width_nav_toggle) {
+@media only screen and (max-width: $width-nav-toggle) {
   /* Bootstrap class. */
   .navbar {
     .navbar__nav {
@@ -22,9 +22,9 @@
 
 /* Bootstrap class. */
 .navbar {
-  background-color: $color_background;
+  background-color: $color-background;
   background-image: url(~assets/images/navbar-background-min.jpg);
-  border-color: $color_highlight;
+  border-color: $color-highlight;
   -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.8);

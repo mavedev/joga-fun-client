@@ -14,7 +14,7 @@
   Media query for centering toggled social buttons icons
   in the navbar.
 */
-@media only screen and (max-width: $width_nav_toggle) { 
+@media only screen and (max-width: $width-nav-toggle) { 
   /* Centering icons within the toggler. */
   .navbar-collapse {
     text-align: center;
