@@ -1,14 +1,16 @@
 @import './variables';
 
-.MainWrapper {
+.Body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
   align-items: center;
+  background-color: $color-background-empty;
+  border-radius: $border_radius_default;
 }
 
 .CategoryTextHintWrapper {
-  margin-right: $spacing_default;
+  margin: auto $spacing_default;
 }
 
 .CategoryTextHint {

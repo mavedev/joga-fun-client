@@ -15,25 +15,27 @@ function CategoryChooser({
 
   return (
     <div className={cn['MainWrapper']}>
-      <div className={cn['CategoryTextHintWrapper']}>
-        <p className={cn['CategoryTextHint']}>Категория:</p>
-      </div>
+      <div className={cn['Body']}>
+        <div className={cn['CategoryTextHintWrapper']}>
+          <p className={cn['CategoryTextHint']}>Категория:</p>
+        </div>
 
-      <DropdownButton
-        variant='light'
-        alignRight
-        title={currentCategory}
-        id='dropdown-menu-align-right'
-        onSelect={onSelectCategory}
-      >
-        {
-          categories.map((value: string, index: number) => (
-            <Dropdown.Item key={value} eventKey={`${index}`}>
-              {value}
-            </Dropdown.Item>
-          ))
-        }
-      </DropdownButton>
+        <DropdownButton
+          variant='light'
+          alignRight
+          title={currentCategory}
+          id='dropdown-menu-align-right'
+          onSelect={onSelectCategory}
+        >
+          {
+            categories.map((value: string, index: number) => (
+              <Dropdown.Item key={value} eventKey={`${index}`}>
+                {value}
+              </Dropdown.Item>
+            ))
+          }
+        </DropdownButton>
+      </div>
     </div>
   );
 }
