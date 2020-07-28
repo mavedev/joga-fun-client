@@ -1,22 +1,26 @@
 import React from 'react';
 import cx from 'classnames';
 
-import styles from 'styles/LoginBox.module.scss';
+import cn from 'styles/LoginBox.module.scss';
 
-const LoginBox = () => (
+type OwnProps = {
+  doLoginCallback: (username: string, password: string) => void;
+}
+
+const LoginBox = ({ doLoginCallback }: OwnProps) => (
   <div className='login-box'>
     {/* Additional wrapper for paddings. */}
-    <div className={styles['box-wrapper']}>
+    <div className={cn['box-wrapper']}>
       {/* The main container. */}
       {/* Third-party classes: container, jumbotron. */}
       <div className={cx(
-        styles['login-box__content'],
+        cn['login-box__content'],
         'container',
         'jumbotron'
       )}
       >
         {/* The title. */}
-        <h3 className={cx('text-center', styles['login-box__title'])}>
+        <h3 className={cx('text-center', cn['login-box__title'])}>
           Вход администратора
         </h3>
         {/* The login form. */}
@@ -36,7 +40,7 @@ const LoginBox = () => (
           <button
             type='submit'
             className={cx(
-              styles['btn--uppercased'],
+              cn['btn--uppercased'],
               'btn',
               'btn-primary',
               'form-control'

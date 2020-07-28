@@ -17,7 +17,7 @@ type AllProps = MapDispatchProps & OwnProps;
 
 const LoginContainer: React.FC<AllProps> = ({ doLogin }: AllProps) => (
   <>
-    <LoginBox />
+    <LoginBox doLoginCallback={doLogin} />
   </>
 );
 
