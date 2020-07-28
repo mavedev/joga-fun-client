@@ -1,5 +1,7 @@
 import thunkMiddlware, { ThunkMiddleware } from 'redux-thunk';
-import { combineReducers, createStore, applyMiddleware } from 'redux';
+import {
+  combineReducers, createStore, applyMiddleware, compose
+} from 'redux';
 
 import { categoriesChooserReducer } from './CategoryChooser/reducers';
 import { loginReducer } from './Auth/reducers';
@@ -10,10 +12,15 @@ const rootReducer = combineReducers({
   auth: loginReducer
 });
 
+const composeEnhancers = (window as any)
+  .__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 export type AppState = ReturnType<typeof rootReducer>;
 export const store = createStore(
   rootReducer,
-  applyMiddleware(thunkMiddlware as ThunkMiddleware<AppState, AppActionType>)
+  composeEnhancers(applyMiddleware(
+    thunkMiddlware as ThunkMiddleware<AppState, AppActionType>
+  ))
 );
 
 export * from './CategoryChooser/actions';
