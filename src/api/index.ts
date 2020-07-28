@@ -1,7 +1,5 @@
 import axios, { AxiosResponse } from 'axios';
 
-const categoriesURL = 'http://localhost:5000/api/v1.0/categories/50';
-
 type APIResponse = Promise<AxiosResponse<any>>;
 
 class API {
@@ -10,8 +8,14 @@ class API {
   });
 
   public static getCategories = (): APIResponse => API.adminAPI.get(
-    categoriesURL
+    'categories/50'
   );
+
+  public static login = (
+    username: string,
+    password: string
+  ): APIResponse => API.adminAPI
+    .post('login', {}, { auth: { username, password } })
 }
 
 export default API;
