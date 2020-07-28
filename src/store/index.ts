@@ -1,4 +1,5 @@
-import { combineReducers, createStore } from 'redux';
+import thunkMiddlware from 'redux-thunk';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
 import { categoriesChooserReducer } from './CategoryChooser/reducers';
 
 const rootReducer = combineReducers({
@@ -6,6 +7,6 @@ const rootReducer = combineReducers({
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
-export const store = createStore(rootReducer);
+export const store = createStore(rootReducer, applyMiddleware(thunkMiddlware));
 
 export * from './CategoryChooser/actions';
