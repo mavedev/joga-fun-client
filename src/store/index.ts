@@ -1,9 +1,11 @@
 import thunkMiddlware from 'redux-thunk';
 import { combineReducers, createStore, applyMiddleware } from 'redux';
 import { categoriesChooserReducer } from './CategoryChooser/reducers';
+import { loginReducer } from './Auth/reducers';
 
 const rootReducer = combineReducers({
-  categoryChooser: categoriesChooserReducer
+  categoryChooser: categoriesChooserReducer,
+  auth: loginReducer
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
