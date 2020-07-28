@@ -17,3 +17,4 @@ export const store = createStore(
 );
 
 export * from './CategoryChooser/actions';
+export * from './Auth/actions';
