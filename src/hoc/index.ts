@@ -1,1 +1,1 @@
-export * from './withRedirectOn';
+export * from './redirections';

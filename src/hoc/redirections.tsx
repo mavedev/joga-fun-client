@@ -1,13 +1,17 @@
 import React from 'react';
 import { Redirect } from 'react-router';
 
-interface AcceptableComponent extends React.FC {
+type AcceptableProps = {
+  isLoggedIn: boolean
+}
+
+interface AcceptableComponent extends React.FC<AcceptableProps> {
   ({ isLoggedIn }: { isLoggedIn: boolean }): JSX.Element;
 }
 
-export const withHomeRedirect = (to: string) => (
+export const withAuthRedirect = (to: string) => (
   WrappedComponent: AcceptableComponent
 ) => {
-  const { isLoggedIn } = WrappedComponent.arguments;
+  const { isLoggedIn } = (WrappedComponent.arguments as AcceptableProps);
   return (isLoggedIn ? <Redirect to={to} /> : WrappedComponent);
 };

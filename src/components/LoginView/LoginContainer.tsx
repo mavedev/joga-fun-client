@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import { createLoginThunk } from 'store';
-import { withRedirectOn } from 'hoc';
+import { withAuthRedirect } from 'hoc';
 import LoginBox from './LoginBox';
 
 type MapStateProps = {}
@@ -26,6 +26,6 @@ const LoginContainer: React.FC<AllProps> = ({ doLogin }: AllProps) => (
 );
 
 export default compose(
-  withRedirectOn,
+  withAuthRedirect('/'),
   connect(null, mapDispatchToProps)
 )(LoginContainer);
