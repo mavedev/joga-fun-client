@@ -1,6 +1,13 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Redirect } from 'react-router';
 
-export const withRedirectOn = (on: boolean, to: string) => (Component: FC) => (
-  on ? <Redirect to={to} /> : <Component />
-);
+interface AcceptableComponent extends React.FC {
+  ({ isLoggedIn }: { isLoggedIn: boolean }): JSX.Element;
+}
+
+export const withHomeRedirect = (to: string) => (
+  WrappedComponent: AcceptableComponent
+) => {
+  const { isLoggedIn } = WrappedComponent.arguments;
+  return (isLoggedIn ? <Redirect to={to} /> : WrappedComponent);
+};

@@ -1,20 +1,16 @@
 import React from 'react';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { AppState, createLoginThunk } from 'store';
+import { createLoginThunk } from 'store';
+import { withRedirectOn } from 'hoc';
 import LoginBox from './LoginBox';
 
-type MapStateProps = {
-  isLoggedIn: boolean;
-}
+type MapStateProps = {}
 
 type MapDispatchProps = {
   doLogin: (username: string, password: string) => void;
 }
-
-const mapStateToProps = (state: AppState): MapStateProps => ({
-  isLoggedIn: state.auth.isLoggedIn
-});
 
 const mapDispatchToProps: MapDispatchProps = {
   doLogin: createLoginThunk
@@ -23,13 +19,13 @@ const mapDispatchToProps: MapDispatchProps = {
 type OwnProps = {}
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
-const LoginContainer: React.FC<AllProps> = ({ isLoggedIn, doLogin }: AllProps) => (
+const LoginContainer: React.FC<AllProps> = ({ doLogin }: AllProps) => (
   <>
     <LoginBox doLoginCallback={doLogin} />
   </>
 );
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+export default compose(
+  withRedirectOn,
+  connect(null, mapDispatchToProps)
 )(LoginContainer);
