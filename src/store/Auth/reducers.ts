@@ -5,7 +5,8 @@ import {
 } from './types';
 
 const initialState: AuthState = {
-  isLoggedIn: false
+  isLoggedIn: false,
+  jwt: ''
 };
 
 export const loginReducer = (
@@ -15,7 +16,8 @@ export const loginReducer = (
   switch (action.type) {
     case DO_LOGIN:
       return {
-        isLoggedIn: true
+        isLoggedIn: true,
+        jwt: state.jwt
       };
     default:
       return state;

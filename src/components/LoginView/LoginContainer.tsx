@@ -2,7 +2,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { createLoginThunk, AppState } from 'store';
+import { createLoginThunk } from 'store';
 import { withAuthRedirect } from 'hoc';
 import LoginBox from './LoginBox';
 

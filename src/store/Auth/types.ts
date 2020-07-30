@@ -1,11 +1,17 @@
 export const DO_LOGIN = 'DO_LOGIN';
+export const SET_JWT = 'SET_JWT';
 
-export interface AuthState {
-  isLoggedIn: boolean
+export type AuthState = {
+  isLoggedIn: boolean;
+  jwt: string;
 }
 
-interface DoLoginActionType {
+type DoLoginActionType = {
   type: typeof DO_LOGIN;
 }
 
-export type LoginActionType = DoLoginActionType;
+type SetJWTActionType = {
+  type: typeof SET_JWT;
+}
+
+export type LoginActionType = DoLoginActionType | SetJWTActionType;
