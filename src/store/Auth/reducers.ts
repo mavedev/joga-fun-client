@@ -1,7 +1,8 @@
 import {
   AuthState,
   LoginActionType,
-  DO_LOGIN
+  DO_LOGIN,
+  SET_JWT
 } from './types';
 
 const initialState: AuthState = {
@@ -18,6 +19,11 @@ export const loginReducer = (
       return {
         isLoggedIn: true,
         jwt: state.jwt
+      };
+    case SET_JWT:
+      return {
+        isLoggedIn: state.isLoggedIn,
+        jwt: action.payload
       };
     default:
       return state;

@@ -12,6 +12,7 @@ type DoLoginActionType = {
 
 type SetJWTActionType = {
   type: typeof SET_JWT;
+  payload: string;
 }
 
 export type LoginActionType = DoLoginActionType | SetJWTActionType;
