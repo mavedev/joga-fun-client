@@ -62,6 +62,7 @@
     ],
     "dot-notation": "off",
     "comma-dangle": "off",
+    "arrow-body-style": "off",
     "max-classes-per-file": "off",
     "prefer-destructuring": "off",
     "no-useless-constructor": "off",

@@ -38,13 +38,14 @@ const LoginBox = ({ doLoginCallback }: OwnProps) => (
           {/* The submit button. */}
           {/* Third=party classes: btn, btn-primary, form-control. */}
           <button
-            type='submit'
+            type='button'
             className={cx(
               cn['btn--uppercased'],
               'btn',
               'btn-primary',
               'form-control'
             )}
+            onClick={() => { doLoginCallback('', ''); }}
           >
             Вход
           </button>
