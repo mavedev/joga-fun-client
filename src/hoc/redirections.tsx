@@ -1,17 +1,14 @@
 import React from 'react';
 import { Redirect } from 'react-router';
 
-type AcceptableProps = {
-  isLoggedIn: boolean
-}
+import { store } from 'store';
 
-interface AcceptableComponent extends React.FC<AcceptableProps> {
-  ({ isLoggedIn }: { isLoggedIn: boolean }): JSX.Element;
-}
+type AnyComponent = React.ComponentType<any>;
 
-export const withAuthRedirect = (to: string) => (
-  WrappedComponent: AcceptableComponent
-) => {
-  const { isLoggedIn } = (WrappedComponent.arguments as AcceptableProps);
-  return (isLoggedIn ? <Redirect to={to} /> : WrappedComponent);
-};
+export const withAuthRedirect = (to: string) => (Wrapped: AnyComponent) => (
+  props: any
+): JSX.Element => (
+  store.getState().auth.isLoggedIn
+  // eslint-disable-next-line react/jsx-props-no-spreading
+    ? <Redirect to={to} /> : <Wrapped {...props} />
+);
