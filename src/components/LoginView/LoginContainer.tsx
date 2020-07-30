@@ -23,6 +23,6 @@ const LoginContainer = ({ doLogin }: AllProps) => (
 );
 
 export default compose<React.ComponentType<OwnProps>>(
-  withAuthRedirect,
+  withAuthRedirect('/'),
   connect(null, mapDispatchToProps)
 )(LoginContainer);
