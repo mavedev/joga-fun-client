@@ -1,20 +1,19 @@
 import React from 'react';
 import cx from 'classnames';
-import Calendar from 'react-calendar';
-import Socials from 'components/Socials';
-import Categories from 'components/Categories/Categories';
-import Post from 'components/Post';
-import Pagination from 'components/Pagination';
 import {
   Container as BContainer,
   Row as BRow,
   Col as BCol
 } from 'react-bootstrap';
 
+import Calendar from 'react-calendar';
+import Socials from 'components/Socials';
+import CategoriesContainer from 'components/Categories';
+import Post from 'components/Post';
+import Pagination from 'components/Pagination';
+
 import styles from 'styles/HomeContent.module.scss';
 import 'react-calendar/dist/Calendar.css';
-
-const category = 'Категория 1';
 
 const HomeContent = () => (
   <BContainer className={styles['content']}>
@@ -32,7 +31,7 @@ const HomeContent = () => (
             Публикации
             <small>
               {' '}
-              {category}
+              category
               {' '}
             </small>
           </h1>
@@ -45,7 +44,7 @@ const HomeContent = () => (
         {/* Sidebar column. 4/12 of the page width. */}
         <BCol md='4'>
           {/* Posts categories list. */}
-          <Categories />
+          <CategoriesContainer />
 
           {/* React Calendar instance. */}
           <Calendar className={styles['adopted-calendar']} locale='ru-ru' />
