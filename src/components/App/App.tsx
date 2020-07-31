@@ -12,7 +12,7 @@ import HomeView from 'views/HomeView';
 import LoginView from 'views/LoginView';
 import NewPostView from 'views/NewPostView';
 
-import './App.scss';
+import 'styles/App/App.scss';
 
 const App: React.FC = () => (
   <Provider store={store}>
