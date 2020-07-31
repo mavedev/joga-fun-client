@@ -3,7 +3,7 @@ import cx from 'classnames';
 import Navbar from 'components/Navbar';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import HomeContent from 'components/HomeView/HomeContent';
+import HomeContent from 'components/HomeView';
 
 import styles from 'styles/View.module.scss';
 
