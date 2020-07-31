@@ -4,8 +4,8 @@ import {
   Row as BRow
 } from 'react-bootstrap';
 
-import cn from 'styles/Categories.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import cn from 'styles/Categories/CategoriesList.module.scss';
 
 import CategoryItem from './CategoryItem';
 
