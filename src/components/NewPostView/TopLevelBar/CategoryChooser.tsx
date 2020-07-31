@@ -1,14 +1,20 @@
 import React from 'react';
-import PropTypes, { InferProps } from 'prop-types';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
-import cn from 'styles/CategoryChooser.module.scss';
+import cn from 'styles/NewPostView/CategoryChooser.module.scss';
 
-function CategoryChooser({
+/* Normal component's props that are to be passed. */
+type OwnProps = {
+  categories: string[];
+  currentCategory: string;
+  setCurrentCategory: (category: string) => void;
+}
+
+const CategoryChooser: React.FC<OwnProps> = ({
   categories,
   currentCategory,
   setCurrentCategory
-}: InferProps<typeof CategoryChooser.propTypes>) {
+}: OwnProps) => {
   const onSelectCategory = (eventKey: number): void => {
     setCurrentCategory(categories[eventKey]);
   };
@@ -40,12 +46,6 @@ function CategoryChooser({
       </div>
     </div>
   );
-}
-
-CategoryChooser.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  currentCategory: PropTypes.string.isRequired,
-  setCurrentCategory: PropTypes.func.isRequired
 };
 
 export default CategoryChooser;

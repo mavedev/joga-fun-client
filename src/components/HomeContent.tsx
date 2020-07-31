@@ -12,7 +12,7 @@ import CategoriesContainer from 'components/Categories';
 import Post from 'components/Post';
 import Pagination from 'components/Pagination';
 
-import styles from 'styles/HomeContent.module.scss';
+import styles from 'styles/HomeView/HomeContent.module.scss';
 import 'react-calendar/dist/Calendar.css';
 
 const HomeContent = () => (

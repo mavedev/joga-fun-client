@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import styles from 'styles/Footer.module.scss';
+import styles from 'styles/Footer/Footer.module.scss';
 
 const Footer = () => (
   <div className={styles['footer-wrapper']}>

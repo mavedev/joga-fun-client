@@ -7,8 +7,8 @@ import {
   Nav as BNav
 } from 'react-bootstrap';
 
-import 'styles/Bootstrap.overrides.scss';
-import styles from 'styles/Navbar.module.scss';
+import 'styles/overrides/bootstrap.scss';
+import styles from 'styles/Navbar/Navbar.module.scss';
 
 const Navbar = () => (
   <BNavbar

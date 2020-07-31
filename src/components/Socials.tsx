@@ -5,7 +5,7 @@ import {
   Row as BRow
 } from 'react-bootstrap';
 
-import styles from 'styles/Socials.module.scss';
+import styles from 'styles/HomeView/Socials.module.scss';
 
 const Socials = () => (
   <div>
