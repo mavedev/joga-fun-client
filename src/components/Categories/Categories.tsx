@@ -6,7 +6,9 @@ import {
 
 import styles from 'styles/Categories.module.scss';
 
-const Categories = () => (
+type OwnProps = { categories: string[]; };
+
+const Categories: React.FC<OwnProps> = ({ categories }: OwnProps) => (
   <div>
     {/* Third-party classes: my-4. */}
     <BCard className='my-4'>

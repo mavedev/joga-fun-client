@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import { store, AppState } from 'store';
+import { AppState } from 'store';
 
 type MapStateProps = { categories: string[]; };
 type MapDispatchProps = {};
@@ -15,4 +16,4 @@ const CategoriesContainer: React.FC<AllProps> = ({ categories }: AllProps) => (
   <div />
 );
 
-export default CategoriesContainer;
+export default connect(mapStateToProps)(CategoriesContainer);

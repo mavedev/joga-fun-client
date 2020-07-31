@@ -1,4 +1,4 @@
-import { CategoriesActionType } from './CategoryChooser/types';
+import { CategoriesActionType } from './Categories/types';
 import { LoginActionType } from './Auth/types';
 
 export type AppActionType = CategoriesActionType | LoginActionType;
