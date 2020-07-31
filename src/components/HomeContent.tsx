@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import Calendar from 'react-calendar';
 import Socials from 'components/Socials';
-import Categories from 'components/Categories';
+import Categories from 'components/Categories/Categories';
 import Post from 'components/Post';
 import Pagination from 'components/Pagination';
 import {
