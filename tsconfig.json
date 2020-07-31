@@ -26,7 +26,6 @@
     "jsx": "react"
   },
   "include": [
-    "global.d.ts",
     "src"
   ]
 }
