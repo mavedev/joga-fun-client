@@ -2,6 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 
 import cn from 'styles/LoginBox.module.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 type OwnProps = {
   doLoginCallback: (username: string, password: string) => void;
@@ -9,7 +10,6 @@ type OwnProps = {
 
 const LoginBox = ({ doLoginCallback }: OwnProps) => (
   <div className='login-box'>
-    {/* Additional wrapper for paddings. */}
     <div className={cn['box-wrapper']}>
       {/* The main container. */}
       {/* Third-party classes: container, jumbotron. */}
