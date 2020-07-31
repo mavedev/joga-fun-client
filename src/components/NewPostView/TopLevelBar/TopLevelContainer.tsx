@@ -19,7 +19,7 @@ type MapStatePropsType = {
 type MapDispatchPropsType = {
   setCurrentCategory: (category: string) => void;
 }
-/* Type for props that will be passed by the store. */
+/* Normal component's props that are to be passed. */
 type OwnPropsType = {}
 /* All props type. */
 type AllProps = MapStatePropsType & MapDispatchPropsType & OwnPropsType;

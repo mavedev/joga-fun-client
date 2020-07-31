@@ -7,7 +7,7 @@ import {
 import styles from 'styles/Categories.module.scss';
 import CategoryItem from './CategoryItem';
 
-
+/* Normal component's props that are to be passed. */
 type OwnProps = { categories: string[]; };
 
 const CategoriesList: React.FC<OwnProps> = ({ categories }: OwnProps) => (

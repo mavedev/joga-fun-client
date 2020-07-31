@@ -14,7 +14,7 @@ import NewPostView from 'views/NewPostView';
 
 import 'styles/App/App.scss';
 
-const App: React.FC = () => (
+const App: React.FC<{}> = () => (
   <Provider store={store}>
     <Preloader>
       <Router>
