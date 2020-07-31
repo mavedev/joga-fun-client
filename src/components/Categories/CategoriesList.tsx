@@ -25,7 +25,7 @@ const CategoriesList: React.FC<OwnProps> = ({ categories }: OwnProps) => (
             {/* Third-party classes: list-unstyled mb-0. */}
             <ul className='list-unstyled mb-0'>
               {categories.map((value: string) => (
-                <CategoryItem name={value} link='/' />
+                <CategoryItem key={value} name={value} link='/' />
               ))}
             </ul>
           </div>
