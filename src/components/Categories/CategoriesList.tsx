@@ -5,10 +5,12 @@ import {
 } from 'react-bootstrap';
 
 import styles from 'styles/Categories.module.scss';
+import CategoryItem from './CategoryItem';
+
 
 type OwnProps = { categories: string[]; };
 
-const Categories: React.FC<OwnProps> = ({ categories }: OwnProps) => (
+const CategoriesList: React.FC<OwnProps> = ({ categories }: OwnProps) => (
   <div>
     {/* Third-party classes: my-4. */}
     <BCard className='my-4'>
@@ -22,15 +24,9 @@ const Categories: React.FC<OwnProps> = ({ categories }: OwnProps) => (
           <div className='col-lg-12'>
             {/* Third-party classes: list-unstyled mb-0. */}
             <ul className='list-unstyled mb-0'>
-              <li>
-                <a href='/'>Категория 1</a>
-              </li>
-              <li>
-                <a href='/'>Категория 2</a>
-              </li>
-              <li>
-                <a href='/'>Категория 3</a>
-              </li>
+              {categories.map((value: string) => (
+                <CategoryItem name={value} link='/' />
+              ))}
             </ul>
           </div>
         </BRow>
@@ -39,4 +35,4 @@ const Categories: React.FC<OwnProps> = ({ categories }: OwnProps) => (
   </div>
 );
 
-export default Categories;
+export default CategoriesList;

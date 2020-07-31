@@ -8,4 +8,4 @@ const CategoryItem: React.FC<OwnProps> = ({ name, link }: OwnProps) => (
   </li>
 );
 
-export default CategoryItem;
+export default React.memo(CategoryItem);

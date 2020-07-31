@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { AppState } from 'store';
+import CategoriesList from './CategoriesList';
 
 type MapStateProps = { categories: string[]; };
 type MapDispatchProps = {};
@@ -13,7 +14,7 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 });
 
 const CategoriesContainer: React.FC<AllProps> = ({ categories }: AllProps) => (
-  <div />
+  <CategoriesList categories={categories} />
 );
 
 export default connect(mapStateToProps)(CategoriesContainer);
