@@ -10,7 +10,7 @@ import { store } from 'store';
 import Preloader from 'components/Preloading';
 import HomeView from 'views/HomeView';
 import LoginView from 'views/LoginView';
-import NewPostView from 'views/NewPostView';
+import NewPostView from 'views/NewPostView/NewPostView';
 
 import 'styles/App/App.scss';
 
