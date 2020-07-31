@@ -7,12 +7,12 @@ import {
 } from 'react-bootstrap';
 
 import Calendar from 'react-calendar';
-import Socials from 'components/Socials';
 import CategoriesContainer from 'components/Categories';
-import Post from 'components/Post';
-import Pagination from 'components/Pagination';
-
 import styles from 'styles/HomeView/HomeContent.module.scss';
+
+import Post from './Post';
+import Socials from './Socials';
+import Pagination from './Pagination';
 import 'react-calendar/dist/Calendar.css';
 
 const HomeContent = () => (

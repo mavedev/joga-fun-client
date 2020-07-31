@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
-import cn from 'styles/NewPostView/CategoryChooser.module.scss';
+import cn from 'styles/NewPostView/TopLevelBar/CategoryChooser.module.scss';
 
 /* Normal component's props that are to be passed. */
 type OwnProps = {
