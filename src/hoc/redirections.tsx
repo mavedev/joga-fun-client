@@ -21,12 +21,31 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 });
 
 /* Outer function returning the HOC. */
-export const withAuthRedirect = (to: string) => (Wrapped: AnyComponent) => {
+export const withHomeRedirect = (to: string) => (Wrapped: AnyComponent) => {
   /* Inner container needed to encapsulate redirection stuff. */
   const RedirectContainer: React.FC<AllInjectedProps> = (
     { isLoggedIn, children }: AllProps
   ): JSX.Element => (
     <>{isLoggedIn ? <Redirect to={to} /> : children}</>
+  );
+  const ConnectedContainer = connect(mapStateToProps)(RedirectContainer);
+
+  /* The result. */
+  return (props: any): JSX.Element => (
+    <ConnectedContainer>
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+      <Wrapped {...props} />
+    </ConnectedContainer>
+  );
+};
+
+/* Outer function returning the HOC. */
+export const withAuthRedirect = (to: string) => (Wrapped: AnyComponent) => {
+  /* Inner container needed to encapsulate redirection stuff. */
+  const RedirectContainer: React.FC<AllInjectedProps> = (
+    { isLoggedIn, children }: AllProps
+  ): JSX.Element => (
+    <>{isLoggedIn ? children : <Redirect to={to} />}</>
   );
   const ConnectedContainer = connect(mapStateToProps)(RedirectContainer);
 

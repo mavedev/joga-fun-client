@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import { createLoginThunk } from 'store';
-import { withAuthRedirect } from 'hoc';
+import { withHomeRedirect } from 'hoc';
 import LoginBox from './LoginBox';
 
 /* Store state props type. */
@@ -28,6 +28,6 @@ const LoginContainer = ({ doLogin }: AllProps) => (
 );
 
 export default compose<React.ComponentType<OwnProps>>(
-  withAuthRedirect('/'),
+  withHomeRedirect('/'),
   connect(null, mapDispatchToProps)
 )(LoginContainer);
