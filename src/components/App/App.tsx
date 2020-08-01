@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -17,15 +17,17 @@ import 'styles/App/App.scss';
 const App: React.FC<{}> = () => (
   <Provider store={store}>
     <Preloader>
-      <Router>
-        <div className='App'>
-          <Switch>
-            <Route path='/' exact component={HomeView} />
-            <Route path='/login' exact component={LoginView} />
-            <Route path='/manage' exact component={NewPostViewConatainer} />
-          </Switch>
-        </div>
-      </Router>
+      <Suspense fallback={<div><h1>Loading</h1></div>}>
+        <Router>
+          <div className='App'>
+            <Switch>
+              <Route path='/' exact component={HomeView} />
+              <Route path='/login' exact component={LoginView} />
+              <Route path='/manage' exact component={NewPostViewConatainer} />
+            </Switch>
+          </div>
+        </Router>
+      </Suspense>
     </Preloader>
   </Provider>
 );
