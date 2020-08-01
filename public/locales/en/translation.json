@@ -1,5 +1,9 @@
 {
-  "World of joga": {
+  "Title": {
     "1": "World of joga"
+  },
+  "Description": {
+    "1": "[Description]",
+    "2": "[Full description]"
   }
 }
