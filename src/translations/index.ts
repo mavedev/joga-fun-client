@@ -3,6 +3,8 @@ import {
   t as getText
 } from 'app-translator';
 
+import * as constants from 'appConstants';
+
 const english: Vocabulary = {
   BCP47: 'en',
   name: 'English',
@@ -28,6 +30,6 @@ const collection: VocabulariesCollection = {
 };
 
 /* Inizialize AppTransaltor with default language */
-AppTranslator.initialize('ru', collection);
+AppTranslator.initialize(constants.DEFAULT_LANG, collection);
 
 export default getText;
