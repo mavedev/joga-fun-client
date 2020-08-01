@@ -3,8 +3,8 @@ import {
   combineReducers, createStore, applyMiddleware, compose
 } from 'redux';
 
-import { categoriesChooserReducer } from './Categories/reducers';
-import { loginReducer } from './Auth/reducers';
+import { categoriesChooserReducer } from './categories/reducers';
+import { loginReducer } from './auth/reducers';
 import { AppActionType } from './types';
 
 const rootReducer = combineReducers({
@@ -23,6 +23,6 @@ export const store = createStore(
   ))
 );
 
-export * from './Categories/actions';
-export * from './Auth/actions';
+export * from './categories/actions';
+export * from './auth/actions';
 export * from './types';
