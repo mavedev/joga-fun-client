@@ -15,7 +15,8 @@ export const configTranslations = () => {
     LanguageDetector,
     i18module
   ).instantiate({
-    fallbackLng: constants.DEFAULT_LANG,
+    fallbackLng: constants.DEFAULT_FALLBACK_LANG,
+    lng: constants.DEFAULT_LANG,
     whitelist: languages,
     interpolation: {
       escapeValue: false,
