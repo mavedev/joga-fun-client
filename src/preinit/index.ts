@@ -4,6 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next as i18module } from 'react-i18next';
 
 import { TranslatorAPI } from 'translations';
+import * as constants from 'appConstants';
 
 const languages = ['en', 'ru', 'uk'];
 
@@ -14,7 +15,7 @@ export const configTranslations = () => {
     LanguageDetector,
     i18module
   ).instantiate({
-    fallbackLng: 'en',
+    fallbackLng: constants.DEFAULT_LANG,
     whitelist: languages,
     interpolation: {
       escapeValue: false,
