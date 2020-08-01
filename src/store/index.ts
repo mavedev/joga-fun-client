@@ -5,10 +5,12 @@ import {
 
 import { categoriesChooserReducer } from './categories/reducers';
 import { loginReducer } from './auth/reducers';
+import { translatorReducer } from './translations/reducers';
 import { AppActionType } from './types';
 
 const rootReducer = combineReducers({
   categoryChooser: categoriesChooserReducer,
+  translator: translatorReducer,
   auth: loginReducer
 });
 
