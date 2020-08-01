@@ -1,24 +1,27 @@
-import i18nextInstance from 'i18next';
-import { initReactI18next } from 'react-i18next';
-
+import { i18n, ThirdPartyModule, InitOptions } from 'i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-/* App locales. */
-const languages: string[] = ['en', 'ru', 'ua'];
+export type TranslatorBackendType = typeof Backend;
+export type LanguageDetectorType = typeof LanguageDetector;
 
-/* Translator instance exported from i18next module. */
-i18nextInstance
-  .use(Backend)
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    fallbackLng: 'en',
-    debug: true,
-    whitelist: languages,
-    interpolation: {
-      escapeValue: false,
-    }
-  });
+export class TranslatorAPI {
+  private static translator: i18n;
 
-export default i18nextInstance;
+  private constructor() {}
+
+  public static config = (
+    translator: i18n,
+    backend: TranslatorBackendType,
+    languageDetector: LanguageDetectorType,
+    moduleInstantiator: ThirdPartyModule
+  ) => {
+    translator.use(backend).use(languageDetector).use(moduleInstantiator);
+    TranslatorAPI.translator = translator;
+    return TranslatorAPI;
+  }
+
+  public static instantiate = (options: InitOptions) => {
+    TranslatorAPI.translator.init(options);
+  }
+}
