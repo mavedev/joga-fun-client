@@ -1,0 +1,11 @@
+@import '../variables';
+
+.MainWrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to left, $color-background-colder, $color-background-hotter
+  );
+}
