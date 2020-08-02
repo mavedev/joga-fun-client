@@ -1,47 +1,7 @@
 @import '../variables';
 
 /* The footer sizing. */
-.footer-wrapper {
+.MainWrapper {
   width: 100%;
   height: 30vh;
-}
-
-/* The main part of the footer content. */
-.footer-wrapper__main {
-  background-color: $color-blackout-lighter;
-  height: 70%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-/* The main part text styling. */
-.footer-wrapper__card {
-  color: white;
-}
-
-/* The main part title styling. */
-.footer-wrapper__card--important {
-  font-size: 1.5em;
-}
-
-/* The copiright text styling. */
-.footer-wrapper__copiright-wrapper {
-  background-color: $color-blackout-darker;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: $color-blackout-text;
-}
-
-/* Space between the copiright text and the webpage name. */
-.footer-wrapper__span-wrapper {
-  padding: $width-minimum;
-}
-
-/* The webpage name styling. */
-.footer-wrapper__text--important {
-  color: $color-background-empty;
 }

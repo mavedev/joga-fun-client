@@ -1,0 +1,21 @@
+@import '../variables';
+
+/* The main part of the footer content. */
+.FooterWrapper--main {
+  background-color: $color-blackout-lighter;
+  height: 70%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The main part text styling. */
+.FooterWrapper__card {
+  color: white;
+}
+
+/* The main part title styling. */
+.FooterWrapper__card--important {
+  font-size: 1.5em;
+}
