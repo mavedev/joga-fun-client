@@ -7,6 +7,7 @@ import {
 
 import 'styles/overrides/bootstrap.scss';
 import cn from 'styles/Navbar/Navbar.module.scss';
+import NavbarList from './NavbarList';
 import NavbarBrand from './NavbarBrand';
 import NavbarToggle from './NavbarToggle';
 import NavbarCollapse from './NavbarCollapse';
@@ -21,14 +22,7 @@ const Navbar = () => (
     <NavbarBrand />
     <NavbarToggle />
     <NavbarCollapse className={cn['NavbarCollapse__nav']}>
-      {/* Inner list of links. */}
-      {/* Third-party classes: nav, navbar-nav, ml-auto. */}
-      <ul className={cx(
-        'nav',
-        'navbar-nav',
-        'ml-auto'
-      )}
-      >
+      <NavbarList>
         {/* The Facebook link. */}
         {/* Third-party classes: nav-item. */}
         <li className='nav-item'>
@@ -68,7 +62,7 @@ const Navbar = () => (
             />
           </BNav.Link>
         </li>
-      </ul>
+      </NavbarList>
     </NavbarCollapse>
   </BNavbar>
 );
