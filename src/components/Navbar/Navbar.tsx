@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar as BNavbar } from 'react-bootstrap';
+import cx from 'classnames';
+import { Navbar as BNavbar, Button as BButton } from 'react-bootstrap';
 
 import * as constants from 'appConstants';
 
@@ -14,11 +15,18 @@ import NavbarCollapse from './NavbarCollapse';
 /* Top navbar. */
 const Navbar: React.FC<{}> = () => (
   <BNavbar
-    className={cn['navbar']}
+    className={cx(cn['navbar'])}
     expand='lg'
     bg='dark'
     sticky='top'
   >
+    {/* <div>
+      <BButton>EN</BButton>
+      <BButton>RU</BButton>
+      <BButton>UK</BButton>
+    </div> */}
+    <NavbarBrand />
+    <NavbarBrand />
     <NavbarBrand />
     <NavbarToggle />
     <NavbarCollapse className={cn['NavbarCollapse__nav']}>

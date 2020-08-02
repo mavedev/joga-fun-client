@@ -20,3 +20,17 @@
     text-align: center;
   }
 }
+
+/*
+  Make the navbar elements be placed evently.
+*/
+.navbar-collapse {
+  flex-grow: unset !important;
+}
+
+/*
+  Make the navbar elements be placed evently.
+*/
+.navbar-expand-lg {
+  justify-content: space-evenly !important;
+}
