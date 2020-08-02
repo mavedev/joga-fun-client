@@ -1,6 +1,8 @@
 import React from 'react';
 import { Navbar as BNavbar } from 'react-bootstrap';
 
+import * as constants from 'appConstants';
+
 import 'styles/overrides/bootstrap.scss';
 import cn from 'styles/Navbar/Navbar.module.scss';
 import NavbarList from './NavbarList';
@@ -22,11 +24,11 @@ const Navbar: React.FC<{}> = () => (
     <NavbarCollapse className={cn['NavbarCollapse__nav']}>
       <NavbarList>
         {/* The Facebook link. */}
-        <NavListItem link='/' className='fa fa-facebook' />
+        <NavListItem link={constants.LINK_FB} className='fa fa-facebook' />
         {/* The Twitter link. */}
-        <NavListItem link='/' className='fa fa-twitter' />
+        <NavListItem link={constants.LINK_TW} className='fa fa-twitter' />
         {/* The VK link. */}
-        <NavListItem link='/' className='fa fa-vk' />
+        <NavListItem link={constants.LINK_VK} className='fa fa-vk' />
       </NavbarList>
     </NavbarCollapse>
   </BNavbar>
