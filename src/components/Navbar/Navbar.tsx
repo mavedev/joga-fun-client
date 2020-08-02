@@ -1,14 +1,13 @@
 import React from 'react';
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
 import {
   Navbar as BNavbar,
-  NavbarBrand as BNavbarBrand,
   Nav as BNav
 } from 'react-bootstrap';
 
 import 'styles/overrides/bootstrap.scss';
 import styles from 'styles/Navbar/Navbar.module.scss';
+import NavbarBrand from './NavbarBrand';
 
 const Navbar = () => (
   <BNavbar
@@ -19,17 +18,7 @@ const Navbar = () => (
   >
 
     {/* Bootstrap logo-like site name. */}
-    <BNavbarBrand>
-      <Link
-        className={cx(
-          styles['navbar__link'],
-          styles['navbar__link_curved']
-        )}
-        to='/'
-      >
-        Joga.fun
-      </Link>
-    </BNavbarBrand>
+    <NavbarBrand />
 
     {/* The 'show/hide' button of the navbar. */}
     <BNavbar.Toggle

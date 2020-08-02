@@ -31,21 +31,6 @@
   min-height: 80px;
 }
 
-/* Links in Bootstrap navbar. */
-.navbar__link {
-  font-size: 2rem !important; // Override Font Awesome styles.
-
-  &, &:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-}
-
-/* Special links style. */
-.navbar__link_curved {
-  font-family: 'Pacifico-Regular', serif;
-}
-
 /* Buttons toggler style. */
 .navbar__toggler {
   border-color: #fff !important; // Override Bootstrap color styles.
