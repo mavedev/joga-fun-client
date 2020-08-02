@@ -14,8 +14,6 @@ type OwnProps = {
 /* Center-aligned nav items. */
 const NavbarCollapse: React.FC<OwnProps> = ({ children, className }: OwnProps) => (
   <BNavbar.Collapse>
-    {/* Bootstrap navbar link wrapper. */}
-    {/* Third-party classes: navbar-nav, ml-auto. */}
     <BNav className={cx('navbar-nav', 'ml-auto', className)}>
       {children}
     </BNav>
