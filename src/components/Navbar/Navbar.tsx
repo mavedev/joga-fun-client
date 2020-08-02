@@ -1,6 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { Navbar as BNavbar } from 'react-bootstrap';
+import i18nextInstance from 'i18next';
 
 import * as constants from 'appConstants';
 
@@ -20,7 +21,7 @@ const Navbar: React.FC<{}> = () => (
     bg='dark'
     sticky='top'
   >
-    <LangSwitcher langs={constants.LANGS_LIST} />
+    <LangSwitcher langs={constants.LANGS_LIST} switcher={i18nextInstance} />
     <NavbarBrand />
     <NavbarCollapse className={cn['NavbarCollapse__nav']}>
       <NavbarList>
