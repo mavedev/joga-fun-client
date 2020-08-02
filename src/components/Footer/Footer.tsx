@@ -12,4 +12,4 @@ const Footer: React.FC<{}> = () => (
   </div>
 );
 
-export default React.memo(Footer);
+export default Footer;

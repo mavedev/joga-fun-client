@@ -22,4 +22,4 @@ const FooterCPPane: React.FC<{}> = () => (
   </div>
 );
 
-export default React.memo(FooterCPPane);
+export default FooterCPPane;

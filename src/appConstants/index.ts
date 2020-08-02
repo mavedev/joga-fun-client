@@ -4,3 +4,4 @@ export const DEFAULT_LANG = LANGS_LIST[1];
 export const LINK_FB = '/';
 export const LINK_TW = '/';
 export const LINK_VK = '/';
+export const NAME_SITE = 'joga.fun';

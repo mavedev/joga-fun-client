@@ -19,7 +19,7 @@ const CategoriesList: React.FC<OwnProps> = ({ categories }: OwnProps) => {
   return (
     <div>
       <BCard className='my-4'>
-        <h5 className='card-header'>{t('Categories.1')}</h5>
+        <h5 className='card-header'>{t('Categories')}</h5>
         <BCard.Body className={cn['ListWrapper--Centered']}>
           <BRow>
             <div className='col-lg-12'>

@@ -11,7 +11,7 @@ const Header = () => {
     <div className={cn['Header-wrapper']}>
       <div className={cn['Header-wrapper__overlay']}>
         <h1 className={cn['Header-wrapper__title']}>
-          {t('Title.1')}
+          {t('Title')}
         </h1>
         <h3 className={cn['Header-wrapper__text']}>
           {t('Description.1')}
