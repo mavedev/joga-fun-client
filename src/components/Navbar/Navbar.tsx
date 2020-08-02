@@ -6,22 +6,21 @@ import {
 } from 'react-bootstrap';
 
 import 'styles/overrides/bootstrap.scss';
-import styles from 'styles/Navbar/Navbar.module.scss';
+import cn from 'styles/Navbar/Navbar.module.scss';
 import NavbarBrand from './NavbarBrand';
 import NavbarToggle from './NavbarToggle';
 import NavbarCollapse from './NavbarCollapse';
 
 const Navbar = () => (
   <BNavbar
-    className={styles['navbar']}
+    className={cn['navbar']}
     expand='lg'
     bg='dark'
     sticky='top'
   >
     <NavbarBrand />
     <NavbarToggle />
-
-    <NavbarCollapse>
+    <NavbarCollapse className={cn['NavbarCollapse__nav']}>
       {/* Inner list of links. */}
       {/* Third-party classes: nav, navbar-nav, ml-auto. */}
       <ul className={cx(
@@ -36,7 +35,7 @@ const Navbar = () => (
           <BNav.Link href='/'>
             {/* Third-party classes: fa-*. */}
             <i className={cx(
-              styles['navbar__link'],
+              cn['navbar__link'],
               'fa',
               'fa-facebook'
             )}
@@ -49,7 +48,7 @@ const Navbar = () => (
           <BNav.Link href='/'>
             {/* Third-party classes: fa-*. */}
             <i className={cx(
-              styles['navbar__link'],
+              cn['navbar__link'],
               'fa',
               'fa-twitter'
             )}
@@ -62,7 +61,7 @@ const Navbar = () => (
           <BNav.Link href='/'>
             {/* Third-party classes: fa-*. */}
             <i className={cx(
-              styles['navbar__link'],
+              cn['navbar__link'],
               'fa',
               'fa-vk'
             )}
