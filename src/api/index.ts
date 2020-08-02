@@ -4,7 +4,7 @@ type APIResponse = Promise<AxiosResponse<any>>;
 
 class API {
   private static adminAPI = axios.create({
-    baseURL: 'http://localhost:5000/api/v1.0/'
+    baseURL: process.env.REACT_APP_API_URL
   });
 
   public static getCategories = (): APIResponse => API.adminAPI.get(

@@ -9,7 +9,8 @@ import NavbarBrand from './NavbarBrand';
 import NavbarToggle from './NavbarToggle';
 import NavbarCollapse from './NavbarCollapse';
 
-const Navbar = () => (
+/* Top navbar. */
+const Navbar: React.FC<{}> = () => (
   <BNavbar
     className={cn['navbar']}
     expand='lg'
