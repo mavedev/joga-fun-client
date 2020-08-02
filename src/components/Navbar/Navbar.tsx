@@ -9,7 +9,6 @@ import cn from 'styles/Navbar/Navbar.module.scss';
 import NavbarList from './NavbarList';
 import NavListItem from './NavListItem';
 import NavbarBrand from './NavbarBrand';
-import NavbarToggle from './NavbarToggle';
 import NavbarCollapse from './NavbarCollapse';
 
 /* Top navbar. */
@@ -20,15 +19,12 @@ const Navbar: React.FC<{}> = () => (
     bg='dark'
     sticky='top'
   >
-    {/* <div>
+    <div>
       <BButton>EN</BButton>
       <BButton>RU</BButton>
       <BButton>UK</BButton>
-    </div> */}
+    </div>
     <NavbarBrand />
-    <NavbarBrand />
-    <NavbarBrand />
-    <NavbarToggle />
     <NavbarCollapse className={cn['NavbarCollapse__nav']}>
       <NavbarList>
         {/* The Facebook link. */}

@@ -1,16 +1,6 @@
 @import '../variables';
 
 /*
-  Importing CSS modules ignores implicitly used classes.
-  So there is a workaround for overriding Bootstrap 
-  color for the toggler icon.
-*/
-.navbar-toggler span.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
-  color: white;
-}
-
-/*
   Media query for centering toggled social buttons icons
   in the navbar.
 */
@@ -32,5 +22,5 @@
   Make the navbar elements be placed evently.
 */
 .navbar-expand-lg {
-  justify-content: space-evenly !important;
+  justify-content: space-between !important;
 }
