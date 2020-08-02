@@ -8,6 +8,7 @@ import {
 import 'styles/overrides/bootstrap.scss';
 import styles from 'styles/Navbar/Navbar.module.scss';
 import NavbarBrand from './NavbarBrand';
+import NavbarToggle from './NavbarToggle';
 
 const Navbar = () => (
   <BNavbar
@@ -16,15 +17,8 @@ const Navbar = () => (
     bg='dark'
     sticky='top'
   >
-
-    {/* Bootstrap logo-like site name. */}
     <NavbarBrand />
-
-    {/* The 'show/hide' button of the navbar. */}
-    <BNavbar.Toggle
-      className={styles['navbar__toggler']}
-      aria-controls='basic-navbar-nav'
-    />
+    <NavbarToggle />
 
     {/* Center-aligned nav items. */}
     <BNavbar.Collapse className={styles['navbar__collapse']}>
