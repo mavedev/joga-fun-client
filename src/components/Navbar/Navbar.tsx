@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import { Navbar as BNavbar, Button as BButton } from 'react-bootstrap';
+import { Navbar as BNavbar } from 'react-bootstrap';
 
 import * as constants from 'appConstants';
 
@@ -9,6 +9,7 @@ import cn from 'styles/Navbar/Navbar.module.scss';
 import NavbarList from './NavbarList';
 import NavListItem from './NavListItem';
 import NavbarBrand from './NavbarBrand';
+import LangSwitcher from './LangSwitcher';
 import NavbarCollapse from './NavbarCollapse';
 
 /* Top navbar. */
@@ -19,11 +20,7 @@ const Navbar: React.FC<{}> = () => (
     bg='dark'
     sticky='top'
   >
-    <div>
-      <BButton>EN</BButton>
-      <BButton>RU</BButton>
-      <BButton>UK</BButton>
-    </div>
+    <LangSwitcher langs={constants.LANGS_LIST} />
     <NavbarBrand />
     <NavbarCollapse className={cn['NavbarCollapse__nav']}>
       <NavbarList>

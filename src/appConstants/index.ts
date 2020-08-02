@@ -1,5 +1,6 @@
-export const DEFAULT_LANG = 'ru';
-export const DEFAULT_FALLBACK_LANG = 'en';
+export const LANGS_LIST = ['en', 'ru', 'uk'];
+export const DEFAULT_FALLBACK_LANG = LANGS_LIST[0];
+export const DEFAULT_LANG = LANGS_LIST[1];
 export const LINK_FB = '/';
 export const LINK_TW = '/';
 export const LINK_VK = '/';
