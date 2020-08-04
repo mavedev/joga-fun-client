@@ -1,6 +1,7 @@
 import {
   SET_CATEGORIES,
-  SET_CURRENT_CATEGORY,
+  MANAGE_SET_CURRENT_CATEGORY,
+  FILTER_SET_CURRENT_CATEGORY,
   CategoriesActionType
 } from './types';
 
@@ -11,7 +12,12 @@ export const createSetCategories = (categories: string[]): CAType => ({
   payload: categories
 });
 
-export const createSetCurrentCategory = (category: string): CAType => ({
-  type: SET_CURRENT_CATEGORY,
+export const createManageSetCurrentCategory = (category: string): CAType => ({
+  type: MANAGE_SET_CURRENT_CATEGORY,
+  payload: category
+});
+
+export const createFilterSetCurrentCategory = (category: string): CAType => ({
+  type: FILTER_SET_CURRENT_CATEGORY,
   payload: category
 });

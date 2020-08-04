@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import {
   AppState,
-  createSetCurrentCategory
+  createManageSetCurrentCategory
 } from 'store';
 import cn from 'styles/NewPostView/TopLevelBar/TopLevelContainer.module.scss';
 import CategoryChooser from './CategoryChooser';
@@ -26,11 +26,11 @@ type AllProps = MapStatePropsType & MapDispatchPropsType & OwnPropsType;
 
 const mapStateToProps = (state: AppState): MapStatePropsType => ({
   categories: state.categoryChooser.categories,
-  currentCategory: state.categoryChooser.currentCategory
+  currentCategory: state.categoryChooser.manageCurrentCategory
 });
 
 const mapDispatchToProps: MapDispatchPropsType = ({
-  setCurrentCategory: createSetCurrentCategory
+  setCurrentCategory: createManageSetCurrentCategory
 });
 
 const TopLevelContainer: React.FC<AllProps> = ({
