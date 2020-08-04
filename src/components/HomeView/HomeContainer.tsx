@@ -4,7 +4,10 @@ import { connect } from 'react-redux';
 import { AppState, createFilterSetCurrentCategory } from 'store';
 
 /* Store state props type. */
-type MapStateProps = { postsQuantity: number; };
+type MapStateProps = {
+  postsQuantity: number;
+  currentCategory: string | null;
+};
 /* Store dispatch props type. */
 type MapDispatchProps = {
   setCurrentFilteredCategory: (category: string) => void;
@@ -15,7 +18,8 @@ type OwnProps = {};
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapStatetoProps = (state: AppState): MapStateProps => ({
-  postsQuantity: state.posts.postsQuantity
+  postsQuantity: state.posts.postsQuantity,
+  currentCategory: state.categories.currentFilteredCategory
 });
 
 const mapDispatchToProps: MapDispatchProps = {
@@ -23,7 +27,7 @@ const mapDispatchToProps: MapDispatchProps = {
 };
 
 const HomeContainer: React.FC<AllProps> = ({
-  postsQuantity, setCurrentFilteredCategory
+  postsQuantity, currentCategory, setCurrentFilteredCategory,
 }: AllProps) => (
   <></>
 );
