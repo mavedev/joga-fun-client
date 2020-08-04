@@ -5,10 +5,12 @@ import {
 
 import { categoriesChooserReducer } from './categories/reducers';
 import { loginReducer } from './auth/reducers';
+import { postsReducer } from './posts/reducers';
 import { AppActionType } from './types';
 
 const rootReducer = combineReducers({
   categoryChooser: categoriesChooserReducer,
+  posts: postsReducer,
   auth: loginReducer
 });
 
@@ -25,4 +27,5 @@ export const store = createStore(
 
 export * from './categories/actions';
 export * from './auth/actions';
+export * from './posts/actions';
 export * from './types';
