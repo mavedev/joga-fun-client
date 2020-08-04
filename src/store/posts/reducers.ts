@@ -1,6 +1,7 @@
 import {
   SET_CURRENT_POSTS_CHUNK_NUMBER,
   SET_CURRENT_POSTS_CHUNK,
+  SET_POSTS_QUANTITY,
   PostsState,
   PostsActiontype
 } from './types';
@@ -27,6 +28,12 @@ export const postsReducer = (
         postsQuantity: state.postsQuantity,
         currentPostsChunkNumber: state.currentPostsChunkNumber,
         currentPostsChunk: action.payload
+      };
+    case SET_POSTS_QUANTITY:
+      return {
+        postsQuantity: action.payload,
+        currentPostsChunkNumber: state.currentPostsChunkNumber,
+        currentPostsChunk: state.currentPostsChunk
       };
     default:
       return state;
