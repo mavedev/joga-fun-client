@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 
 import cx from 'classnames';
-import styles from 'styles/HomeView/Post.module.scss';
+import styles from 'styles/HomeView/Posts/Post.module.scss';
 
 const Post = () => (
   <div className='MainWrapper'>
