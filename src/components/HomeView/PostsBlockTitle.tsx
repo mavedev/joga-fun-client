@@ -15,7 +15,7 @@ const PostsBlockTitle: React.FC<{}> = () => {
       'my-4'
     )}
     >
-      Публикации
+      {t('Publications')}
       <small>
         {' '}
         category
