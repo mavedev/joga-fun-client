@@ -1,5 +1,4 @@
 import React from 'react';
-import cx from 'classnames';
 import {
   Container as BContainer,
   Row as BRow,
@@ -8,35 +7,23 @@ import {
 
 import Calendar from 'react-calendar';
 import CategoriesContainer from 'components/Categories';
-import styles from 'styles/HomeView/HomeContent.module.scss';
+import cn from 'styles/HomeView/HomeContent.module.scss';
 
 import Post from './Post';
 import Socials from './Socials';
 import Pagination from './Pagination';
+import PostsBlockTitle from './PostsBlockTitle';
 import 'react-calendar/dist/Calendar.css';
 
 const HomeContent = () => (
-  <BContainer className={styles['content']}>
-    <div className={styles['row-wrapper']}>
+  <BContainer className={cn['content']}>
+    <div className={cn['row-wrapper']}>
       <BRow>
         {/* Posts column. 8/12 of the page width. */}
-        <BCol md='8' className={styles['PostsAreaWrapper']}>
-          {/* The publications block title. */}
-          {/* Third-party classes: my-4. */}
-          <h1 className={cx(
-            styles['content__title'],
-            'my-4'
-          )}
-          >
-            Публикации
-            <small>
-              {' '}
-              category
-              {' '}
-            </small>
-          </h1>
+        <BCol md='8' className={cn['PostsAreaWrapper']}>
+          <PostsBlockTitle />
           <Post />
-          <div className={styles['PaginationWrapper']}>
+          <div className={cn['PaginationWrapper']}>
             <Pagination />
           </div>
         </BCol>
@@ -47,7 +34,7 @@ const HomeContent = () => (
           <CategoriesContainer />
 
           {/* React Calendar instance. */}
-          <Calendar className={styles['adopted-calendar']} locale='ru-ru' />
+          <Calendar className={cn['adopted-calendar']} locale='ru-ru' />
 
           {/* Owner's social buttons. */}
           <Socials />

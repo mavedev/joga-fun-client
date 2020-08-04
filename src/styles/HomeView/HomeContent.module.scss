@@ -10,11 +10,6 @@
   padding-bottom: $spacing-default;
 }
 
-/* Title styling. */
-.content__title {
-  color: $color-background-empty;
-}
-
 /* Modification for third-party class: react-calendar. */
 .adopted-calendar {
   width: auto !important; // Override default fixed width.
