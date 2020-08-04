@@ -12,6 +12,7 @@ export const createSetPostsCount = (count: number): PostsActiontype => ({
 export const createSetPostsCountThunk = () => (
   dispatch: Dispatch<AppActionType>
 ) => {
-  // TODO: Delegate the stuff to the API.
-  dispatch(createSetPostsCount(0));
+  API.getPostsQuantity().then((response) => {
+    dispatch(createSetPostsCount(response.data['result']));
+  });
 };
