@@ -26,6 +26,7 @@ const mapDispatchToProps: MapDispatchProps = {
   setCurrentFilteredCategory: createFilterSetCurrentCategory
 };
 
+/* A wrapper for the Home components getting info from the store. */
 const HomeContainer: React.FC<AllProps> = ({
   postsQuantity, currentCategory, setCurrentFilteredCategory,
 }: AllProps) => (

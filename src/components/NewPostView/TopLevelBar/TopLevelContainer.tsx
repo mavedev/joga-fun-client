@@ -33,6 +33,8 @@ const mapDispatchToProps: MapDispatchPropsType = ({
   setCurrentCategory: createManageSetCurrentCategory
 });
 
+/* A wrapper for the CategoriesChooser and the PusblishButton
+   getting categories info from the store. */
 const TopLevelContainer: React.FC<AllProps> = ({
   categories,
   currentCategory,
