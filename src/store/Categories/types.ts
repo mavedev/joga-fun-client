@@ -1,21 +1,29 @@
 export const SET_CATEGORIES = 'SET_CATEGORIES';
-export const SET_CURRENT_CATEGORY = 'SET_CURRENT_CATEGORY';
+export const MANAGE_SET_CURRENT_CATEGORY = 'SET_CURRENT_CATEGORY';
+export const FILTER_SET_CURRENT_CATEGORY = 'FILTER_SET_CURRENT_CATEGORY';
 
-export interface CategoriesState {
+export type CategoriesState = {
   categories: string[];
-  currentCategory: string;
-}
+  manageCurrentCategory: string;
+  filterCurrentCategory: string | null;
+};
 
-interface SetCategoriesActionType {
+type SetCategoriesActionType = {
   type: typeof SET_CATEGORIES;
   payload: string[];
-}
+};
 
-interface SetCurrentCategoryActionType {
-  type: typeof SET_CURRENT_CATEGORY;
+type SetManageCurrentCategoryActionType = {
+  type: typeof MANAGE_SET_CURRENT_CATEGORY;
   payload: string;
-}
+};
+
+type SetFilterCurrentCategoryActionType = {
+  type: typeof FILTER_SET_CURRENT_CATEGORY;
+  payload: string | null;
+};
 
 export type CategoriesActionType =
   SetCategoriesActionType
-  | SetCurrentCategoryActionType;
+  | SetManageCurrentCategoryActionType
+  | SetFilterCurrentCategoryActionType;
