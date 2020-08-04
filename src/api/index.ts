@@ -8,7 +8,7 @@ class API {
   });
 
   public static getCategories = (): APIResponse => API.instance.get(
-    'categories/50'
+    'categories'
   );
 
   public static login = (
