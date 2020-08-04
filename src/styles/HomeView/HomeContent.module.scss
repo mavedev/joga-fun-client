@@ -10,12 +10,6 @@
   padding-bottom: $spacing-default;
 }
 
-/* Modification for third-party class: react-calendar. */
-.adopted-calendar {
-  width: auto !important; // Override default fixed width.
-  border-radius: $border-radius-default;
-}
-
 .PostsAreaWrapper {
   display: flex;
   flex-flow: column nowrap;

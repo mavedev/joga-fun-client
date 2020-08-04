@@ -5,12 +5,10 @@ import {
   Col as BCol
 } from 'react-bootstrap';
 
-import Calendar from 'react-calendar';
-import CategoriesContainer from 'components/Categories';
 import cn from 'styles/HomeView/HomeContent.module.scss';
 
 import Post from './Post';
-import Socials from './Socials';
+import Sidebar from './Sidebar';
 import Pagination from './Pagination';
 import PostsBlockTitle from './PostsBlockTitle';
 import 'react-calendar/dist/Calendar.css';
@@ -29,16 +27,7 @@ const HomeContent = () => (
         </BCol>
 
         {/* Sidebar column. 4/12 of the page width. */}
-        <BCol md='4'>
-          {/* Posts categories list. */}
-          <CategoriesContainer />
-
-          {/* React Calendar instance. */}
-          <Calendar className={cn['adopted-calendar']} locale='ru-ru' />
-
-          {/* Owner's social buttons. */}
-          <Socials />
-        </BCol>
+        <Sidebar />
       </BRow>
     </div>
   </BContainer>

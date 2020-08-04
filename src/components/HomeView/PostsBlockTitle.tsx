@@ -3,6 +3,7 @@ import cx from 'classnames';
 
 import { useTranslation } from 'react-i18next';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import cn from 'styles/HomeView/PostsBlockTitle.module.scss';
 
 /* The publications block title. */
