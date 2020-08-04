@@ -7,9 +7,9 @@ import {
 } from './types';
 
 const initialState: CategoriesState = {
-  categories: [],
-  manageCurrentCategory: '',
-  filterCurrentCategory: null
+  categoriesList: [],
+  currentManagedCategory: '',
+  currentFilteredCategory: null
 };
 
 export const categoriesChooserReducer = (
@@ -19,21 +19,21 @@ export const categoriesChooserReducer = (
   switch (action.type) {
     case SET_CATEGORIES:
       return {
-        categories: action.payload,
-        manageCurrentCategory: state.manageCurrentCategory,
-        filterCurrentCategory: state.filterCurrentCategory
+        categoriesList: action.payload,
+        currentManagedCategory: state.currentManagedCategory,
+        currentFilteredCategory: state.currentFilteredCategory
       };
     case MANAGE_SET_CURRENT_CATEGORY:
       return {
-        categories: state.categories,
-        manageCurrentCategory: action.payload,
-        filterCurrentCategory: state.filterCurrentCategory
+        categoriesList: state.categoriesList,
+        currentManagedCategory: action.payload,
+        currentFilteredCategory: state.currentFilteredCategory
       };
     case FILTER_SET_CURRENT_CATEGORY:
       return {
-        categories: state.categories,
-        manageCurrentCategory: state.manageCurrentCategory,
-        filterCurrentCategory: action.payload
+        categoriesList: state.categoriesList,
+        currentManagedCategory: state.currentManagedCategory,
+        currentFilteredCategory: action.payload
       };
     default:
       return state;

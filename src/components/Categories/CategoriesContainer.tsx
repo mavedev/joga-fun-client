@@ -14,7 +14,7 @@ type OwnProps = {};
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapStateToProps = (state: AppState): MapStateProps => ({
-  categories: state.categoryChooser.categories
+  categories: state.categories.categoriesList
 });
 
 /* A wrapper for the Categories component getting categories from the store. */

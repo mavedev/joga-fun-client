@@ -25,8 +25,8 @@ type OwnPropsType = {}
 type AllProps = MapStatePropsType & MapDispatchPropsType & OwnPropsType;
 
 const mapStateToProps = (state: AppState): MapStatePropsType => ({
-  categories: state.categoryChooser.categories,
-  currentCategory: state.categoryChooser.manageCurrentCategory
+  categories: state.categories.categoriesList,
+  currentCategory: state.categories.currentManagedCategory
 });
 
 const mapDispatchToProps: MapDispatchPropsType = ({

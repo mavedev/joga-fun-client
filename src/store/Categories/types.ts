@@ -3,9 +3,9 @@ export const MANAGE_SET_CURRENT_CATEGORY = 'SET_CURRENT_CATEGORY';
 export const FILTER_SET_CURRENT_CATEGORY = 'FILTER_SET_CURRENT_CATEGORY';
 
 export type CategoriesState = {
-  categories: string[];
-  manageCurrentCategory: string;
-  filterCurrentCategory: string | null;
+  categoriesList: string[];
+  currentManagedCategory: string;
+  currentFilteredCategory: string | null;
 };
 
 type SetCategoriesActionType = {

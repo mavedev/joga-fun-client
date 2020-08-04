@@ -20,7 +20,7 @@ type AllProps = AllInjectedProps & { children?: React.ReactNode; };
 
 /* State props connection. */
 const mapStateToProps = (state: AppState): MapStateProps => ({
-  categories: state.categoryChooser.categories
+  categories: state.categories.categoriesList
 });
 
 /* State dispatch function connection. */

@@ -9,7 +9,7 @@ import { postsReducer } from './posts/reducers';
 import { AppActionType } from './types';
 
 const rootReducer = combineReducers({
-  categoryChooser: categoriesChooserReducer,
+  categories: categoriesChooserReducer,
   posts: postsReducer,
   auth: loginReducer
 });
