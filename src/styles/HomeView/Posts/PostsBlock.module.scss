@@ -1,6 +1,12 @@
+@import '../../variables';
+
 .PostsAreaWrapper {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+}
+
+.PostWrapper {
+  margin-bottom: $spacing-default;
 }

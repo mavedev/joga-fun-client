@@ -10,7 +10,15 @@ import PostsBlockTitle from './PostsBlockTitle';
 const PostsBlock: React.FC<{}> = () => (
   <BCol md='8' className={cn['PostsAreaWrapper']}>
     <PostsBlockTitle />
-    <Post />
+    <div className={cn['PostWrapper']}>
+      <Post />
+    </div>
+    <div className={cn['PostWrapper']}>
+      <Post />
+    </div>
+    <div className={cn['PostWrapper']}>
+      <Post />
+    </div>
   </BCol>
 );
 
