@@ -63,9 +63,9 @@ const Preloader: React.FC<AllProps> = ({
   /* Loading posts quantity. */
   useEffect(() => {
     API.getPostsQuantity().then((response) => {
-      setPostsQuantity();
+      setPostsQuantity(retrieve(response.data, 0));
     });
-  });
+  }, [postsQuantity, setPostsQuantity]);
 
   return <>{children}</>;
 };
