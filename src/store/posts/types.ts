@@ -1,14 +1,8 @@
+import { PostDTO as Post } from 'dal';
+
 export const SET_CURRENT_POSTS_CHUNK_NUMBER = 'SET_CURRENT_POSTS_CHUNK_NUMBER';
 export const SET_CURRENT_POSTS_CHUNK = 'SET_CURRENT_POSTS_CHUNK';
 export const SET_POSTS_QUANTITY = 'SET_POSTS_QUANTITY';
-
-export type Post = {
-  title: string;
-  imageURL: string;
-  body: string;
-  created: string;
-  category: string;
-};
 
 export type PostsState = {
   postsQuantity: number;

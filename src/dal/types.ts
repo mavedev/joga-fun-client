@@ -12,4 +12,12 @@ export const isCategoriesDTO = (obj: any): obj is CategoriesDTO => (
   && obj.results.every((element: any) => isCategoryDTO(element))
 );
 
+export type PostDTO = {
+  title: string;
+  imageURL: string;
+  body: string;
+  created: string;
+  category: string;
+};
+
 export type RootDTO = CategoriesDTO;

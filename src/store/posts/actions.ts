@@ -1,12 +1,12 @@
 import { Dispatch } from 'redux';
 
 import API from 'api';
+import { PostDTO as Post } from 'dal';
 import {
   SET_CURRENT_POSTS_CHUNK_NUMBER,
   SET_CURRENT_POSTS_CHUNK,
   SET_POSTS_QUANTITY,
-  PostsActiontype,
-  Post
+  PostsActiontype
 } from './types';
 import { AppActionType } from '../types';
 

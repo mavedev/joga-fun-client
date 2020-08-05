@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { AppState, Post, createFilterSetCurrentCategory } from 'store';
+import { AppState, createFilterSetCurrentCategory } from 'store';
+import { PostDTO as Post } from 'dal';
 
 /* Store state props type. */
 type MapStateProps = {

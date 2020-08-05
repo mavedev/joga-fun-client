@@ -3,23 +3,27 @@ import {
   Card as BCard
 } from 'react-bootstrap';
 
+import { PostDTO } from 'dal';
 import cx from 'classnames';
 import styles from 'styles/HomeView/Posts/Post.module.scss';
 
-const Post = () => (
+/* Normal component's props that are to be passed. */
+type OwnProps = { data: PostDTO; };
+
+const Post: React.FC<OwnProps> = ({ data }: OwnProps) => (
   <div className='MainWrapper'>
     <BCard>
       <img
         className='card-img-top'
-        src='https://magic-online.ru/wp-content/cache/thumb/c1/123bd2d06e004c1_750x300.jpg'
-        alt='Card cap'
+        src={data.imageURL}
+        alt=''
       />
       <div className='card-body'>
-        <h2 className='card-title'>Будущая первая статья</h2>
+        <h2 className='card-title'>{data.title}</h2>
         <p
           className='card-text'
         >
-          Краткое описание будущей первой статьи.
+          {`${data.body.slice(0, 100)} ...`}
         </p>
         <a
           href='/'
@@ -33,7 +37,7 @@ const Post = () => (
         </a>
       </div>
       <div className='card-footer text-muted'>
-        <p>19 июня 2020</p>
+        <p>{data.created}</p>
       </div>
     </BCard>
   </div>
