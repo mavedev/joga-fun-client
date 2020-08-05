@@ -1,11 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { AppState, createFilterSetCurrentCategory } from 'store';
+import { AppState, Post, createFilterSetCurrentCategory } from 'store';
 
 /* Store state props type. */
 type MapStateProps = {
   postsQuantity: number;
+  currentPostsChunkNumber: number;
+  currentPostsChunk: Post[];
   currentCategory: string | null;
 };
 /* Store dispatch props type. */
@@ -19,6 +21,8 @@ type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapStatetoProps = (state: AppState): MapStateProps => ({
   postsQuantity: state.posts.postsQuantity,
+  currentPostsChunkNumber: state.posts.currentPostsChunkNumber,
+  currentPostsChunk: state.posts.currentPostsChunk,
   currentCategory: state.categories.currentFilteredCategory
 });
 
