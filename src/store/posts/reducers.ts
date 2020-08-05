@@ -8,7 +8,7 @@ import {
 
 const initialState: PostsState = {
   postsQuantity: 0,
-  currentPostsChunkNumber: 0,
+  currentPostsChunkNumber: 1,
   currentPostsChunk: []
 };
 

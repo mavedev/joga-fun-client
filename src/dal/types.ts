@@ -12,6 +12,14 @@ export const isCategoriesDTO = (obj: any): obj is CategoriesDTO => (
   && obj.results.every((element: any) => isCategoryDTO(element))
 );
 
+export type PostsQuantityDTO = {
+  result: number;
+}
+
+export const isPostsQuantityDTO = (obj: any): obj is PostsQuantityDTO => (
+  typeof obj.result === 'number'
+);
+
 export type PostDTO = {
   title: string;
   imageURL: string;
