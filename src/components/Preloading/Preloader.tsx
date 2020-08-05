@@ -14,7 +14,7 @@ import { retrieve, PostDTO as Post } from 'dal';
 type MapStateProps = {
   categories: string[];
   postsQuantity: number;
-  currentPostsChunk: Post[];
+  currentPostChunkNumber: number;
 };
 /* Store dispatch props type. */
 type MapDispatchProps = {
@@ -32,7 +32,7 @@ type AllProps = AllInjectedProps & { children?: React.ReactNode; };
 const mapStateToProps = (state: AppState): MapStateProps => ({
   categories: state.categories.categoriesList,
   postsQuantity: state.posts.postsQuantity,
-  currentPostsChunk: state.posts.currentPostsChunk
+  currentPostChunkNumber: state.posts.currentPostsChunkNumber
 });
 
 /* State dispatch function connection. */
@@ -47,8 +47,8 @@ const Preloader: React.FC<AllProps> = ({
   setCategories,
   postsQuantity,
   setPostsQuantity,
-  currentPostsChunk,
   setCurrentPostsChunk,
+  currentPostChunkNumber,
   children
 }: AllProps) => {
   /* Stringified categories, needed for comparation. */
@@ -66,6 +66,12 @@ const Preloader: React.FC<AllProps> = ({
       setPostsQuantity(retrieve(response.data, 0));
     });
   }, [postsQuantity, setPostsQuantity]);
+
+  useEffect(() => {
+    API.getPostsChunk(currentPostChunkNumber).then((response) => {
+      setCurrentPostsChunk(retrieve(response.data, [] as Post[]));
+    });
+  }, [currentPostChunkNumber, setCurrentPostsChunk]);
 
   return <>{children}</>;
 };
