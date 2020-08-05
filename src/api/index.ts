@@ -19,7 +19,11 @@ class API {
 
   public static getPostsQuantity = (): APIResponse => API.instance.get(
     'posts/quantity', {}
-  )
+  );
+
+  public static getPostsChunk = (chunk: number) => API.instance.get(
+    `posts/${chunk}`, {}
+  );
 }
 
 export default API;
