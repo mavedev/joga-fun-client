@@ -14,13 +14,11 @@ type OwnProps = { posts: PostDTO[]; };
 const PostsBlock: React.FC<OwnProps> = ({ posts }: OwnProps) => (
   <BCol md='8' className={cn['PostsAreaWrapper']}>
     <PostsBlockTitle />
-    {
-      posts.map((post: PostDTO) => (
-        <div className={cn['PostWrapper']}>
-          <Post data={post} />
-        </div>
-      ))
-    }
+    {posts.map((post: PostDTO) => (
+      <div key={post.title} className={cn['PostWrapper']}>
+        <Post data={post} />
+      </div>
+    ))}
   </BCol>
 );
 

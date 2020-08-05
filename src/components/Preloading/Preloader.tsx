@@ -8,13 +8,20 @@ import {
   createSetCurrentPostChunk,
 } from 'store';
 import API from 'api';
-import { retrieve, PostDTO as Post } from 'dal';
+import {
+  retrieve,
+  CategoriesDTO,
+  PostsQuantityDTO,
+  PostDTO as Post,
+  PostsDTO
+} from 'dal';
 
 /* Store state props type. */
 type MapStateProps = {
   categories: string[];
   postsQuantity: number;
-  currentPostChunkNumber: number;
+  currentPostsChunkNumber: number;
+  currentPostsChunk: Post[];
 };
 /* Store dispatch props type. */
 type MapDispatchProps = {
@@ -32,7 +39,8 @@ type AllProps = AllInjectedProps & { children?: React.ReactNode; };
 const mapStateToProps = (state: AppState): MapStateProps => ({
   categories: state.categories.categoriesList,
   postsQuantity: state.posts.postsQuantity,
-  currentPostChunkNumber: state.posts.currentPostsChunkNumber
+  currentPostsChunkNumber: state.posts.currentPostsChunkNumber,
+  currentPostsChunk: state.posts.currentPostsChunk
 });
 
 /* State dispatch function connection. */
@@ -48,7 +56,8 @@ const Preloader: React.FC<AllProps> = ({
   postsQuantity,
   setPostsQuantity,
   setCurrentPostsChunk,
-  currentPostChunkNumber,
+  currentPostsChunkNumber,
+  currentPostsChunk,
   children
 }: AllProps) => {
   /* Stringified categories, needed for comparation. */
@@ -56,22 +65,25 @@ const Preloader: React.FC<AllProps> = ({
   /* Loading categories. */
   useEffect(() => {
     API.getCategories().then((response) => {
-      setCategories(retrieve(response.data, [] as string[]));
+      setCategories(retrieve(response.data as CategoriesDTO, [] as string[]));
     });
   }, [stringifiedCategories, setCategories]);
 
   /* Loading posts quantity. */
   useEffect(() => {
     API.getPostsQuantity().then((response) => {
-      setPostsQuantity(retrieve(response.data, 0));
+      setPostsQuantity(retrieve(response.data as PostsQuantityDTO, 0));
     });
   }, [postsQuantity, setPostsQuantity]);
 
+  /* Stringified current posts chunk, needed for comparation. */
+  const stringifiedCurrentPostsChunk = JSON.stringify(currentPostsChunk);
+  /* Loading current posts chunk. */
   useEffect(() => {
-    API.getPostsChunk(currentPostChunkNumber).then((response) => {
-      setCurrentPostsChunk(retrieve(response.data, [] as Post[]));
+    API.getPostsChunk(currentPostsChunkNumber).then((response) => {
+      setCurrentPostsChunk(retrieve(response.data as PostsDTO, [] as Post[]));
     });
-  }, [currentPostChunkNumber, setCurrentPostsChunk]);
+  }, [stringifiedCurrentPostsChunk, currentPostsChunkNumber, setCurrentPostsChunk]);
 
   return <>{children}</>;
 };
