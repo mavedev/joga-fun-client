@@ -6,10 +6,12 @@ import {
 import { categoriesChooserReducer } from './categories/reducers';
 import { loginReducer } from './auth/reducers';
 import { postsReducer } from './posts/reducers';
+import { localesReducer } from './locales/reducers';
 import { AppActionType } from './types';
 
 const rootReducer = combineReducers({
   categories: categoriesChooserReducer,
+  locales: localesReducer,
   posts: postsReducer,
   auth: loginReducer
 });
@@ -28,4 +30,5 @@ export const store = createStore(
 export * from './categories/actions';
 export * from './auth/actions';
 export * from './posts/actions';
+export * from './locales/action';
 export * from './types';
