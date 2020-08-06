@@ -20,4 +20,5 @@ const Sidebar: React.FC<{}> = () => (
   </BCol>
 );
 
+/* Using memoizing because the sidebar is rarely changed by itself. */
 export default React.memo(Sidebar);
