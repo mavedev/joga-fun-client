@@ -12,12 +12,12 @@ export const createSetCategories = (categories: string[]): CAType => ({
   payload: categories
 });
 
-export const createManageSetCurrentCategory = (category: string): CAType => ({
+export const createSetCurrentManagedCategory = (category: string): CAType => ({
   type: MANAGE_SET_CURRENT_CATEGORY,
   payload: category
 });
 
-export const createFilterSetCurrentCategory = (category: string): CAType => ({
+export const createSetCurrentFilteredCategory = (category: string): CAType => ({
   type: FILTER_SET_CURRENT_CATEGORY,
   payload: category
 });

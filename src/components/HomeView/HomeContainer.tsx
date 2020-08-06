@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { AppState, createFilterSetCurrentCategory } from 'store';
+import { AppState, createSetCurrentFilteredCategory } from 'store';
 import { PostDTO as Post } from 'dal';
 
 /* Store state props type. */
@@ -28,7 +28,7 @@ const mapStatetoProps = (state: AppState): MapStateProps => ({
 });
 
 const mapDispatchToProps: MapDispatchProps = {
-  setCurrentFilteredCategory: createFilterSetCurrentCategory
+  setCurrentFilteredCategory: createSetCurrentFilteredCategory
 };
 
 /* A wrapper for the Home components getting info from the store. */

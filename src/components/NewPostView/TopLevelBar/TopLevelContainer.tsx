@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import {
   AppState,
-  createManageSetCurrentCategory
+  createSetCurrentManagedCategory
 } from 'store';
 import cn from 'styles/NewPostView/TopLevelBar/TopLevelContainer.module.scss';
 import CategoryChooser from './CategoryChooser';
@@ -30,7 +30,7 @@ const mapStateToProps = (state: AppState): MapStatePropsType => ({
 });
 
 const mapDispatchToProps: MapDispatchPropsType = ({
-  setCurrentCategory: createManageSetCurrentCategory
+  setCurrentCategory: createSetCurrentManagedCategory
 });
 
 /* A wrapper for the CategoriesChooser and the PusblishButton
