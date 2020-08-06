@@ -11,9 +11,14 @@ import cn from 'styles/Categories/CategoriesList.module.scss';
 import CategoryItem from './CategoryItem';
 
 /* Normal component's props that are to be passed. */
-type OwnProps = { categories: string[]; };
+type OwnProps = {
+  categories: string[];
+  setCurrentFilteredCategory: (category: string) => void;
+};
 
-const CategoriesList: React.FC<OwnProps> = ({ categories }: OwnProps) => {
+const CategoriesList: React.FC<OwnProps> = ({
+  categories, setCurrentFilteredCategory
+}: OwnProps) => {
   const { t } = useTranslation();
 
   return (
@@ -25,7 +30,11 @@ const CategoriesList: React.FC<OwnProps> = ({ categories }: OwnProps) => {
             <div className='col-lg-12'>
               <ul className='list-unstyled mb-0'>
                 {categories.map((value: string) => (
-                  <CategoryItem key={value} name={value} link='/' />
+                  <CategoryItem
+                    action={setCurrentFilteredCategory}
+                    key={value}
+                    name={value}
+                  />
                 ))}
               </ul>
             </div>

@@ -24,8 +24,13 @@ const mapDispatchToProps: MapDispatchProps = {
 };
 
 /* A wrapper for the Categories component getting categories from the store. */
-const CategoriesContainer: React.FC<AllProps> = ({ categories }: AllProps) => (
-  <CategoriesList categories={categories} />
+const CategoriesContainer: React.FC<AllProps> = ({
+  categories, setCurrentFilteredCategory
+}: AllProps) => (
+  <CategoriesList
+    categories={categories}
+    setCurrentFilteredCategory={setCurrentFilteredCategory}
+  />
 );
 
 export default connect(
