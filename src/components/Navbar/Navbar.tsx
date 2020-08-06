@@ -26,11 +26,20 @@ const Navbar: React.FC<{}> = () => (
     <NavbarCollapse className={cn['NavbarCollapse__nav']}>
       <NavbarList>
         {/* The Facebook link. */}
-        <NavListItem link={constants.LINK_FB} className='fa fa-facebook' />
+        <NavListItem
+          link={process.env.REACT_APP_LINK_FB || '/'}
+          className='fa fa-facebook'
+        />
         {/* The Twitter link. */}
-        <NavListItem link={constants.LINK_TW} className='fa fa-twitter' />
+        <NavListItem
+          link={process.env.REACT_APP_LINK_TW || '/'}
+          className='fa fa-twitter'
+        />
         {/* The VK link. */}
-        <NavListItem link={constants.LINK_VK} className='fa fa-vk' />
+        <NavListItem
+          link={process.env.REACT_APP_LINK_VK || '/'}
+          className='fa fa-vk'
+        />
       </NavbarList>
     </NavbarCollapse>
   </BNavbar>

@@ -19,7 +19,7 @@ const Socials: React.FC<{}> = () => {
         <BRow className={cx('justify-content-center', 'align-items-center')}>
           {/* Facebook. */}
           <a
-            href={process.env.REACT_APP_LINK_FB}
+            href={process.env.REACT_APP_LINK_FB || '/'}
             className={cx(cn['socials__button'], cn['socials__button--facebook'])}
           >
             <i className={cx('fa', 'fa-facebook')} />
@@ -27,7 +27,7 @@ const Socials: React.FC<{}> = () => {
 
           {/* Twitter. */}
           <a
-            href={process.env.REACT_APP_LINK_TW}
+            href={process.env.REACT_APP_LINK_TW || '/'}
             className={cx(cn['socials__button'], cn['socials__button--twitter'])}
           >
             <i className={cx('fa', 'fa-twitter')} />
@@ -35,7 +35,7 @@ const Socials: React.FC<{}> = () => {
 
           {/* VK. */}
           <a
-            href={process.env.REACT_APP_LINK_VK}
+            href={process.env.REACT_APP_LINK_VK || '/'}
             className={cx(cn['socials__button'], cn['socials__button--vk'])}
           >
             <i className={cx('fa', 'fa-vk')} />
