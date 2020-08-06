@@ -36,4 +36,6 @@ const Navbar: React.FC<{}> = () => (
   </BNavbar>
 );
 
-export default Navbar;
+/* Use memoizing because the navbar is independent
+   from the outside data. */
+export default React.memo(Navbar);
