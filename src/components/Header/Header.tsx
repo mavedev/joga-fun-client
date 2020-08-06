@@ -24,4 +24,6 @@ const Header = () => {
   );
 };
 
+/* Do not use memoizing because of slow display
+   of the background image on refresh. */
 export default Header;
