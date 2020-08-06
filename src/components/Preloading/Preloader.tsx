@@ -20,6 +20,7 @@ import {
 type MapStateProps = {
   categories: string[];
   postsQuantity: number;
+  currentFilteredCategory: string | null;
   currentPostsChunkNumber: number;
   currentPostsChunk: Post[];
 };
@@ -39,6 +40,7 @@ type AllProps = AllInjectedProps & { children?: React.ReactNode; };
 const mapStateToProps = (state: AppState): MapStateProps => ({
   categories: state.categories.categoriesList,
   postsQuantity: state.posts.postsQuantity,
+  currentFilteredCategory: state.categories.currentFilteredCategory,
   currentPostsChunkNumber: state.posts.currentPostsChunkNumber,
   currentPostsChunk: state.posts.currentPostsChunk
 });
@@ -56,6 +58,7 @@ const Preloader: React.FC<AllProps> = ({
   postsQuantity,
   setPostsQuantity,
   setCurrentPostsChunk,
+  currentFilteredCategory,
   currentPostsChunkNumber,
   currentPostsChunk,
   children
@@ -80,10 +83,18 @@ const Preloader: React.FC<AllProps> = ({
   const stringifiedCurrentPostsChunk = JSON.stringify(currentPostsChunk);
   /* Loading current posts chunk. */
   useEffect(() => {
-    API.getPostsChunk(currentPostsChunkNumber).then((response) => {
+    API.getPostsChunk(
+      currentFilteredCategory,
+      currentPostsChunkNumber
+    ).then((response) => {
       setCurrentPostsChunk(retrieve(response.data as PostsDTO, [] as Post[]));
     });
-  }, [stringifiedCurrentPostsChunk, currentPostsChunkNumber, setCurrentPostsChunk]);
+  }, [
+    stringifiedCurrentPostsChunk,
+    currentFilteredCategory,
+    currentPostsChunkNumber,
+    setCurrentPostsChunk
+  ]);
 
   return <>{children}</>;
 };

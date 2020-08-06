@@ -17,12 +17,15 @@ class API {
   ): APIResponse => API.instance
     .post('login', {}, { auth: { username, password } })
 
-  public static getPostsQuantity = (): APIResponse => API.instance.get(
-    'posts/quantity', {}
+  public static getPostsChunk = (
+    filteredCategory: string | null,
+    chunk: number
+  ): APIResponse => API.instance.get(
+    `posts/${filteredCategory || 'all'}/${chunk}`, {}
   );
 
-  public static getPostsChunk = (chunk: number) => API.instance.get(
-    `posts/${chunk}`, {}
+  public static getPostsQuantity = (): APIResponse => API.instance.get(
+    'posts/quantity', {}
   );
 }
 
