@@ -12,6 +12,6 @@ const Footer: React.FC<{}> = () => (
   </div>
 );
 
-/* Use memoizing because the footer is completely
-   static, unchangeable and data-independent in itself. */
+/* Use memoizing because the footer is independent
+   from the outside data. */
 export default React.memo(Footer);

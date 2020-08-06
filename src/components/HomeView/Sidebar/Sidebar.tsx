@@ -20,4 +20,4 @@ const Sidebar: React.FC<{}> = () => (
   </BCol>
 );
 
-export default Sidebar;
+export default React.memo(Sidebar);

@@ -24,6 +24,6 @@ const Header = () => {
   );
 };
 
-/* Do not use memoizing because of slow display
-   of the background image on refresh. */
-export default Header;
+/* Use memoizing because the header is independent
+   from the outside data. */
+export default React.memo(Header);
