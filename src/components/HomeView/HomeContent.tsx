@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container as BContainer, Row as BRow } from 'react-bootstrap';
-import i18nextInstance from 'i18next';
 
 import cn from 'styles/HomeView/HomeContent.module.scss';
 import PostsContainer from './Posts';
@@ -14,7 +13,7 @@ const HomeContent: React.FC<{}> = () => (
         {/* Posts column. 8/12 of the page width. */}
         <PostsContainer />
         {/* Sidebar column. 4/12 of the page width. */}
-        <Sidebar localizer={i18nextInstance} />
+        <Sidebar />
       </BRow>
     </div>
   </BContainer>

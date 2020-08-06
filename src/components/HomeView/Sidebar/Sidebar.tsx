@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col as BCol } from 'react-bootstrap';
-import { i18n } from 'i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-calendar/dist/Calendar.css';
@@ -10,15 +9,15 @@ import CategoriesContainer from 'components/Categories';
 import Socials from './Socials';
 
 /* Normal props of the component. */
-type OwnProps = { localizer: i18n; };
+type OwnProps = { locale: string; };
 
 /* Sidebar column. */
-const Sidebar: React.FC<OwnProps> = ({ localizer }: OwnProps) => (
+const Sidebar: React.FC<OwnProps> = ({ locale }: OwnProps) => (
   <BCol md='4' className='Sidebar'>
     {/* Posts categories list. */}
     <CategoriesContainer />
     {/* React Calendar instance. */}
-    <Calendar className={cn['Sidebar__Calendar']} locale={localizer.language} />
+    <Calendar className={cn['Sidebar__Calendar']} locale={locale} />
     {/* Owner's social buttons. */}
     <Socials />
   </BCol>
