@@ -3,7 +3,7 @@ import { Button as BButton } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { i18n } from 'i18next';
 
-import { AppState, createSetLocale } from 'store';
+import { createSetLocale } from 'store';
 
 import 'styles/overrides/bootstrap.scss';
 import cn from 'styles/Navbar/LangSwitcher.module.scss';
