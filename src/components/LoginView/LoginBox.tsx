@@ -12,7 +12,7 @@ type OwnProps = {
 };
 
 /* Main presentational component. */
-const LoginBox = ({ doLoginCallback }: OwnProps) => {
+const LoginBox: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => {
   return (
     <div className='login-box'>
       <div className={cn['BoxWrapper']}>

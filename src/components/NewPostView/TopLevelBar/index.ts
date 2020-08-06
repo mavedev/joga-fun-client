@@ -1,3 +1,1 @@
-import TopLevelContainer from './TopLevelContainer';
-
-export default TopLevelContainer;
+export { default } from './TopLevelContainer';

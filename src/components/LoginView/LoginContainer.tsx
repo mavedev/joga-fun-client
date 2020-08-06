@@ -23,7 +23,7 @@ const mapDispatchToProps: MapDispatchProps = {
 
 /* The container for the login box passing store's auth dispatcher.
    Redirects to home in case of successful login. */
-const LoginContainer = ({ doLogin }: AllProps) => (
+const LoginContainer: React.FC<AllProps> = ({ doLogin }: AllProps) => (
   <LoginBox doLoginCallback={doLogin} />
 );
 

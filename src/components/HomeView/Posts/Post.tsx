@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 type OwnProps = { data: PostDTO; };
 
 const Post: React.FC<OwnProps> = ({ data }: OwnProps) => {
-  const { t } = useTranslation();
+  const { t: translator } = useTranslation();
 
   return (
     <div className='MainWrapper'>
@@ -29,7 +29,7 @@ const Post: React.FC<OwnProps> = ({ data }: OwnProps) => {
             {`${data.body.slice(0, 100)} ...`}
           </p>
           <NavLink to='/login' className={cx('btn', 'btn-primary')}>
-            {`${t('ReadFull')} `}
+            {`${translator('ReadFull')} `}
             &rarr;
           </NavLink>
         </div>

@@ -11,12 +11,12 @@ type OwnProps = { title: string | null; };
 
 /* The publications block title. */
 const PostsBlockTitle: React.FC<OwnProps> = ({ title }: OwnProps) => {
-  const { t } = useTranslation();
+  const { t: translator } = useTranslation();
 
   return (
     <h1 className={cx(cn['PostsBlockTitle'], 'my-4')}>
-      {`${t('Publications')}:`}
-      <small>{` ${title || t('CategoriesAll')} `}</small>
+      {`${translator('Publications')}:`}
+      <small>{` ${title || translator('CategoriesAll')} `}</small>
     </h1>
   );
 };

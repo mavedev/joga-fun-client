@@ -8,7 +8,7 @@ import cn from 'styles/Footer/FooterTopPane.module.scss';
 
 /* The main block with info. */
 const FooterTopPane: React.FC<{}> = () => {
-  const { t } = useTranslation();
+  const { t: translator } = useTranslation();
 
   return (
     <div className={cn['FooterWrapper--main']}>
@@ -24,9 +24,7 @@ const FooterTopPane: React.FC<{}> = () => {
         cn['FooterWrapper__card--with-contacts']
       )}
       >
-        {t('Feedback')}
-        {': '}
-        {process.env.REACT_APP_EMAIL}
+        {`${translator('Feedback')}: ${process.env.REACT_APP_EMAIL}`}
       </div>
     </div>
   );

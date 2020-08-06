@@ -7,7 +7,7 @@ import {
 
 import styles from 'styles/HomeView/Socials.module.scss';
 
-const Socials = () => (
+const Socials: React.FC<{}> = () => (
   <div>
     <BColumn>
       {/* Third-party classes: my-4. */}

@@ -6,7 +6,7 @@ import cn from 'styles/NewPostView/NewPostBox.module.scss';
 import 'react-quill/dist/quill.snow.css';
 import 'styles/overrides/Quill.scss';
 
-const NewPostBox = () => {
+const NewPostBox: React.FC<{}> = () => {
   const quillInstance = React.createRef<ReactQuill>();
   return (
     <div className={cn['MainWrapper']}>

@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Card as BCard,
-  Row as BRow
-} from 'react-bootstrap';
+import { Card as BCard, Row as BRow } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,19 +16,19 @@ type OwnProps = {
 const CategoriesList: React.FC<OwnProps> = ({
   categories, setCurrentFilteredCategory
 }: OwnProps) => {
-  const { t } = useTranslation();
+  const { t: translator } = useTranslation();
 
   return (
     <div>
       <BCard className='my-4'>
-        <h5 className='card-header'>{t('Categories')}</h5>
+        <h5 className='card-header'>{translator('Categories')}</h5>
         <BCard.Body className={cn['ListWrapper--Centered']}>
           <BRow>
             <div className='col-lg-12'>
               <ul className='list-unstyled mb-0'>
                 <CategoryItem
                   action={() => { setCurrentFilteredCategory(null); }}
-                  name={t('CategoriesAll')}
+                  name={translator('CategoriesAll')}
                 />
                 {categories.map((value: string) => (
                   <CategoryItem
