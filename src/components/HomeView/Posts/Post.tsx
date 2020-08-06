@@ -17,6 +17,7 @@ const Post: React.FC<OwnProps> = ({ data }: OwnProps) => (
         className='card-img-top'
         src={data.imageURL}
         alt=''
+        crossOrigin='anonymous'
       />
       <div className='card-body'>
         <h2 className='card-title'>{data.title}</h2>
