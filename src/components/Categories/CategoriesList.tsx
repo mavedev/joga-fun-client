@@ -45,4 +45,5 @@ const CategoriesList: React.FC<OwnProps> = ({
   );
 };
 
-export default CategoriesList;
+/* Use memoizing because categories updates really seldom. */
+export default React.memo(CategoriesList);

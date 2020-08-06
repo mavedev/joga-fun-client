@@ -1,3 +1,5 @@
+@import '../variables';
+
 /* Custom font for the header. */
 @font-face {
   font-family: 'Lobster-Regular';
@@ -6,6 +8,7 @@
 
 /* Top-lever block wrapper. */
 .Header-wrapper {
+  background-color: $color-background-hotter;
   background: url(~assets/images/header-background-min.jpg);
   text-align: center;
   width: 100%;

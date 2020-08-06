@@ -23,4 +23,7 @@ const CategoryItem: React.FC<OwnProps> = ({ name, action }: OwnProps) => (
   </li>
 );
 
+/* Use memoizing because list containing category items
+   is changed on language change, but items do not by design
+   (there names are language-independent.) */
 export default React.memo(CategoryItem);
