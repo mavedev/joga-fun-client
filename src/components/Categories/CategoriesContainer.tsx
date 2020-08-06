@@ -8,7 +8,7 @@ import CategoriesList from './CategoriesList';
 type MapStateProps = { categories: string[]; };
 /* Store dispatch props type. */
 type MapDispatchProps = {
-  setCurrentFilteredCategory: (category: string) => void;
+  setCurrentFilteredCategory: (category: string | null) => void;
 };
 /* Normal component's props that are to be passed. */
 type OwnProps = {};

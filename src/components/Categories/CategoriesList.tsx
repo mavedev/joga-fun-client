@@ -13,7 +13,7 @@ import CategoryItem from './CategoryItem';
 /* Normal component's props that are to be passed. */
 type OwnProps = {
   categories: string[];
-  setCurrentFilteredCategory: (category: string) => void;
+  setCurrentFilteredCategory: (category: string | null) => void;
 };
 
 const CategoriesList: React.FC<OwnProps> = ({
@@ -29,9 +29,13 @@ const CategoriesList: React.FC<OwnProps> = ({
           <BRow>
             <div className='col-lg-12'>
               <ul className='list-unstyled mb-0'>
+                <CategoryItem
+                  action={() => { setCurrentFilteredCategory(null); }}
+                  name={t('CategoriesAll')}
+                />
                 {categories.map((value: string) => (
                   <CategoryItem
-                    action={setCurrentFilteredCategory}
+                    action={() => { setCurrentFilteredCategory(value); }}
                     key={value}
                     name={value}
                   />

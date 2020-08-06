@@ -17,7 +17,7 @@ export const createSetCurrentManagedCategory = (category: string): CAType => ({
   payload: category
 });
 
-export const createSetCurrentFilteredCategory = (category: string): CAType => ({
+export const createSetCurrentFilteredCategory = (category: string | null): CAType => ({
   type: FILTER_SET_CURRENT_CATEGORY,
   payload: category
 });
