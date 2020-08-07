@@ -3,7 +3,7 @@ import { Col as BCol } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-calendar/dist/Calendar.css';
-import cn from 'styles/HomeView/Sidebar.module.scss';
+import cn from 'styles/HomeView/Sidebar/Sidebar.module.scss';
 import Calendar from 'react-calendar';
 import CategoriesContainer from 'components/Categories';
 import Socials from './Socials';
