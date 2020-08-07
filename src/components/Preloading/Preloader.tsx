@@ -11,7 +11,6 @@ import API from 'api';
 import {
   retrieve,
   CategoriesDTO,
-  PostsQuantityDTO,
   PostDTO as Post,
   PostsDTO
 } from 'dal';
@@ -87,7 +86,9 @@ const Preloader: React.FC<AllProps> = ({
       currentFilteredCategory,
       currentPostsChunkNumber
     ).then((response) => {
-      setCurrentPostsChunk(retrieve(response.data as PostsDTO, [] as Post[]));
+      const retrievedPosts = retrieve<Post[]>(response.data as PostsDTO, []);
+      setCurrentPostsChunk(retrievedPosts);
+      setPostsQuantity(retrievedPosts.length);
     });
   }, [
     stringifiedCurrentPostsChunk,

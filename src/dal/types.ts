@@ -1,15 +1,14 @@
+/** Category info that is to be recieved from the server. */
 export type CategoryDTO = {
   name: string;
 }
 
+/** Categories info that is to be recieved from the server. */
 export type CategoriesDTO = {
   results: CategoryDTO[]
 }
 
-export type PostsQuantityDTO = {
-  result: number;
-}
-
+/** Post info that is to be recieved from the server. */
 export type PostDTO = {
   title: string;
   imageURL: string;
@@ -18,25 +17,24 @@ export type PostDTO = {
   category: string;
 };
 
+/** Posts info that is to be recieved from the server. */
 export type PostsDTO = {
   results: PostDTO[];
 };
 
+/** Check CategoryDTO type. */
 export const isCategoryDTO = (obj: any): obj is CategoryDTO => (
   !!obj.name
   && typeof obj.name === 'string'
 );
 
+/** Check CategoriesDTO type. */
 export const isCategoriesDTO = (obj: any): obj is CategoriesDTO => (
   !!obj.results
   && obj.results.every((element: any) => isCategoryDTO(element))
 );
 
-export const isPostsQuantityDTO = (obj: any): obj is PostsQuantityDTO => (
-  !!obj.result
-  && typeof obj.result === 'number'
-);
-
+/** Check PostDTO type. */
 export const isPostDTO = (obj: any): obj is PostDTO => (
   !!obj.title && typeof obj.title === 'string'
   && !!obj.imageURL && typeof obj.imageURL === 'string'
@@ -45,11 +43,11 @@ export const isPostDTO = (obj: any): obj is PostDTO => (
   && !!obj.category && typeof obj.category === 'string'
 );
 
+/** Check PostsDTO type. */
 export const isPostsDTO = (obj: any): obj is PostsDTO => (
   !!obj.results
   && obj.results.every((element: any) => isPostDTO(element))
 );
 
-export type RootDTO = CategoriesDTO
-  | PostsQuantityDTO
-  | PostsDTO;
+/** All possible DTOs. */
+export type RootDTO = CategoriesDTO | PostsDTO;
