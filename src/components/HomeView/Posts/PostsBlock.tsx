@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import cn from 'styles/HomeView/Posts/PostsBlock.module.scss';
 import Post from './Post';
 import PostsBlockTitleContainer from './PostsBlockTitleContainer';
+import NavBlock from './NavBlock';
 
 /* Normal component's props that are to be passed. */
 type OwnProps = {
@@ -27,6 +28,7 @@ const PostsBlock: React.FC<OwnProps> = ({
         <Post data={post} />
       </div>
     ))}
+    <NavBlock />
   </BCol>
 );
 
