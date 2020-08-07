@@ -1,6 +1,3 @@
-import { Dispatch } from 'redux';
-
-import API from 'api';
 import { PostDTO as Post } from 'dal';
 import {
   SET_CURRENT_POSTS_CHUNK_NUMBER,
@@ -8,7 +5,6 @@ import {
   SET_CHUNKS_LEFT,
   PostsActiontype
 } from './types';
-import { AppActionType } from '../types';
 
 type PAType = PostsActiontype;
 
