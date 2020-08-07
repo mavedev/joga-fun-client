@@ -6,20 +6,33 @@ import NavButton from './NavButton';
 
 /* Normal component's props that are to be passed. */
 type OwnProps = {
+  enablePrev: boolean;
+  enableNext: boolean;
   nextAction: (...args: any[]) => void;
   prevAction: (...args: any[]) => void;
 };
 
-const NavBlock: React.FC<OwnProps> = ({ nextAction, prevAction }: OwnProps) => {
+/** The post block's navigation buttons node. */
+const NavBlock: React.FC<OwnProps> = ({
+  enablePrev, enableNext, nextAction, prevAction
+}: OwnProps) => {
   const { t: translator } = useTranslation();
 
   return (
     <div className={cn['NavBlock']}>
       <div className={cn['NavButtonWrapper']}>
-        <NavButton text={translator('LoadPrev')} action={prevAction} />
+        <NavButton
+          text={translator('LoadPrev')}
+          action={prevAction}
+          disabled={!enablePrev}
+        />
       </div>
       <div className={cn['NavButtonWrapper']}>
-        <NavButton text={translator('LoadMore')} action={nextAction} />
+        <NavButton
+          text={translator('LoadMore')}
+          action={nextAction}
+          disabled={!enableNext}
+        />
       </div>
     </div>
   );
