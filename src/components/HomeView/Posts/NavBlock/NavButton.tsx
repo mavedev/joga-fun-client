@@ -1,5 +1,7 @@
 import React from 'react';
+import { Button as BButton } from 'react-bootstrap';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import cn from 'styles/HomeView/Posts/NavBlock/NavButton.module.scss';
 
 /* Normal component's props that are to be passed. */
@@ -13,14 +15,14 @@ type OwnProps = {
 const NavButton: React.FC<OwnProps> = ({
   text, disabled, action
 }: OwnProps) => (
-  <button
-    type='button'
+  <BButton
+    variant='light'
     disabled={disabled}
     className={cn['NavButton']}
     onClick={action}
   >
     {text}
-  </button>
+  </BButton>
 );
 
 export default NavButton;

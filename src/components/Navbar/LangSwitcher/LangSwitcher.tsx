@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { Button as BButton } from 'react-bootstrap';
 import { i18n } from 'i18next';
 
-import 'styles/overrides/bootstrap.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import cn from 'styles/Navbar/LangSwitcher.module.scss';
 
 /* Normal props of the component. */
@@ -26,7 +26,6 @@ const LangSwitcher: React.FC<OwnProps> = ({
       {langs.map((value) => (
         <div key={value} className={cn['BButtonWrapper']}>
           <BButton
-            className='BButton'
             variant='light'
             onClick={() => { switchLanguage(value); }}
           >
