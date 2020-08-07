@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import * as constants from 'appConstants';
 import { AppState } from 'store';
 import { PostDTO as Post } from 'dal';
 import PostsBlock from './PostsBlock';
@@ -33,7 +32,6 @@ const PostsContainer: React.FC<AllProps> = ({
 }: AllProps) => (
   <PostsBlock
     chunksLeft={chunksLeft}
-    postsChunkCapacity={constants.POSTS_CHUNK_CAPACITY}
     currentPostsChunkNumber={currentPostsChunkNumber}
     currentPostsChunk={currentPostsChunk}
   />
