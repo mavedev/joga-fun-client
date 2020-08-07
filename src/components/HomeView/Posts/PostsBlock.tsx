@@ -8,13 +8,23 @@ import Post from './Post';
 import PostsBlockTitleContainer from './PostsBlockTitleContainer';
 
 /* Normal component's props that are to be passed. */
-type OwnProps = { posts: PostDTO[]; };
+type OwnProps = {
+  postsQuantity: number;
+  postsChunkCapacity: number;
+  currentPostsChunkNumber: number;
+  currentPostsChunk: PostDTO[];
+};
 
 /* Posts column. */
-const PostsBlock: React.FC<OwnProps> = ({ posts }: OwnProps) => (
+const PostsBlock: React.FC<OwnProps> = ({
+  postsQuantity,
+  postsChunkCapacity,
+  currentPostsChunkNumber,
+  currentPostsChunk
+}: OwnProps) => (
   <BCol md='8' className={cn['PostsAreaWrapper']}>
     <PostsBlockTitleContainer />
-    {posts.map((post: PostDTO) => (
+    {currentPostsChunk.map((post: PostDTO) => (
       <div key={post.title} className={cn['PostWrapper']}>
         <Post data={post} />
       </div>
