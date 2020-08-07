@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import {
   AppState,
   createSetCategories,
-  createSetPostsQuantity,
+  createSetChunksLeft,
   createSetCurrentPostChunk,
 } from 'store';
 import API from 'api';
@@ -25,7 +25,7 @@ type MapStateProps = {
 /* Store dispatch props type. */
 type MapDispatchProps = {
   setCategories: (categories: string[]) => void;
-  setPostsQuantity: (quantity: number) => void;
+  setChunksLeft: (quantity: number) => void;
   setCurrentPostsChunk: (posts: Post[]) => void;
 };
 /* Type for props that will be passed by the store. */
@@ -45,14 +45,14 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 /* State dispatch function connection. */
 const mapDispatchToProps: MapDispatchProps = ({
   setCategories: createSetCategories,
-  setPostsQuantity: createSetPostsQuantity,
+  setChunksLeft: createSetChunksLeft,
   setCurrentPostsChunk: createSetCurrentPostChunk
 });
 
 const Preloader: React.FC<AllProps> = ({
   categories,
   setCategories,
-  setPostsQuantity,
+  setChunksLeft,
   setCurrentPostsChunk,
   currentFilteredCategory,
   currentPostsChunkNumber,
@@ -76,20 +76,20 @@ const Preloader: React.FC<AllProps> = ({
       currentFilteredCategory,
       currentPostsChunkNumber
     ).then((response) => {
-      const defaultResult: PostsDTO = { total: 0, posts: [] };
+      const defaultResult: PostsDTO = { chunksLeft: 0, posts: [] };
       const retrievedPostsInfo = retrieve<PostsDTO>(
         response.data as PostsDTO,
         defaultResult
       );
       setCurrentPostsChunk(retrievedPostsInfo.posts);
-      setPostsQuantity(retrievedPostsInfo.total);
+      setChunksLeft(retrievedPostsInfo.chunksLeft);
     });
   }, [
     stringifiedCurrentPostsChunk,
     currentFilteredCategory,
     currentPostsChunkNumber,
     setCurrentPostsChunk,
-    setPostsQuantity
+    setChunksLeft
   ]);
 
   return <>{children}</>;

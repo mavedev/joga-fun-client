@@ -9,7 +9,7 @@ import PostsBlockTitleContainer from './PostsBlockTitleContainer';
 
 /* Normal component's props that are to be passed. */
 type OwnProps = {
-  postsQuantity: number;
+  chunksLeft: number;
   postsChunkCapacity: number;
   currentPostsChunkNumber: number;
   currentPostsChunk: PostDTO[];
@@ -17,7 +17,7 @@ type OwnProps = {
 
 /* Posts column. */
 const PostsBlock: React.FC<OwnProps> = ({
-  postsQuantity,
+  chunksLeft,
   postsChunkCapacity,
   currentPostsChunkNumber,
   currentPostsChunk

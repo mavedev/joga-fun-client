@@ -19,7 +19,7 @@ export type PostDTO = {
 
 /** Posts info that is to be recieved from the server. */
 export type PostsDTO = {
-  total: number;
+  chunksLeft: number;
   posts: PostDTO[];
 };
 
@@ -46,7 +46,7 @@ export const isPostDTO = (obj: any): obj is PostDTO => (
 
 /** Check PostsDTO type. */
 export const isPostsDTO = (obj: any): obj is PostsDTO => (
-  !!obj.total && typeof obj.total === 'number'
+  !!obj.chunksLeft && typeof obj.chunksLeft === 'number'
   && !!obj.posts && typeof obj.posts === 'object'
   && obj.posts.every((element: any) => isPostDTO(element))
 );

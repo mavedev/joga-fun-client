@@ -2,10 +2,10 @@ import { PostDTO as Post } from 'dal';
 
 export const SET_CURRENT_POSTS_CHUNK_NUMBER = 'SET_CURRENT_POSTS_CHUNK_NUMBER';
 export const SET_CURRENT_POSTS_CHUNK = 'SET_CURRENT_POSTS_CHUNK';
-export const SET_POSTS_QUANTITY = 'SET_POSTS_QUANTITY';
+export const SET_CHUNKS_LEFT = 'SET_CHUNKS_LEFT';
 
 export type PostsState = {
-  postsQuantity: number;
+  chunksLeft: number;
   currentPostsChunkNumber: number;
   currentPostsChunk: Post[];
 };
@@ -21,7 +21,7 @@ export type SetCurrentPostsChunkActionType = {
 };
 
 export type SetPostsQuantityActionType = {
-  type: typeof SET_POSTS_QUANTITY;
+  type: typeof SET_CHUNKS_LEFT;
   payload: number;
 };
 

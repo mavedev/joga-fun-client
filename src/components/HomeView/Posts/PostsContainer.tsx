@@ -8,7 +8,7 @@ import PostsBlock from './PostsBlock';
 
 /* Store state props type. */
 type MapStateProps = {
-  postsQuantity: number;
+  chunksLeft: number;
   currentPostsChunkNumber: number;
   currentPostsChunk: Post[];
 };
@@ -20,19 +20,19 @@ type OwnProps = {};
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapStateToProps = (state: AppState): MapStateProps => ({
-  postsQuantity: state.posts.postsQuantity,
+  chunksLeft: state.posts.chunksLeft,
   currentPostsChunkNumber: state.posts.currentPostsChunkNumber,
   currentPostsChunk: state.posts.currentPostsChunk
 });
 
 /* A wrapper for the PostsBlock component getting posts from the store. */
 const PostsContainer: React.FC<AllProps> = ({
-  postsQuantity,
+  chunksLeft,
   currentPostsChunkNumber,
   currentPostsChunk
 }: AllProps) => (
   <PostsBlock
-    postsQuantity={postsQuantity}
+    chunksLeft={chunksLeft}
     postsChunkCapacity={constants.POSTS_CHUNK_CAPACITY}
     currentPostsChunkNumber={currentPostsChunkNumber}
     currentPostsChunk={currentPostsChunk}
