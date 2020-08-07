@@ -1,7 +1,6 @@
 import {
   CategoriesDTO,
   PostsDTO,
-  PostDTO,
   RootDTO,
   isCategoriesDTO,
   isPostsDTO

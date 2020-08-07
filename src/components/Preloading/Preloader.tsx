@@ -88,7 +88,8 @@ const Preloader: React.FC<AllProps> = ({
     stringifiedCurrentPostsChunk,
     currentFilteredCategory,
     currentPostsChunkNumber,
-    setCurrentPostsChunk
+    setCurrentPostsChunk,
+    setPostsQuantity
   ]);
 
   return <>{children}</>;

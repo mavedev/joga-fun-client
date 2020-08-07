@@ -19,7 +19,7 @@ const LangSwitcher: React.FC<OwnProps> = ({
   const switchLanguage = useCallback((language: string) => {
     switcher.changeLanguage(language);
     setLocale(language);
-  }, [switcher]);
+  }, [switcher, setLocale]);
 
   return (
     <div className={cn['MainWrapper']}>
