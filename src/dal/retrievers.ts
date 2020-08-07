@@ -13,10 +13,10 @@ const retrieveCategories = (from: CategoriesDTO): string[] => (
 );
 
 /** Get posts from the DTO. */
-const retrievePosts = (from: PostsDTO): PostDTO[] => from.results;
+const retrievePostsInfo = (from: PostsDTO): PostsDTO => from;
 
 type RetrievedCategoriesType = ReturnType<typeof retrieveCategories>;
-type RetrievedPostsType = ReturnType<typeof retrievePosts>;
+type RetrievedPostsType = ReturnType<typeof retrievePostsInfo>;
 type RetrievedType = RetrievedCategoriesType | RetrievedPostsType | undefined;
 
 /** The return type of the retrieve function. */
@@ -37,7 +37,7 @@ export const retrieve = <T>(
     return retrieveCategories(from) as RetrieverType<T>;
   }
   if (isPostsDTO(from)) {
-    return retrievePosts(from) as RetrieverType<T>;
+    return retrievePostsInfo(from) as RetrieverType<T>;
   }
   return errorResult as RetrieverType<T>;
 };

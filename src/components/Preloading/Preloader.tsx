@@ -18,7 +18,6 @@ import {
 /* Store state props type. */
 type MapStateProps = {
   categories: string[];
-  postsQuantity: number;
   currentFilteredCategory: string | null;
   currentPostsChunkNumber: number;
   currentPostsChunk: Post[];
@@ -38,7 +37,6 @@ type AllProps = AllInjectedProps & { children?: React.ReactNode; };
 /* State props connection. */
 const mapStateToProps = (state: AppState): MapStateProps => ({
   categories: state.categories.categoriesList,
-  postsQuantity: state.posts.postsQuantity,
   currentFilteredCategory: state.categories.currentFilteredCategory,
   currentPostsChunkNumber: state.posts.currentPostsChunkNumber,
   currentPostsChunk: state.posts.currentPostsChunk
@@ -54,7 +52,6 @@ const mapDispatchToProps: MapDispatchProps = ({
 const Preloader: React.FC<AllProps> = ({
   categories,
   setCategories,
-  postsQuantity,
   setPostsQuantity,
   setCurrentPostsChunk,
   currentFilteredCategory,
@@ -71,13 +68,6 @@ const Preloader: React.FC<AllProps> = ({
     });
   }, [stringifiedCategories, setCategories]);
 
-  /* Loading posts quantity. */
-  useEffect(() => {
-    API.getPostsQuantity().then((response) => {
-      setPostsQuantity(retrieve(response.data as PostsQuantityDTO, 0));
-    });
-  }, [postsQuantity, setPostsQuantity]);
-
   /* Stringified current posts chunk, needed for comparation. */
   const stringifiedCurrentPostsChunk = JSON.stringify(currentPostsChunk);
   /* Loading current posts chunk. */
@@ -86,9 +76,13 @@ const Preloader: React.FC<AllProps> = ({
       currentFilteredCategory,
       currentPostsChunkNumber
     ).then((response) => {
-      const retrievedPosts = retrieve<Post[]>(response.data as PostsDTO, []);
-      setCurrentPostsChunk(retrievedPosts);
-      setPostsQuantity(retrievedPosts.length);
+      const defaultResult: PostsDTO = { total: 0, posts: [] };
+      const retrievedPostsInfo = retrieve<PostsDTO>(
+        response.data as PostsDTO,
+        defaultResult
+      );
+      setCurrentPostsChunk(retrievedPostsInfo.posts);
+      setPostsQuantity(retrievedPostsInfo.total);
     });
   }, [
     stringifiedCurrentPostsChunk,

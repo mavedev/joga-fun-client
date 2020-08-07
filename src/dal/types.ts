@@ -19,7 +19,8 @@ export type PostDTO = {
 
 /** Posts info that is to be recieved from the server. */
 export type PostsDTO = {
-  results: PostDTO[];
+  total: number;
+  posts: PostDTO[];
 };
 
 /** Check CategoryDTO type. */
@@ -45,8 +46,9 @@ export const isPostDTO = (obj: any): obj is PostDTO => (
 
 /** Check PostsDTO type. */
 export const isPostsDTO = (obj: any): obj is PostsDTO => (
-  !!obj.results
-  && obj.results.every((element: any) => isPostDTO(element))
+  !!obj.total && typeof obj.total === 'number'
+  && !!obj.posts && typeof obj.posts === 'object'
+  && obj.posts.every((element: any) => isPostDTO(element))
 );
 
 /** All possible DTOs. */
