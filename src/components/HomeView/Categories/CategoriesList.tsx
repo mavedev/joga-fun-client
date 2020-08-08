@@ -11,10 +11,13 @@ import CategoryItem from './CategoryItem';
 type OwnProps = {
   categories: string[];
   setCurrentFilteredCategory: (category: string | null) => void;
+  setCurrentPostChunkNumber: (chunk: number) => void;
 };
 
 const CategoriesList: React.FC<OwnProps> = ({
-  categories, setCurrentFilteredCategory
+  categories,
+  setCurrentFilteredCategory,
+  setCurrentPostChunkNumber
 }: OwnProps) => {
   const { t: translator } = useTranslation();
 
@@ -27,12 +30,18 @@ const CategoriesList: React.FC<OwnProps> = ({
             <div className='col-lg-12'>
               <ul className='list-unstyled mb-0'>
                 <CategoryItem
-                  action={() => { setCurrentFilteredCategory(null); }}
+                  action={() => {
+                    setCurrentFilteredCategory(null);
+                    setCurrentPostChunkNumber(1);
+                  }}
                   name={translator('CategoriesAll')}
                 />
                 {categories.map((value: string) => (
                   <CategoryItem
-                    action={() => { setCurrentFilteredCategory(value); }}
+                    action={() => {
+                      setCurrentFilteredCategory(value);
+                      setCurrentPostChunkNumber(1);
+                    }}
                     key={value}
                     name={value}
                   />

@@ -13,9 +13,7 @@ import NavBlockContainer from './NavBlock';
 type OwnProps = { currentPostsChunk: PostDTO[]; };
 
 /* Posts column. */
-const PostsBlock: React.FC<OwnProps> = ({
-  currentPostsChunk
-}: OwnProps) => {
+const PostsBlock: React.FC<OwnProps> = ({ currentPostsChunk }: OwnProps) => {
   const anchorReference = React.useRef<HTMLDivElement>(null);
   const scrollToTop = React.useCallback(() => {
     window.scrollTo(0, anchorReference.current?.offsetTop || 0);

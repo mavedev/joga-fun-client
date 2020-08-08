@@ -1,7 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { AppState, createSetCurrentFilteredCategory } from 'store';
+import {
+  AppState,
+  createSetCurrentFilteredCategory,
+  createSetCurrentPostChunkNumber
+} from 'store';
 import CategoriesList from './CategoriesList';
 
 /* Store state props type. */
@@ -9,6 +13,7 @@ type MapStateProps = { categories: string[]; };
 /* Store dispatch props type. */
 type MapDispatchProps = {
   setCurrentFilteredCategory: (category: string | null) => void;
+  setCurrentPostChunkNumber: (chunk: number) => void;
 };
 /* Normal component's props that are to be passed. */
 type OwnProps = {};
@@ -20,16 +25,20 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 });
 
 const mapDispatchToProps: MapDispatchProps = {
-  setCurrentFilteredCategory: createSetCurrentFilteredCategory
+  setCurrentFilteredCategory: createSetCurrentFilteredCategory,
+  setCurrentPostChunkNumber: createSetCurrentPostChunkNumber
 };
 
 /* A wrapper for the Categories component getting categories from the store. */
 const CategoriesContainer: React.FC<AllProps> = ({
-  categories, setCurrentFilteredCategory
+  categories,
+  setCurrentFilteredCategory,
+  setCurrentPostChunkNumber
 }: AllProps) => (
   <CategoriesList
     categories={categories}
     setCurrentFilteredCategory={setCurrentFilteredCategory}
+    setCurrentPostChunkNumber={setCurrentPostChunkNumber}
   />
 );
 
