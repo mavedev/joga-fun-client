@@ -28,6 +28,6 @@ const LoginContainer: React.FC<AllProps> = ({ doLogin }: AllProps) => (
 );
 
 export default compose<React.ComponentType<OwnProps>>(
-  withHomeRedirect('/'),
+  withHomeRedirect('/manage'),
   connect(null, mapDispatchToProps)
 )(LoginContainer);

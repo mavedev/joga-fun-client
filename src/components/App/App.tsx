@@ -1,10 +1,6 @@
 import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import { store } from 'store';
 import Preloader from 'components/Preloading';
@@ -19,7 +15,7 @@ const App: React.FC<{}> = () => (
   <Provider store={store}>
     <Preloader>
       <Suspense fallback={<SuspenseView />}>
-        <Router>
+        <HashRouter>
           <div className='App'>
             <Switch>
               <Route path='/' exact component={HomeView} />
@@ -27,7 +23,7 @@ const App: React.FC<{}> = () => (
               <Route path='/manage' exact component={NewPostViewConatainer} />
             </Switch>
           </div>
-        </Router>
+        </HashRouter>
       </Suspense>
     </Preloader>
   </Provider>

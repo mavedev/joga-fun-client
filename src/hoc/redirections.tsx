@@ -47,6 +47,7 @@ export const withAuthRedirect = (to: string) => (Wrapped: AnyComponent) => {
   ): JSX.Element => (
     <>{isLoggedIn ? children : <Redirect to={to} />}</>
   );
+
   const ConnectedContainer = connect(mapStateToProps)(RedirectContainer);
 
   /* The result. */
