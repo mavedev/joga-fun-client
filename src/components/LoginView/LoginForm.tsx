@@ -10,16 +10,37 @@ type OwnProps = {
 };
 
 /* The form containing auth fields. */
-const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => (
-  <form>
-    <div className='form-group'>
-      <input type='text' className='form-control' placeholder='Логин' />
-    </div>
-    <div className='form-group'>
-      <input type='password' className='form-control' placeholder='Пароль' />
-    </div>
-    <LoginButton action={doLoginCallback} />
-  </form>
-);
+const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => {
+  const usernameRef = React.useRef<HTMLInputElement>(null);
+  const passwordRef = React.useRef<HTMLInputElement>(null);
+  const login = React.useCallback(() => {
+    doLoginCallback(
+      usernameRef.current?.value || '',
+      passwordRef.current?.value || ''
+    );
+  }, [usernameRef, passwordRef, doLoginCallback]);
+
+  return (
+    <form>
+      <div className='form-group'>
+        <input
+          ref={usernameRef}
+          type='text'
+          className='form-control'
+          placeholder='Логин'
+        />
+      </div>
+      <div className='form-group'>
+        <input
+          ref={passwordRef}
+          type='password'
+          className='form-control'
+          placeholder='Пароль'
+        />
+      </div>
+      <LoginButton action={login} />
+    </form>
+  );
+};
 
 export default LoginForm;

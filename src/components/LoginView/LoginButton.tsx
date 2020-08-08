@@ -6,7 +6,7 @@ import cn from 'styles/LoginView/LoginButton.module.scss';
 
 /* Normal component's props that are to be passed. */
 type OwnProps = {
-  action: (arg0: string, arg1: string) => void;
+  action: () => void;
 };
 
 /* The main button for the login box. */
@@ -19,7 +19,7 @@ const LoginButton: React.FC<OwnProps> = ({ action }: OwnProps) => (
       'btn-primary',
       'form-control'
     )}
-    onClick={() => { action('', ''); }}
+    onClick={action}
   >
     Вход
   </button>
