@@ -9,7 +9,7 @@ type MapStateProps = { locale: string; };
 /* Store dispatch props type. */
 type MapDispatchProps = {};
 /* Normal props of the component. */
-type OwnProps = {};
+type OwnProps = { scrollAction: () => void; };
 /* All props type. */
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
@@ -18,8 +18,10 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 });
 
 /* A wrapper for the Sidebar component getting the locale from the store. */
-const SidebarContainer: React.FC<AllProps> = ({ locale }: AllProps) => (
-  <Sidebar locale={locale} />
+const SidebarContainer: React.FC<AllProps> = ({
+  locale, scrollAction
+}: AllProps) => (
+  <Sidebar scrollAction={scrollAction} locale={locale} />
 );
 
 export default connect(mapStateToProps)(SidebarContainer);

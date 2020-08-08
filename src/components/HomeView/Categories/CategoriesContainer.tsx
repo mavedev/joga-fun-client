@@ -16,7 +16,7 @@ type MapDispatchProps = {
   setCurrentPostChunkNumber: (chunk: number) => void;
 };
 /* Normal component's props that are to be passed. */
-type OwnProps = {};
+type OwnProps = { scrollAction: () => void; };
 /* All props type. */
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
@@ -33,12 +33,14 @@ const mapDispatchToProps: MapDispatchProps = {
 const CategoriesContainer: React.FC<AllProps> = ({
   categories,
   setCurrentFilteredCategory,
-  setCurrentPostChunkNumber
+  setCurrentPostChunkNumber,
+  scrollAction
 }: AllProps) => (
   <CategoriesList
     categories={categories}
     setCurrentFilteredCategory={setCurrentFilteredCategory}
     setCurrentPostChunkNumber={setCurrentPostChunkNumber}
+    scrollAction={scrollAction}
   />
 );
 

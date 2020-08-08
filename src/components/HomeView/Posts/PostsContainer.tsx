@@ -6,13 +6,11 @@ import { PostDTO as Post } from 'dal';
 import PostsBlock from './PostsBlock';
 
 /* Store state props type. */
-type MapStateProps = {
-  currentPostsChunk: Post[];
-};
+type MapStateProps = { currentPostsChunk: Post[]; };
 /* Store dispatch props type. */
 type MapDispatchProps = {};
 /* Normal component's props that are to be passed. */
-type OwnProps = {};
+type OwnProps = { scrollAction: () => void; };
 /* All props type. */
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
@@ -21,8 +19,10 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 });
 
 /* A wrapper for the PostsBlock component getting posts from the store. */
-const PostsContainer: React.FC<AllProps> = ({ currentPostsChunk }: AllProps) => (
-  <PostsBlock currentPostsChunk={currentPostsChunk} />
+const PostsContainer: React.FC<AllProps> = ({
+  currentPostsChunk, scrollAction
+}: AllProps) => (
+  <PostsBlock scrollAction={scrollAction} currentPostsChunk={currentPostsChunk} />
 );
 
 export default connect(mapStateToProps)(PostsContainer);

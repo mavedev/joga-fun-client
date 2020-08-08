@@ -12,14 +12,25 @@ type OwnProps = {
   categories: string[];
   setCurrentFilteredCategory: (category: string | null) => void;
   setCurrentPostChunkNumber: (chunk: number) => void;
+  scrollAction: () => void;
 };
 
 const CategoriesList: React.FC<OwnProps> = ({
   categories,
   setCurrentFilteredCategory,
-  setCurrentPostChunkNumber
+  setCurrentPostChunkNumber,
+  scrollAction
 }: OwnProps) => {
   const { t: translator } = useTranslation();
+  const filterCategories = React.useCallback((category: string | null) => {
+    setCurrentFilteredCategory(category);
+    setCurrentPostChunkNumber(1);
+    scrollAction();
+  }, [
+    setCurrentFilteredCategory,
+    setCurrentPostChunkNumber,
+    scrollAction
+  ]);
 
   return (
     <div>
@@ -30,18 +41,12 @@ const CategoriesList: React.FC<OwnProps> = ({
             <div className='col-lg-12'>
               <ul className='list-unstyled mb-0'>
                 <CategoryItem
-                  action={() => {
-                    setCurrentFilteredCategory(null);
-                    setCurrentPostChunkNumber(1);
-                  }}
+                  action={() => { filterCategories(null); }}
                   name={translator('CategoriesAll')}
                 />
                 {categories.map((value: string) => (
                   <CategoryItem
-                    action={() => {
-                      setCurrentFilteredCategory(value);
-                      setCurrentPostChunkNumber(1);
-                    }}
+                    action={() => { filterCategories(value); }}
                     key={value}
                     name={value}
                   />

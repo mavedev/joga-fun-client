@@ -9,13 +9,18 @@ import CategoriesContainer from 'components/HomeView/Categories';
 import Socials from './Socials';
 
 /* Normal props of the component. */
-type OwnProps = { locale: string; };
+type OwnProps = {
+  locale: string;
+  scrollAction: () => void;
+};
 
 /* Sidebar column. */
-const Sidebar: React.FC<OwnProps> = ({ locale }: OwnProps) => (
+const Sidebar: React.FC<OwnProps> = ({
+  locale, scrollAction
+}: OwnProps) => (
   <BCol md='4' className='Sidebar'>
     {/* Posts categories list. */}
-    <CategoriesContainer />
+    <CategoriesContainer scrollAction={scrollAction} />
     {/* React Calendar instance. */}
     <Calendar className={cn['Sidebar__Calendar']} locale={locale} />
     {/* Owner's social buttons. */}
