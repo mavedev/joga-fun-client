@@ -1,0 +1,11 @@
+@import '../variables';
+
+/* Bottom-pressed footer styling. */
+.PostViewContent__Container {
+  min-height: calc(100vh - #{$height-content});
+}
+
+/* Separation of the content from the footer. */
+.PostViewContent__RowWrapper {
+  padding-bottom: $spacing-default;
+}

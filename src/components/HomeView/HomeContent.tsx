@@ -4,7 +4,7 @@ import { Container as BContainer, Row as BRow } from 'react-bootstrap';
 import cn from 'styles/HomeView/HomeContent.module.scss';
 import ScrollAnchor from 'components/ScrollAnchor';
 import PostsContainer from './Posts';
-import SidebarContainer from './Sidebar';
+import SidebarContainer from '../Sidebar';
 
 /* Main home view block. */
 const HomeContent: React.FC<{}> = () => {
