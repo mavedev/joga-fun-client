@@ -6,8 +6,6 @@ import { initReactI18next as i18module } from 'react-i18next';
 import { TranslatorAPI } from 'translations';
 import * as constants from 'appConstants';
 
-const languages = ['en', 'ru', 'uk'];
-
 export const configTranslations = () => {
   TranslatorAPI.config(
     i18instance,
@@ -17,7 +15,7 @@ export const configTranslations = () => {
   ).instantiate({
     fallbackLng: constants.DEFAULT_FALLBACK_LANG,
     lng: constants.DEFAULT_LANG,
-    whitelist: languages,
+    whitelist: constants.LANGS_LIST,
     interpolation: {
       escapeValue: false,
     }
