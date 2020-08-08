@@ -4,18 +4,18 @@ import { connect } from 'react-redux';
 import { AppState, createSetCurrentPostChunkNumber } from 'store';
 import NavBlock from './NavBlock';
 
-/* Store state props type. */
+/** Store state props type. */
 type MapStateProps = {
   currentPostsChunkNumber: number;
   chunksLeft: number;
 };
-/* Store dispatch props type. */
+/** Store dispatch props type. */
 type MapDispatchProps = {
   setCurrentPostsChunkNumber: (chunk: number) => void;
 };
-/* Normal component's props that are to be passed. */
-type OwnProps = {};
-/* All props type. */
+/** Normal component's props that are to be passed. */
+type OwnProps = { scrollAction: () => void; };
+/** All props type. */
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapStateToProps = (state: AppState): MapStateProps => ({
@@ -28,19 +28,22 @@ const mapDispatchToProps: MapDispatchProps = {
 };
 
 /** A wrapper for the NavBlock component getting posts info from the store. */
-const NavBlockContainer: React.FC<AllProps> = ({
+const NavBlockContainer = ({
   chunksLeft,
   currentPostsChunkNumber,
-  setCurrentPostsChunkNumber
+  setCurrentPostsChunkNumber,
+  scrollAction
 }: AllProps) => (
   <NavBlock
     enablePrev={currentPostsChunkNumber > 1}
     enableNext={chunksLeft > 0}
     nextAction={() => {
       setCurrentPostsChunkNumber(currentPostsChunkNumber + 1);
+      scrollAction();
     }}
     prevAction={() => {
       setCurrentPostsChunkNumber(currentPostsChunkNumber - 1);
+      scrollAction();
     }}
   />
 );
