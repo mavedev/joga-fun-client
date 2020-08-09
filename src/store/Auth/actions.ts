@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 
 import API from 'api';
-
+import { cookieService } from 'services';
 import { DO_LOGIN, SET_JWT, LoginActionType } from './types';
 import { AppActionType } from '../types';
 
@@ -21,5 +21,6 @@ export const createLoginThunk = (
   API.login(username, password).then((response) => {
     dispatch(createSetLoggedIn());
     dispatch(createSetJWT(response.data['token']));
+    cookieService.set('access-token', response.data['token'], { path: '/' });
   });
 };
