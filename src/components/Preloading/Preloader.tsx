@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { cookieService } from 'services';
 
 import {
   AppState,
   createSetCategories,
   createSetChunksLeft,
   createSetCurrentPostChunk,
+  createSetLoggedIn,
+  createSetJWT
 } from 'store';
 import API from 'api';
 import {
@@ -21,12 +24,15 @@ type MapStateProps = {
   currentFilteredCategory: string | null;
   currentPostsChunkNumber: number;
   currentPostsChunk: Post[];
+  isLoggedIn: boolean;
 };
 /* Store dispatch props type. */
 type MapDispatchProps = {
   setCategories: (categories: string[]) => void;
   setChunksLeft: (quantity: number) => void;
   setCurrentPostsChunk: (posts: Post[]) => void;
+  setLoggedIn: (isLoggedIn: boolean) => void;
+  setJWT: (jwt: string) => void;
 };
 /* Type for props that will be passed by the store. */
 type AllInjectedProps = MapStateProps & MapDispatchProps;
@@ -39,14 +45,17 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
   categories: state.categories.categoriesList,
   currentFilteredCategory: state.categories.currentFilteredCategory,
   currentPostsChunkNumber: state.posts.currentPostsChunkNumber,
-  currentPostsChunk: state.posts.currentPostsChunk
+  currentPostsChunk: state.posts.currentPostsChunk,
+  isLoggedIn: state.auth.isLoggedIn
 });
 
 /* State dispatch function connection. */
 const mapDispatchToProps: MapDispatchProps = ({
   setCategories: createSetCategories,
   setChunksLeft: createSetChunksLeft,
-  setCurrentPostsChunk: createSetCurrentPostChunk
+  setCurrentPostsChunk: createSetCurrentPostChunk,
+  setLoggedIn: createSetLoggedIn,
+  setJWT: createSetJWT
 });
 
 const Preloader: React.FC<AllProps> = ({
@@ -54,11 +63,22 @@ const Preloader: React.FC<AllProps> = ({
   setCategories,
   setChunksLeft,
   setCurrentPostsChunk,
+  setLoggedIn,
+  setJWT,
   currentFilteredCategory,
   currentPostsChunkNumber,
   currentPostsChunk,
   children
 }: AllProps) => {
+  /* Loading auth info from cookies. */
+  useEffect(() => {
+    const accessToken = cookieService.get('access-token') as string || null;
+    if (accessToken) {
+      setLoggedIn(true);
+      setJWT(accessToken);
+    }
+  }, [setLoggedIn, setJWT]);
+
   /* Stringified categories, needed for comparation. */
   const stringifiedCategories = JSON.stringify(categories);
   /* Loading categories. */
