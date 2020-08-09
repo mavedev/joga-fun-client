@@ -4,10 +4,10 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import { store } from 'store';
 import Preloader from 'components/Preloading';
-import HomeView from 'views/HomeView';
-import LoginView from 'views/LoginView';
-import SuspenseView from 'views/SuspenseView';
-import NewPostViewConatainer from 'views/NewPostView';
+import HomeView from 'pages/HomeView';
+import LoginView from 'pages/LoginView';
+import SuspenseView from 'pages/SuspenseView';
+import NewPostViewConatainer from 'pages/NewPostView';
 
 import 'styles/App/App.scss';
 
