@@ -19,20 +19,17 @@ export const categoriesChooserReducer = (
   switch (action.type) {
     case SET_CATEGORIES:
       return {
-        categoriesList: action.payload,
-        currentManagedCategory: state.currentManagedCategory,
-        currentFilteredCategory: state.currentFilteredCategory
+        ...state,
+        categoriesList: action.payload
       };
     case MANAGE_SET_CURRENT_CATEGORY:
       return {
-        categoriesList: state.categoriesList,
-        currentManagedCategory: action.payload,
-        currentFilteredCategory: state.currentFilteredCategory
+        ...state,
+        currentManagedCategory: action.payload
       };
     case FILTER_SET_CURRENT_CATEGORY:
       return {
-        categoriesList: state.categoriesList,
-        currentManagedCategory: state.currentManagedCategory,
+        ...state,
         currentFilteredCategory: action.payload
       };
     default:
