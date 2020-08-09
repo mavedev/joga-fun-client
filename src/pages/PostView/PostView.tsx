@@ -1,8 +1,10 @@
 import React from 'react';
 import cx from 'classnames';
+
 import Navbar from 'components/Navbar';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import PostViewContent from 'components/PostView';
 
 import cn from 'styles/View.module.scss';
 
@@ -15,6 +17,7 @@ const PostView: React.FC<{}> = () => (
     >
       <Navbar />
       <Header />
+      <PostViewContent />
     </div>
     <div className={cn['footer-wrapper']}>
       <Footer />
