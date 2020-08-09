@@ -5,6 +5,15 @@ export const SET_CURRENT_POSTS_CHUNK = 'SET_CURRENT_POSTS_CHUNK';
 export const SET_CURRENT_POST = 'SET_CURRENT_POST';
 export const SET_CHUNKS_LEFT = 'SET_CHUNKS_LEFT';
 
+export const defaultPost: Post = {
+  id: '',
+  title: '',
+  category: '',
+  imageURL: '',
+  body: '',
+  created: ''
+};
+
 export type PostsState = {
   chunksLeft: number;
   currentPostsChunkNumber: number;

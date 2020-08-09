@@ -10,6 +10,7 @@ export type CategoriesDTO = {
 
 /** Post info that is to be recieved from the server. */
 export type PostDTO = {
+  id: string;
   title: string;
   imageURL: string;
   body: string;

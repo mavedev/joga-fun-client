@@ -1,17 +1,42 @@
 import React from 'react';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router';
 
+import { createSetPostThunk } from 'store';
 import PostView from './PostView';
 
-type MatchParams = { postID: string | undefined; };
-
+/** Store state props type. */
+type MapStateProps = {};
+/** Store dispatch props type. */
+type MapDispatchProps = { setCurrentPost: (postID: Maybe<string>) => void; };
+/** Router params. */
+type MatchParams = { postID: Maybe<string>; };
 /** Normal component's props that are to be passed. */
 interface OwnProps extends RouteComponentProps<MatchParams> {}
+/** All props type. */
+type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
-const PostViewContainer: React.FC<OwnProps> = ({ match }: OwnProps) => {
+const mapDispatchToProps: MapDispatchProps = {
+  setCurrentPost: createSetPostThunk
+};
+
+/* A wrapper for the PostView component getting post info
+   from the route and pushing the current post data to the store. */
+const PostViewContainer: React.FC<AllProps> = ({
+  match, setCurrentPost
+}: AllProps) => {
+  React.useEffect(
+    () => { setCurrentPost(match.params.postID); },
+    [setCurrentPost, match.params.postID]
+  );
+
   return (
     <PostView />
   );
 };
 
-export default withRouter(PostViewContainer);
+export default compose<React.ComponentType<{}>>(
+  withRouter,
+  connect(null, mapDispatchToProps)
+)(PostViewContainer);

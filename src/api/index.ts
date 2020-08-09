@@ -26,8 +26,8 @@ export default class API {
     return API.instance.get(`posts/${filteredCategory || 'all'}/${chunk}`, {});
   }
 
-  public static getPost = (postID: string | undefined) => {
-    return API.instance.get(`post/${postID} || 0`, {});
+  public static getPost = (postID: Maybe<string>) => {
+    return API.instance.get(`post/${postID || ''}`, {});
   }
 
   public static getPostsQuantity = (): APIResponse => {

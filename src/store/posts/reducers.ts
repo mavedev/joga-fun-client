@@ -1,20 +1,12 @@
-import { PostDTO as Post } from 'dal';
 import {
   SET_CURRENT_POSTS_CHUNK_NUMBER,
   SET_CURRENT_POSTS_CHUNK,
   SET_CURRENT_POST,
   SET_CHUNKS_LEFT,
   PostsState,
-  PostsActiontype
+  PostsActiontype,
+  defaultPost
 } from './types';
-
-const defaultPost: Post = {
-  title: '',
-  category: '',
-  imageURL: '',
-  body: '',
-  created: ''
-};
 
 const initialState: PostsState = {
   chunksLeft: 0,
