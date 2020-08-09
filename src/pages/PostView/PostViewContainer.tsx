@@ -1,8 +1,17 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter, RouteComponentProps } from 'react-router';
 
-type OwnProps = { match: any; };
+import PostView from './PostView';
 
-const PostViewContainer: React.FC<{}> = () => (<></>);
+type MatchParams = { postID: string | undefined; };
+
+/** Normal component's props that are to be passed. */
+interface OwnProps extends RouteComponentProps<MatchParams> {}
+
+const PostViewContainer: React.FC<OwnProps> = ({ match }: OwnProps) => {
+  return (
+    <PostView />
+  );
+};
 
 export default withRouter(PostViewContainer);
