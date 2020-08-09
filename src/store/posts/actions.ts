@@ -1,3 +1,5 @@
+import { Dispatch } from 'redux';
+
 import { PostDTO as Post } from 'dal';
 import {
   SET_CURRENT_POSTS_CHUNK_NUMBER,
@@ -5,6 +7,7 @@ import {
   SET_CHUNKS_LEFT,
   PostsActiontype
 } from './types';
+import { AppActionType } from '../types';
 
 type PAType = PostsActiontype;
 
@@ -22,3 +25,9 @@ export const createSetChunksLeft = (quantity: number): PAType => ({
   type: SET_CHUNKS_LEFT,
   payload: quantity
 });
+
+export const createSetPostThunk = (postID: string) => (
+  dispatch: Dispatch<AppActionType>
+) => {
+
+};
