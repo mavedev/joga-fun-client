@@ -1,9 +1,11 @@
 import React from 'react';
+import { compose } from 'redux';
 import { Card as BCard, Row as BRow } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cn from 'styles/Categories/CategoriesList.module.scss';
+import styles from 'styles/Common/Categories/CategoriesList.module.scss';
+import { withCSSModulePartiallyApplied } from 'misc/hoc';
 
 import CategoryItem from './CategoryItem';
 
@@ -36,7 +38,7 @@ const CategoriesList: React.FC<OwnProps> = ({
     <div>
       <BCard className='my-4'>
         <h5 className='card-header'>{translator('Categories')}</h5>
-        <BCard.Body className={cn['ListWrapper--Centered']}>
+        <BCard.Body styleName='ListWrapper--Centered'>
           <BRow>
             <div className='col-lg-12'>
               <ul className='list-unstyled mb-0'>
@@ -61,4 +63,7 @@ const CategoriesList: React.FC<OwnProps> = ({
 };
 
 /* Use memoizing because categories updates really seldom. */
-export default React.memo(CategoriesList);
+export default compose<React.ComponentType<OwnProps>>(
+  React.memo,
+  withCSSModulePartiallyApplied(styles)
+)(CategoriesList);

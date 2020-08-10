@@ -8,16 +8,16 @@ import {
 } from 'store';
 import CategoriesList from './CategoriesList';
 
-/* Store state props type. */
+/** Store state props type. */
 type MapStateProps = { categories: string[]; };
-/* Store dispatch props type. */
+/** Store dispatch props type. */
 type MapDispatchProps = {
   setCurrentFilteredCategory: (category: string | null) => void;
   setCurrentPostChunkNumber: (chunk: number) => void;
 };
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = { scrollAction: () => void; };
-/* All props type. */
+/** All props type. */
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapStateToProps = (state: AppState): MapStateProps => ({
@@ -29,7 +29,7 @@ const mapDispatchToProps: MapDispatchProps = {
   setCurrentPostChunkNumber: createSetCurrentPostChunkNumber
 };
 
-/* A wrapper for the Categories component getting categories from the store. */
+/** A wrapper for the Categories component getting categories from the store. */
 const CategoriesContainer: React.FC<AllProps> = ({
   categories,
   setCurrentFilteredCategory,

@@ -1,19 +1,18 @@
 import React from 'react';
+import { compose } from 'redux';
 
-import cn from 'styles/Categories/CategoryItem.module.scss';
+import styles from 'styles/Common/Categories/CategoryItem.module.scss';
+import { withCSSModulePartiallyApplied } from 'misc/hoc';
 
-/* Normal component's props that are to be passed. */
-type OwnProps = {
-  name: string;
-  action: () => void;
-};
+/** Normal component's props that are to be passed. */
+type OwnProps = { name: string; action: () => void; };
 
-/* List item with name and action to do on clicking the link within. */
+/** List item with name and action to do on clicking the link within. */
 const CategoryItem: React.FC<OwnProps> = ({ name, action }: OwnProps) => (
   <li>
-    <div className={cn['CategoryItem__ButtonWrapper']}>
+    <div styleName='CategoryItem__ButtonWrapper'>
       <button
-        className={cn['CategoryItem__Button']}
+        styleName='CategoryItem__Button'
         type='button'
         onClick={action}
       >
@@ -26,4 +25,7 @@ const CategoryItem: React.FC<OwnProps> = ({ name, action }: OwnProps) => (
 /* Use memoizing because list containing category items
    is changed on language change, but items do not by design
    (there names are language-independent.) */
-export default React.memo(CategoryItem);
+export default compose<React.ComponentType<OwnProps>>(
+  React.memo,
+  withCSSModulePartiallyApplied(styles)
+)(CategoryItem);
