@@ -1,7 +1,7 @@
-@import '../variables';
+@import '../../variables';
 
 /* The main part of the footer content. */
-.FooterWrapper--main {
+.FooterTopPane__MainWrapper {
   background-color: $color-blackout-lighter;
   height: 70%;
   display: flex;
@@ -10,12 +10,19 @@
   align-items: center;
 }
 
-/* The main part text styling. */
-.FooterWrapper__card {
+/* The card mixin. */
+@mixin FooterTopPane__Card {
   color: white;
 }
 
+/* The main part text styling. */
+.FooterTopPane__Card--Simple {
+  @include FooterTopPane__Card;
+}
+
 /* The main part title styling. */
-.FooterWrapper__card--important {
+.FooterTopPane__Card--Important {
+  @include FooterTopPane__Card;
+
   font-size: 1.5em;
 }

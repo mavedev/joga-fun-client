@@ -1,7 +1,7 @@
-@import '../variables';
+@import '../../variables';
 
 /* The copiright text styling. */
-.FooterCPPane__copiright-wrapper {
+.FooterCPPane__CopirightWrapper {
   background-color: $color-blackout-darker;
   height: 30%;
   display: flex;
@@ -11,11 +11,11 @@
 }
 
 /* Space between the copiright text and the webpage name. */
-.FooterCPPane__span-wrapper {
+.FooterCPPane__SpanWrapper {
   padding: $width-minimum;
 }
 
 /* The webpage name styling. */
-.FooterCPPane__text--important {
+.FooterCPPane__Text--Important {
   color: $color-background-empty;
 }

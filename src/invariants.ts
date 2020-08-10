@@ -9,3 +9,4 @@ export const LINK_TW = '/';
 export const LINK_VK = '/';
 export const NAME_SITE = 'joga.fun';
 export const POSTS_CHUNK_CAPACITY = 5;
+export const STYLE_OPTIONS_DEFAULT = { allowMultiple: true } as const;

@@ -1,25 +1,21 @@
 import React from 'react';
+import withCSSModuleApplied from 'react-css-modules';
 
-import cn from 'styles/Footer/FooterCPPane.module.scss';
+import * as constants from 'invariants';
+import styles from 'styles/Common/Footer/FooterCPPane.module.scss';
 
-/* Copiright info. */
+/** Copiright info. */
 const FooterCPPane: React.FC<{}> = () => (
-  <div className={cn['FooterCPPane__copiright-wrapper']}>
-    <div className={cn['FooterCPPane__span-wrapper']}>
-      <span className='FooterCPPane__copiright'>
-        &copy;
-        {' '}
-        {new Date().getFullYear()}
-        {' '}
-        Copiright:
-      </span>
+  <div styleName='FooterCPPane__CopirightWrapper'>
+    <div styleName='FooterCPPane__SpanWrapper'>
+      <span>{`© ${new Date().getFullYear()} Copiright:`}</span>
     </div>
-    <div className={cn['FooterCPPane__span-wrapper']}>
-      <span className={cn['FooterCPPane__text--important']}>
-        JogaFun
+    <div styleName='FooterCPPane__SpanWrapper'>
+      <span styleName='FooterCPPane__Text--Important'>
+        {constants.NAME_SITE}
       </span>
     </div>
   </div>
 );
 
-export default FooterCPPane;
+export default withCSSModuleApplied(FooterCPPane, styles);

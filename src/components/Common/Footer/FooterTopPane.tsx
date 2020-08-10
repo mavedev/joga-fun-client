@@ -1,33 +1,24 @@
 import React from 'react';
-import cx from 'classnames';
 import { useTranslation } from 'react-i18next';
+import withCSSModuleApplied from 'react-css-modules';
 
 import * as constants from 'invariants';
+import styles from 'styles/Common/Footer/FooterTopPane.module.scss';
 
-import cn from 'styles/Footer/FooterTopPane.module.scss';
-
-/* The main block with info. */
+/** The main block with info. */
 const FooterTopPane: React.FC<{}> = () => {
   const { t: translator } = useTranslation();
 
   return (
-    <div className={cn['FooterWrapper--main']}>
-      <div className={cx(
-        cn['FooterWrapper__card'],
-        cn['FooterWrapper__card--important']
-      )}
-      >
+    <div styleName='FooterTopPane__MainWrapper'>
+      <div styleName='FooterTopPane__Card--Important'>
         {constants.NAME_SITE}
       </div>
-      <div className={cx(
-        cn['FooterWrapper__card'],
-        cn['FooterWrapper__card--with-contacts']
-      )}
-      >
+      <div styleName='FooterTopPane__Card--Simple'>
         {`${translator('Feedback')}: ${process.env.REACT_APP_EMAIL}`}
       </div>
     </div>
   );
 };
 
-export default FooterTopPane;
+export default withCSSModuleApplied(FooterTopPane, styles);

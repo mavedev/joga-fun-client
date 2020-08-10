@@ -1,12 +1,14 @@
 import React from 'react';
+import { compose } from 'redux';
 
-import cn from 'styles/Footer/Footer.module.scss';
+import styles from 'styles/Common/Footer/Footer.module.scss';
+import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import FooterTopPane from './FooterTopPane';
 import FooterCPPane from './FooterCPPane';
 
-/* The footer. */
+/** The footer. */
 const Footer: React.FC<{}> = () => (
-  <div className={cn['MainWrapper']}>
+  <div styleName='Footer__MainWrapper'>
     <FooterTopPane />
     <FooterCPPane />
   </div>
@@ -14,4 +16,7 @@ const Footer: React.FC<{}> = () => (
 
 /* Use memoizing because the footer is independent
    from the outside data. */
-export default React.memo(Footer);
+export default compose<React.ComponentType<{}>>(
+  React.memo,
+  withCSSModulePartiallyApplied(styles)
+)(Footer);
