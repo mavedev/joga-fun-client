@@ -3,8 +3,6 @@ import { Redirect } from 'react-router';
 import { connect } from 'react-redux';
 import { AppState } from 'store';
 
-/* Acceptable components' types. */
-type AnyComponent = React.ComponentType<any>;
 /* Store state props type. */
 type MapStateProps = { isLoggedIn: boolean; };
 /* Store dispatch props type. */
