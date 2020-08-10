@@ -1,24 +1,24 @@
 import React from 'react';
 import { compose } from 'redux';
-import withSCSSModule from 'react-css-modules';
 import { useTranslation } from 'react-i18next';
 
-import cn from 'styles/Header/Header.module.scss';
+import { withCSSModulePartiallyApplied } from 'hoc';
+import styles from 'styles/Header/Header.module.scss';
 
 /** Main header component. */
 const Header: React.FC<{}> = () => {
   const { t: translator } = useTranslation();
 
   return (
-    <div styleName='Header-wrapper'>
-      <div styleName='Header-wrapper__overlay'>
-        <h1 styleName='Header-wrapper__title'>
+    <div styleName='HeaderWrapper'>
+      <div styleName='Header__Overlay'>
+        <h1 styleName='Header__Title'>
           {translator('Title')}
         </h1>
-        <h3 styleName='Header-wrapper__text'>
+        <h3 styleName='Header__Text'>
           {translator('Description.1')}
         </h3>
-        <p styleName='Header-wrapper__text'>
+        <p styleName='Header__Text'>
           {translator('Description.2')}
         </p>
       </div>
@@ -28,8 +28,7 @@ const Header: React.FC<{}> = () => {
 
 /* Use memoizing because the header is independent
    from the outside data. */
-export default compose(
-
-)();
-
-React.memo(withSCSSModule(Header, cn));
+export default compose<React.ComponentType<{}>>(
+  React.memo,
+  withCSSModulePartiallyApplied(styles)
+)(Header);

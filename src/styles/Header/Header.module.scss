@@ -7,7 +7,7 @@
 }
 
 /* Top-lever block wrapper. */
-.Header-wrapper {
+.HeaderWrapper {
   background-color: $color-background-hotter;
   background: url(~assets/images/header-background-min.jpg);
   text-align: center;
@@ -21,7 +21,7 @@
 }
 
 /* The header overlay. */
-.Header-wrapper__overlay {
+.Header__Overlay {
   width: 100%;
   height: 100%;
   padding: 50px;
@@ -31,14 +31,14 @@
 }
 
 /* Title style. */
-.Header-wrapper__title {
+.Header__Title {
   font-family: 'Lobster-Regular', cursive;
   font-size: 100px;
   margin-bottom: 30px;
 }
 
 /* Simple text style. */
-.Header-wrapper__text {
+.Header__Text {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 30px;
 }

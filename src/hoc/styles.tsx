@@ -5,6 +5,7 @@ type CSSModuleClassnames = {
   readonly [key: string]: string;
 };
 
-export const withCSSModulePartiallyApplied = (cn: CSSModuleClassnames) => {
-  return (Component: AnyComponent) => withCSSModule(Component, cn);
+/** Partial application for CSS module HOC accepting the module itself. */
+export const withCSSModulePartiallyApplied = (styles: CSSModuleClassnames) => {
+  return (Component: AnyComponent) => withCSSModule(Component, styles);
 };
