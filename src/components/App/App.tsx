@@ -4,26 +4,26 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import { store } from 'store';
 import HomePage from 'pages/HomePage';
+import PostPage from 'pages/PostPage';
 import LoginPage from 'pages/LoginPage';
-import SuspenseView from 'pages/SuspensePage';
-
-import NewPostViewConatainer from 'pages/NewPostPage';
-import PostViewContainer from 'pages/PostPage';
+import NewPostPage from 'pages/NewPostPage';
+import SuspensePage from 'pages/SuspensePage';
 import Preloader from './Preloading';
 
 import 'styles/App/App.scss';
 
+/** The main component of the app. */
 const App: React.FC<{}> = () => (
   <Provider store={store}>
     <Preloader>
-      <Suspense fallback={<SuspenseView />}>
+      <Suspense fallback={<SuspensePage />}>
         <HashRouter>
           <div className='App'>
             <Switch>
               <Route path='/' exact component={HomePage} />
+              <Route path='/post/:postID' component={PostPage} />
               <Route path='/login' exact component={LoginPage} />
-              <Route path='/manage' exact component={NewPostViewConatainer} />
-              <Route path='/post/:postID' component={PostViewContainer} />
+              <Route path='/manage' exact component={NewPostPage} />
             </Switch>
           </div>
         </HashRouter>
