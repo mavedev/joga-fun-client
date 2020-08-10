@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Card as BCard } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import { PostDTO } from 'dal';
+import { PostDTO } from 'misc/dal';
 import cx from 'classnames';
 
 import 'bootstrap/dist/css/bootstrap.min.css';

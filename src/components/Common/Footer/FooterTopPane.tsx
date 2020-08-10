@@ -2,7 +2,7 @@ import React from 'react';
 import cx from 'classnames';
 import { useTranslation } from 'react-i18next';
 
-import * as constants from 'appConstants';
+import * as constants from 'invariants';
 
 import cn from 'styles/Footer/FooterTopPane.module.scss';
 

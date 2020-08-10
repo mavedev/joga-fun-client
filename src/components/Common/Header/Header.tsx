@@ -2,7 +2,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
-import { withCSSModulePartiallyApplied } from 'hoc';
+import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import styles from 'styles/Header/Header.module.scss';
 
 /** Main header component. */

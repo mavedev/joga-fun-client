@@ -1,8 +1,8 @@
 import { Dispatch } from 'redux';
 import HttpStatus from 'http-status-codes';
 
-import API from 'api';
-import { PostDTO as Post } from 'dal';
+import API from 'misc/api';
+import { PostDTO as Post } from 'misc/dal';
 import {
   SET_CURRENT_POSTS_CHUNK_NUMBER,
   SET_CURRENT_POSTS_CHUNK,

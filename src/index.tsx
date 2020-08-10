@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as preinit from 'preinit';
+import services from 'misc/services';
 import App from './components/App';
 
-preinit.configTranslations();
+services.translations.configTranslations();
 
 ReactDOM.render(
   <React.StrictMode>

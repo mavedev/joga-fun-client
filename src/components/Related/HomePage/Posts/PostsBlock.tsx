@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col as BCol } from 'react-bootstrap';
 
-import { PostDTO } from 'dal';
+import { PostDTO } from 'misc/dal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import cn from 'styles/HomeView/Posts/PostsBlock.module.scss';
 import Post from './Post';

@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { Navbar as BNavbar } from 'react-bootstrap';
 import i18next from 'i18next';
 
-import * as constants from 'appConstants';
+import * as constants from 'invariants';
 
 import 'styles/overrides/bootstrap.scss';
 import cn from 'styles/Navbar/Navbar.module.scss';

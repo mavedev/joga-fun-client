@@ -1,4 +1,4 @@
-import * as constants from 'appConstants';
+import * as constants from 'invariants';
 import { SET_LOCALE, LocalesState, LocalesActionType } from './types';
 
 const initialState: LocalesState = {

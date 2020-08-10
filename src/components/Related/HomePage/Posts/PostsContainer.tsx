@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { AppState } from 'store';
-import { PostDTO as Post } from 'dal';
+import { PostDTO as Post } from 'misc/dal';
 import PostsBlock from './PostsBlock';
 
 /* Store state props type. */

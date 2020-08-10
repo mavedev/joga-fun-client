@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { cookieService } from 'services';
+import services from 'misc/services';
 
 import {
   AppState,
@@ -10,13 +10,13 @@ import {
   createSetLoggedIn,
   createSetJWT
 } from 'store';
-import API from 'api';
+import API from 'misc/api';
 import {
   retrieve,
   CategoriesDTO,
   PostDTO as Post,
   PostsDTO
-} from 'dal';
+} from 'misc/dal';
 
 /* Store state props type. */
 type MapStateProps = {
@@ -72,7 +72,7 @@ const Preloader: React.FC<AllProps> = ({
 }: AllProps) => {
   /* Loading auth info from cookies. */
   useEffect(() => {
-    const accessToken = cookieService.get('access-token') as string || null;
+    const accessToken = services.cookies.get('access-token') as string || null;
     if (accessToken) {
       setLoggedIn(true);
       setJWT(accessToken);

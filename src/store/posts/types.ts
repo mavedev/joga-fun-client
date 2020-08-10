@@ -1,4 +1,4 @@
-import { PostDTO as Post } from 'dal';
+import { PostDTO as Post } from 'misc/dal';
 
 export const SET_CURRENT_POSTS_CHUNK_NUMBER = 'SET_CURRENT_POSTS_CHUNK_NUMBER';
 export const SET_CURRENT_POSTS_CHUNK = 'SET_CURRENT_POSTS_CHUNK';

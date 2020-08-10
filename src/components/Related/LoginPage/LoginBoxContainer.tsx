@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import { createLoginThunk } from 'store';
-import { withHomeRedirect } from 'hoc';
+import { withHomeRedirect } from 'misc/hoc';
 import LoginBox from './LoginBox';
 
 /* Store state props type. */
