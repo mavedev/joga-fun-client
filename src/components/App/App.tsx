@@ -3,13 +3,13 @@ import { Provider } from 'react-redux';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import { store } from 'store';
-import Preloader from 'components/Preloading';
-import HomeView from 'pages/HomeView';
-import LoginView from 'pages/LoginView';
-import SuspenseView from 'pages/SuspenseView';
+import HomePage from 'pages/HomePage';
+import LoginPage from 'pages/LoginPage';
+import SuspenseView from 'pages/SuspensePage';
 
-import NewPostViewConatainer from 'pages/NewPostView';
-import PostViewContainer from 'pages/PostView';
+import NewPostViewConatainer from 'pages/NewPostPage';
+import PostViewContainer from 'pages/PostPage';
+import Preloader from './Preloading';
 
 import 'styles/App/App.scss';
 
@@ -20,8 +20,8 @@ const App: React.FC<{}> = () => (
         <HashRouter>
           <div className='App'>
             <Switch>
-              <Route path='/' exact component={HomeView} />
-              <Route path='/login' exact component={LoginView} />
+              <Route path='/' exact component={HomePage} />
+              <Route path='/login' exact component={LoginPage} />
               <Route path='/manage' exact component={NewPostViewConatainer} />
               <Route path='/post/:postID' component={PostViewContainer} />
             </Switch>

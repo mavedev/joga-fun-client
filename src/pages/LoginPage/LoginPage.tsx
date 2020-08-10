@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
-import Navbar from 'components/Navbar';
-import LoginContainer from 'components/LoginView';
+import Navbar from 'components/Common/Navbar';
+import LoginBoxContainer from 'components/Related/LoginPage';
 
 import styles from 'styles/View.module.scss';
 
-const LoginView = () => (
+const LoginPage: React.FC<{}> = () => (
   <div>
     <div className={cx(
       styles['view-area'],
@@ -14,9 +14,9 @@ const LoginView = () => (
     )}
     >
       <Navbar />
-      <LoginContainer />
+      <LoginBoxContainer />
     </div>
   </div>
 );
 
-export default LoginView;
+export default LoginPage;

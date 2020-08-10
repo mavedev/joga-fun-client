@@ -1,11 +1,11 @@
 import React from 'react';
 import cx from 'classnames';
-import Navbar from 'components/Navbar';
-import NewPostBox from 'components/NewPostView/NewPostBox';
+import Navbar from 'components/Common/Navbar';
+import NewPostBox from 'components/Related/NewPostPage';
 
 import styles from 'styles/View.module.scss';
 
-const NewPostView = () => (
+const NewPostPage: React.FC<{}> = () => (
   <div>
     <div className={cx(
       styles['view-area'],
@@ -19,4 +19,4 @@ const NewPostView = () => (
   </div>
 );
 
-export default NewPostView;
+export default NewPostPage;

@@ -1,13 +1,13 @@
 import React from 'react';
 import cx from 'classnames';
-import Navbar from 'components/Navbar';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
-import HomeContent from 'components/HomeView';
+import Navbar from 'components/Common/Navbar';
+import Header from 'components/Common/Header';
+import Footer from 'components/Common/Footer';
+import HomeContent from 'components/Related/HomePage';
 
 import styles from 'styles/View.module.scss';
 
-const HomeView = () => (
+const HomePage: React.FC<{}> = () => (
   <div className={styles['page-wrapper']}>
     <div className={cx(
       styles['view-area'],
@@ -24,4 +24,4 @@ const HomeView = () => (
   </div>
 );
 
-export default HomeView;
+export default HomePage;

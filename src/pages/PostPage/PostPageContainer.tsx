@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter, RouteComponentProps } from 'react-router';
 
 import { createSetPostThunk } from 'store';
-import PostView from './PostView';
+import PostPage from './PostPage';
 
 /** Store state props type. */
 type MapStateProps = {};
@@ -23,7 +23,7 @@ const mapDispatchToProps: MapDispatchProps = {
 
 /* A wrapper for the PostView component getting post info
    from the route and pushing the current post data to the store. */
-const PostViewContainer: React.FC<AllProps> = ({
+const PostPostPageContainer: React.FC<AllProps> = ({
   match, setCurrentPost
 }: AllProps) => {
   React.useEffect(
@@ -32,11 +32,11 @@ const PostViewContainer: React.FC<AllProps> = ({
   );
 
   return (
-    <PostView />
+    <PostPage />
   );
 };
 
 export default compose<React.ComponentType<{}>>(
   withRouter,
   connect(null, mapDispatchToProps)
-)(PostViewContainer);
+)(PostPostPageContainer);

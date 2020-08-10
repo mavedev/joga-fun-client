@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-calendar/dist/Calendar.css';
 import cn from 'styles/HomeView/Sidebar/Sidebar.module.scss';
 import Calendar from 'react-calendar';
-import CategoriesContainer from 'components/HomeView/Categories';
+import CategoriesContainer from 'components/Common/Categories';
 import Socials from './Socials';
 
 /* Normal props of the component. */
