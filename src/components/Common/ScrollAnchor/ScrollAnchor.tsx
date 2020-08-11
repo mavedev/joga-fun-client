@@ -8,8 +8,6 @@ type AnchorRefType = ((instance: HTMLDivElement | null) => void)
   | null;
 
 /** A special dummy component used to be scrolled to. */
-const ScrollAnchor = (_: OwnProps, ref: AnchorRefType) => (
-  <div ref={ref} />
-);
+const ScrollAnchor = (_: OwnProps, ref: AnchorRefType) => (<div ref={ref} />);
 
 export default React.forwardRef<HTMLDivElement, OwnProps>(ScrollAnchor);
