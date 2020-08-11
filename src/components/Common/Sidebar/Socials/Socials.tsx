@@ -20,9 +20,7 @@ const Socials: React.FC<{}> = () => {
         <h3 className='my-4' styleName='Socials__Title'>
           {translator('OurSocials')}
         </h3>
-        {/* The social buttons themselves. */}
         <BRow className='justify-content-center align-items-center'>
-          {/* Facebook. */}
           <SocialLink
             href={linkFB}
             className='fa fa-facebook'
