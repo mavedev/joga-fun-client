@@ -4,14 +4,13 @@ import { Card as BCard } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 import { PostDTO } from 'misc/dal';
-import cx from 'classnames';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = { data: PostDTO; };
 
-const Post: React.FC<OwnProps> = ({ data }: OwnProps) => {
+const Post: React.FC<OwnProps> = ({ data }) => {
   const { t: translator } = useTranslation();
 
   return (
@@ -25,10 +24,8 @@ const Post: React.FC<OwnProps> = ({ data }: OwnProps) => {
         />
         <div className='card-body'>
           <h2 className='card-title'>{data.title}</h2>
-          <p className='card-text'>
-            {`${data.body.slice(0, 100)} ...`}
-          </p>
-          <NavLink to='/login' className={cx('btn', 'btn-primary')}>
+          <p className='card-text'>{`${data.body.slice(0, 100)} ...`}</p>
+          <NavLink to='/login' className='btn btn-primary'>
             {`${translator('ReadFull')} `}
             &rarr;
           </NavLink>

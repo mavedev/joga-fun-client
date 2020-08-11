@@ -1,13 +1,13 @@
-@import '../../variables';
+@import '../../../variables';
 
-.PostsAreaWrapper {
+.PostsBlock__MainWrapper {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
 
-.PostWrapper {
+.PostsBlock__PostWrapper {
   margin-bottom: $spacing-default;
   min-width: 100%;
 }

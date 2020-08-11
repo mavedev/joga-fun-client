@@ -18,7 +18,7 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 });
 
 /** A wrapper for the PostsBlockTitle component getting the category from the store. */
-const PostsBlockTitleContainer = ({ category }: AllProps) => (
+const PostsBlockTitleContainer: React.FC<AllProps> = ({ category }) => (
   <PostsBlockTitle title={category} />
 );
 

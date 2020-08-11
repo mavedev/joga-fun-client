@@ -1,23 +1,27 @@
 import React from 'react';
-import cx from 'classnames';
+import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cn from 'styles/HomeView/Posts/PostsBlockTitle.module.scss';
+import styles from 'styles/Related/HomePage/Posts/PostsBlockTitle.module.scss';
+import { withCSSModulePartiallyApplied } from 'misc/hoc';
 
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = { title: string | null; };
 
-/* The publications block title. */
-const PostsBlockTitle = ({ title }: OwnProps) => {
+/** The publications block title. */
+const PostsBlockTitle: React.FC<OwnProps> = ({ title }) => {
   const { t: translator } = useTranslation();
 
   return (
-    <h1 className={cx(cn['PostsBlockTitle'], 'my-4')}>
+    <h1 className='my-4' styleName='PostsBlockTitle__Text'>
       {`${translator('Publications')}:`}
       <small>{` ${title || translator('CategoriesAll')} `}</small>
     </h1>
   );
 };
 
-export default React.memo(PostsBlockTitle);
+export default compose<React.ComponentType<OwnProps>>(
+  React.memo,
+  withCSSModulePartiallyApplied(styles)
+)(PostsBlockTitle);

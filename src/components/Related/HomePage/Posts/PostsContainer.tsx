@@ -19,9 +19,7 @@ const mapStateToProps = (state: AppState): MapStateProps => ({
 });
 
 /* A wrapper for the PostsBlock component getting posts from the store. */
-const PostsContainer: React.FC<AllProps> = ({
-  currentPostsChunk, scrollAction
-}: AllProps) => (
+const PostsContainer: React.FC<AllProps> = ({ currentPostsChunk, scrollAction }) => (
   <PostsBlock scrollAction={scrollAction} currentPostsChunk={currentPostsChunk} />
 );
 
