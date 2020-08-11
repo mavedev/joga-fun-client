@@ -1,14 +1,9 @@
 /* Links in Bootstrap navbar. */
-.NavbarBrand__link {
+.NavListItem__link {
   font-size: 2rem !important; // Override Font Awesome styles.
 
   &, &:hover {
     color: #fff;
     text-decoration: none;
   }
-}
-
-/* Special links style. */
-.NavbarBrand__link--curved {
-  font-family: 'Pacifico-Regular', serif;
 }

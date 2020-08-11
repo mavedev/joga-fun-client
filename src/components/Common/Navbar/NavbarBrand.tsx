@@ -1,19 +1,16 @@
 import React from 'react';
-import cx from 'classnames';
+import withCSSModule from 'react-css-modules';
 import { Link } from 'react-router-dom';
 import { NavbarBrand as BNavbarBrand } from 'react-bootstrap';
 
 import 'styles/overrides/bootstrap.scss';
-import cn from 'styles/Navbar/NavbarBrand.module.scss';
+import styles from 'styles/Common/Navbar/NavbarBrand.module.scss';
 
-/* Bootstrap logo-like site name. */
+/** Bootstrap logo-like site name. */
 const NavbarBrand: React.FC<{}> = () => (
   <BNavbarBrand>
     <Link
-      className={cx(
-        cn['NavbarBrand__link'],
-        cn['NavbarBrand__link--curved']
-      )}
+      styleName='NavbarBrand__link NavbarBrand__link--curved'
       to='/'
     >
       Joga.fun
@@ -21,4 +18,4 @@ const NavbarBrand: React.FC<{}> = () => (
   </BNavbarBrand>
 );
 
-export default NavbarBrand;
+export default withCSSModule(NavbarBrand, styles, { allowMultiple: true });

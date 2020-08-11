@@ -69,6 +69,7 @@
     "no-useless-constructor": "off",
     "no-empty-function": "off",
     "no-unused-vars": "off",
+    "react/prop-types": "off",
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "import/no-absolute-path": "off",

@@ -1,18 +1,4 @@
-@import '../variables';
-
-/*
-  Media query for centering toggled social buttons icons
-  in the navbar.
-*/
-@media only screen and (max-width: $width-nav-toggle) {
-  /* Bootstrap class. */
-  .navbar {
-    .NavbarCollapse__nav {
-      display: inline-block;
-      float: none;
-    }
-  }
-}
+@import '../../variables';
 
 /* Custom font for the brand text. */
 @font-face {

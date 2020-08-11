@@ -1,23 +1,23 @@
 import React from 'react';
-import cx from 'classnames';
 import { Nav as BNav } from 'react-bootstrap';
 
 import 'styles/overrides/bootstrap.scss';
-import cn from 'styles/Navbar/NavListItem.module.scss';
+import styles from 'styles/Common/Navbar/NavListItem.module.scss';
+import withCSSModule from 'react-css-modules';
 
-/* Normal component props */
+/** Normal component props */
 type OwnProps = {
   link: string;
-  className: string | undefined;
+  className: Maybe<string>;
 };
 
-/* Social button link */
-const NavListItem: React.FC<OwnProps> = ({ link, className }: OwnProps) => (
+/** Social button link */
+const NavListItem: React.FC<OwnProps> = ({ link, className }) => (
   <li className='nav-item'>
     <BNav.Link href={link}>
-      <i className={cx(cn['NavListItem__link'], className)} />
+      <i styleName='NavListItem__link' className={className} />
     </BNav.Link>
   </li>
 );
 
-export default NavListItem;
+export default withCSSModule(NavListItem, styles);

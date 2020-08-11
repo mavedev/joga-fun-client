@@ -1,12 +1,13 @@
 import React from 'react';
-import cx from 'classnames';
+import { compose } from 'redux';
 import { Navbar as BNavbar } from 'react-bootstrap';
 import i18next from 'i18next';
 
 import * as constants from 'invariants';
 
 import 'styles/overrides/bootstrap.scss';
-import cn from 'styles/Navbar/Navbar.module.scss';
+import styles from 'styles/Common/Navbar/Navbar.module.scss';
+import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import NavbarList from './NavbarList';
 import NavListItem from './NavListItem';
 import NavbarBrand from './NavbarBrand';
@@ -16,14 +17,14 @@ import LangSwitcherContainer from './LangSwitcher';
 /* Top navbar. */
 const Navbar: React.FC<{}> = () => (
   <BNavbar
-    className={cx(cn['navbar'])}
+    styleName='navbar'
     expand='lg'
     bg='dark'
     sticky='top'
   >
     <LangSwitcherContainer langs={constants.LANGS_LIST} switcher={i18next} />
     <NavbarBrand />
-    <NavbarCollapse className={cn['NavbarCollapse__nav']}>
+    <NavbarCollapse>
       <NavbarList>
         {/* The Facebook link. */}
         <NavListItem
@@ -47,4 +48,7 @@ const Navbar: React.FC<{}> = () => (
 
 /* Use memoizing because the navbar is independent
    from the outside data. */
-export default React.memo(Navbar);
+export default compose<React.ComponentType<{}>>(
+  React.memo,
+  withCSSModulePartiallyApplied(styles)
+)(Navbar);
