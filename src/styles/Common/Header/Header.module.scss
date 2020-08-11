@@ -1,4 +1,4 @@
-@import '../variables';
+@import '../../variables';
 
 /* Custom font for the header. */
 @font-face {
@@ -7,7 +7,7 @@
 }
 
 /* Top-lever block wrapper. */
-.HeaderWrapper {
+.Header__MainWrapper {
   background-color: $color-background-hotter;
   background: url(~assets/images/header-background-min.jpg);
   text-align: center;

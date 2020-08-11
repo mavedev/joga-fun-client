@@ -3,14 +3,14 @@ import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
-import styles from 'styles/Header/Header.module.scss';
+import styles from 'styles/Common/Header/Header.module.scss';
 
 /** Main header component. */
 const Header: React.FC<{}> = () => {
   const { t: translator } = useTranslation();
 
   return (
-    <div styleName='HeaderWrapper'>
+    <div styleName='Header__MainWrapper'>
       <div styleName='Header__Overlay'>
         <h1 styleName='Header__Title'>
           {translator('Title')}
