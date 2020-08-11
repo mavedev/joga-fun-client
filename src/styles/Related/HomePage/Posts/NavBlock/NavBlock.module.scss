@@ -1,4 +1,4 @@
-@import '../../../variables';
+@import '../../../../variables';
 
 .NavBlock {
   width: 100%;
@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.NavButtonWrapper {
+.NavBlock__NavButtonWrapper {
   width: 49%;
   display: flex;
   justify-content: center;

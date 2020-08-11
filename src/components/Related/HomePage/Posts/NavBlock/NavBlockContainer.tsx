@@ -28,12 +28,12 @@ const mapDispatchToProps: MapDispatchProps = {
 };
 
 /** A wrapper for the NavBlock component getting posts info from the store. */
-const NavBlockContainer = ({
+const NavBlockContainer: React.FC<AllProps> = ({
   chunksLeft,
   currentPostsChunkNumber,
   setCurrentPostsChunkNumber,
   scrollAction
-}: AllProps) => (
+}) => (
   <NavBlock
     enablePrev={currentPostsChunkNumber > 1}
     enableNext={chunksLeft > 0}
