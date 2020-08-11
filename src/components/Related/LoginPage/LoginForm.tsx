@@ -1,16 +1,18 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import LoginButton from './LoginButton';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = {
   doLoginCallback: (username: string, password: string) => void;
 };
 
-/* The form containing auth fields. */
-const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => {
+/** The form containing auth fields. */
+const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }) => {
+  const { t: translator } = useTranslation();
   const usernameRef = React.useRef<HTMLInputElement>(null);
   const passwordRef = React.useRef<HTMLInputElement>(null);
   const login = React.useCallback(() => {
@@ -27,7 +29,7 @@ const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => {
           ref={usernameRef}
           type='text'
           className='form-control'
-          placeholder='Логин'
+          placeholder={translator('Login')}
         />
       </div>
       <div className='form-group'>
@@ -35,7 +37,7 @@ const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => {
           ref={passwordRef}
           type='password'
           className='form-control'
-          placeholder='Пароль'
+          placeholder={translator('Password')}
         />
       </div>
       <LoginButton action={login} />

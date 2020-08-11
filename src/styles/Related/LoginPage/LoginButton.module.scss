@@ -1,0 +1,12 @@
+@mixin LoginButton {}
+
+.LoginButton--Simple {
+  @include LoginButton;
+}
+
+/* Uppercase style for inner buttons. */
+.LoginButton--Uppercased {
+  @include LoginButton;
+
+  text-transform: uppercase;
+}

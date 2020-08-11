@@ -1,22 +1,22 @@
 import React from 'react';
-import cx from 'classnames';
+import withCSSModule from 'react-css-modules';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import cn from 'styles/LoginView/LoginBox.module.scss';
+import styles from 'styles/Related/LoginPage/LoginBox.module.scss';
 import LoginForm from './LoginForm';
 import BoxTitle from './BoxTitle';
 
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = {
   doLoginCallback: (username: string, password: string) => void;
 };
 
-/* Main presentational component. */
-const LoginBox: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => {
+/** Main presentational component. */
+const LoginBox: React.FC<OwnProps> = ({ doLoginCallback }) => {
   return (
     <div className='login-box'>
-      <div className={cn['BoxWrapper']}>
-        <div className={cx('container', 'jumbotron')}>
+      <div styleName='LoginBox__LoginFormWrapper'>
+        <div className='container jumbotron'>
           <BoxTitle />
           <LoginForm doLoginCallback={doLoginCallback} />
         </div>
@@ -25,4 +25,4 @@ const LoginBox: React.FC<OwnProps> = ({ doLoginCallback }: OwnProps) => {
   );
 };
 
-export default LoginBox;
+export default withCSSModule(LoginBox, styles);

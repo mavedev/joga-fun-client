@@ -6,24 +6,24 @@ import { createLoginThunk } from 'store';
 import { withHomeRedirect } from 'misc/hoc';
 import LoginBox from './LoginBox';
 
-/* Store state props type. */
+/** Store state props type. */
 type MapStateProps = {}
-/* Store dispatch props type. */
+/** Store dispatch props type. */
 type MapDispatchProps = {
   doLogin: (username: string, password: string) => void;
 }
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = {}
-/* All props type. */
+/** All props type. */
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapDispatchToProps: MapDispatchProps = {
   doLogin: createLoginThunk
 };
 
-/* The container for the login box passing store's auth dispatcher.
+/** The container for the login box passing store's auth dispatcher.
    Redirects to home in case of successful login. */
-const LoginContainer: React.FC<AllProps> = ({ doLogin }: AllProps) => (
+const LoginContainer: React.FC<AllProps> = ({ doLogin }) => (
   <LoginBox doLoginCallback={doLogin} />
 );
 

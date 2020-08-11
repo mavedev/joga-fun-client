@@ -11,5 +11,9 @@
   "ReadFull": "Читати повністю",
   "LoadMore": "Показати ще",
   "LoadPrev": "До попередніх",
-  "OurSocials": "Ми в соцмережах"
+  "OurSocials": "Ми в соцмережах",
+  "AdminEntrance": "Вхід адміністратора",
+  "Entrance": "Вхід",
+  "Login": "Логін",
+  "Password": "Пароль"
 }

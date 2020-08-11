@@ -11,5 +11,9 @@
   "ReadFull": "Read full post",
   "LoadMore": "Load more",
   "LoadPrev": "Back to previous",
-  "OurSocials": "Our socials"
+  "OurSocials": "Our socials",
+  "AdminEntrance": "Admin entrance",
+  "Entrance": "Login",
+  "Login": "Login",
+  "Password": "Password"
 }
