@@ -4,7 +4,7 @@ import { Card as BCard, Row as BRow } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from 'styles/Common/Categories/CategoriesList.module.scss';
+import { CategoriesListStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 
 import CategoryItem from './CategoryItem';

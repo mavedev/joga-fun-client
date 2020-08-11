@@ -2,7 +2,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'components/common/Navbar/LangSwitcher/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import styles from 'styles/Related/HomePage/Posts/PostsBlockTitle.module.scss';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 

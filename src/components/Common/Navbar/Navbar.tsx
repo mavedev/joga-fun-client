@@ -6,7 +6,7 @@ import i18next from 'i18next';
 import * as constants from 'invariants';
 
 import 'styles/overrides/bootstrap.scss';
-import styles from 'styles/Common/Navbar/Navbar.module.scss';
+import { NavbarStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import NavbarList from './NavbarList';
 import NavListItem from './NavListItem';
@@ -14,7 +14,7 @@ import NavbarBrand from './NavbarBrand';
 import NavbarCollapse from './NavbarCollapse';
 import LangSwitcherContainer from './LangSwitcher';
 
-/* Top navbar. */
+/** Top navbar. */
 const Navbar: React.FC<{}> = () => (
   <BNavbar
     bg='dark'

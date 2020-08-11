@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import withCSSModuleApplied from 'react-css-modules';
 
 import * as constants from 'invariants';
-import styles from 'styles/Common/Footer/FooterTopPane.module.scss';
+import { FooterTopPaneStyles as styles } from 'styles';
 
 /** The main block with info. */
 const FooterTopPane: React.FC<{}> = () => {

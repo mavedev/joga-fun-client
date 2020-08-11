@@ -2,7 +2,7 @@ import React from 'react';
 import withCSSModuleApplied from 'react-css-modules';
 
 import * as constants from 'invariants';
-import styles from 'styles/Common/Footer/FooterCPPane.module.scss';
+import { FooterCPPaneStyles as styles } from 'styles';
 
 /** Copiright info. */
 const FooterCPPane: React.FC<{}> = () => (

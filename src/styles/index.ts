@@ -1,0 +1,13 @@
+export { default as CategoriesListStyles } from './components/common/Categories/CategoriesList.module.scss';
+export { default as CategoryItemStyles } from './components/common/Categories/CategoryItem.module.scss';
+export { default as FooterStyles } from './components/common/Footer/Footer.module.scss';
+export { default as FooterCPPaneStyles } from './components/common/Footer/FooterCPPane.module.scss';
+export { default as FooterTopPaneStyles } from './components/common/Footer/FooterTopPane.module.scss';
+export { default as HeaderStyles } from './components/common/Header/Header.module.scss';
+export { default as NavbarStyles } from './components/common/Navbar/Navbar.module.scss';
+export { default as NavbarBrandStyles } from './components/common/Navbar/NavbarBrand.module.scss';
+export { default as NavListItemStyles } from './components/common/Navbar/NavListItem.module.scss';
+export { default as LangSwitcherStyles } from './components/common/Navbar/LangSwitcher/LangSwitcher.module.scss';
+export { default as SidebarStyles } from './components/common/Sidebar/Sidebar.module.scss';
+export { default as SocialLinkStyles } from './components/common/Sidebar/Socials/SocialLink.module.scss';
+export { default as SocialsStyles } from './components/common/Sidebar/Socials/Socials.module.scss';

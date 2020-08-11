@@ -4,7 +4,7 @@ import { Button as BButton } from 'react-bootstrap';
 import { i18n } from 'i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from 'styles/Common/Navbar/LangSwitcher/LangSwitcher.module.scss';
+import { LangSwitcherStyles as styles } from 'styles';
 
 /** Normal props of the component. */
 type OwnProps = {

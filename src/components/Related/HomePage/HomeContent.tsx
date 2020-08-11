@@ -3,8 +3,8 @@ import withCSSModule from 'react-css-modules';
 import { Container as BContainer, Row as BRow } from 'react-bootstrap';
 
 import styles from 'styles/Related/HomePage/HomeContent.module.scss';
-import ScrollAnchor from 'components/Common/ScrollAnchor';
-import SidebarContainer from 'components/Common/Sidebar';
+import ScrollAnchor from 'components/common/ScrollAnchor';
+import SidebarContainer from 'components/common/Sidebar';
 import PostsContainer from './Posts';
 
 /** Main home view block. */

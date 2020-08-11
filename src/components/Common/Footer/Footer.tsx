@@ -1,7 +1,7 @@
 import React from 'react';
 import { compose } from 'redux';
 
-import styles from 'styles/Common/Footer/Footer.module.scss';
+import { FooterStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import FooterTopPane from './FooterTopPane';
 import FooterCPPane from './FooterCPPane';

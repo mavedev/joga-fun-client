@@ -10,7 +10,7 @@ import NewPostPage from 'pages/NewPostPage';
 import SuspensePage from 'pages/SuspensePage';
 import Preloader from './Preloading';
 
-import 'styles/App/App.scss';
+import 'styles/components/App/App.scss';
 
 /** The main component of the app. */
 const App: React.FC<{}> = () => (

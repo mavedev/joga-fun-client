@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav as BNav } from 'react-bootstrap';
 
 import 'styles/overrides/bootstrap.scss';
-import styles from 'styles/Common/Navbar/NavListItem.module.scss';
+import { NavListItemStyles as styles } from 'styles';
 import withCSSModule from 'react-css-modules';
 
 /** Normal component props */

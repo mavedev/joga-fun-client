@@ -1,7 +1,7 @@
 import React from 'react';
 import { compose } from 'redux';
 
-import styles from 'styles/Common/Categories/CategoryItem.module.scss';
+import { CategoryItemStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 
 /** Normal component's props that are to be passed. */

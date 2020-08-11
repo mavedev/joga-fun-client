@@ -1,7 +1,7 @@
 import React from 'react';
 import withCSSModule from 'react-css-modules';
 
-import styles from 'styles/Common/Sidebar/Socials/SocialLink.module.scss';
+import { SocialLinkStyles as styles } from 'styles';
 
 /** Normal props of the component. */
 type OwnProps = {

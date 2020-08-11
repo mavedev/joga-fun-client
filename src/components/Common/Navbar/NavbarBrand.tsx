@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { NavbarBrand as BNavbarBrand } from 'react-bootstrap';
 
 import 'styles/overrides/bootstrap.scss';
-import styles from 'styles/Common/Navbar/NavbarBrand.module.scss';
+import { NavbarBrandStyles as styles } from 'styles';
 
 /** Bootstrap logo-like site name. */
 const NavbarBrand: React.FC<{}> = () => (

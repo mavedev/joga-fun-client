@@ -4,7 +4,7 @@ import { Col as BColumn, Row as BRow } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from 'styles/Common/Sidebar/Socials/Socials.module.scss';
+import { SocialsStyles as styles } from 'styles';
 import SocialLink from './SocialLink';
 
 /** A block with social links. */

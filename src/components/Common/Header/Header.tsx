@@ -3,7 +3,7 @@ import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
-import styles from 'styles/Common/Header/Header.module.scss';
+import { HeaderStyles as styles } from 'styles';
 
 /** Main header component. */
 const Header: React.FC<{}> = () => {
