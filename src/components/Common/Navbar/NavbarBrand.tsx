@@ -15,4 +15,4 @@ const NavbarBrand: React.FC<{}> = () => (
   </BNavbarBrand>
 );
 
-export default withCSSModule(NavbarBrand, styles, { allowMultiple: true });
+export default withCSSModule(NavbarBrand, styles);

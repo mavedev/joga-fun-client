@@ -5,23 +5,21 @@ import { i18n } from 'i18next';
 import { createSetLocale } from 'store';
 import LangSwitcher from './LangSwitcher';
 
-/* Store state props type. */
+/** Store state props type. */
 type MapStateProps = {};
-/* Store dispatch props type. */
+/** Store dispatch props type. */
 type MapDispatchProps = { setLocale: (locale: string) => void; };
-/* Normal props of the component. */
+/** Normal props of the component. */
 type OwnProps = { langs: string[]; switcher: i18n; };
-/* All props type. */
+/** All props type. */
 type AllProps = MapStateProps & MapDispatchProps & OwnProps;
 
 const mapDispatchToProps: MapDispatchProps = {
   setLocale: createSetLocale
 };
 
-/* A wrapper for the LangSwitcher component getting the locale from the store. */
-const LangSwitcherContainer: React.FC<AllProps> = ({
-  langs, switcher, setLocale
-}: AllProps) => (
+/** A wrapper for the LangSwitcher component getting the locale from the store. */
+const LangSwitcherContainer: React.FC<AllProps> = ({ langs, switcher, setLocale }) => (
   <LangSwitcher
     langs={langs}
     switcher={switcher}

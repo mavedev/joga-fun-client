@@ -14,9 +14,7 @@ type OwnProps = {
 };
 
 /** Panel with buttons to switch interface language. */
-const LangSwitcher: React.FC<OwnProps> = ({
-  langs, switcher, setLocale
-}: OwnProps) => {
+const LangSwitcher: React.FC<OwnProps> = ({ langs, switcher, setLocale }) => {
   const switchLanguage = useCallback((language: string) => {
     switcher.changeLanguage(language);
     setLocale(language);
