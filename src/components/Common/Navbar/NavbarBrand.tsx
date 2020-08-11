@@ -9,10 +9,7 @@ import styles from 'styles/Common/Navbar/NavbarBrand.module.scss';
 /** Bootstrap logo-like site name. */
 const NavbarBrand: React.FC<{}> = () => (
   <BNavbarBrand>
-    <Link
-      styleName='NavbarBrand__link NavbarBrand__link--curved'
-      to='/'
-    >
+    <Link to='/' styleName='NavbarBrand__Link--Curved'>
       Joga.fun
     </Link>
   </BNavbarBrand>

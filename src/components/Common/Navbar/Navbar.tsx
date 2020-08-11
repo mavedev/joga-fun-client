@@ -17,10 +17,10 @@ import LangSwitcherContainer from './LangSwitcher';
 /* Top navbar. */
 const Navbar: React.FC<{}> = () => (
   <BNavbar
-    styleName='navbar'
-    expand='lg'
     bg='dark'
+    expand='lg'
     sticky='top'
+    styleName='Navbar__BNavbar'
   >
     <LangSwitcherContainer langs={constants.LANGS_LIST} switcher={i18next} />
     <NavbarBrand />

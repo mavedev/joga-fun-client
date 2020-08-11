@@ -1,13 +1,8 @@
 @import '../../variables';
+@import '../../fonts';
 
-/* Custom font for the brand text. */
-@font-face {
-  font-family: 'Pacifico-Regular';
-  src: url(~assets/fonts/Pacifico-Regular.ttf) format('truetype');
-}
-
-/* Bootstrap class. */
-.navbar {
+/* Styling a Bootstrap element. */
+.Navbar__BNavbar {
   background-color: $color-background;
   background-image: url(~assets/images/navbar-background-min.jpg);
   border-color: $color-highlight;
