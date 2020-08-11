@@ -8,7 +8,7 @@ import styles from 'styles/Common/Sidebar/Sidebar.module.scss';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import Calendar from 'react-calendar';
 import CategoriesContainer from 'components/Common/Categories';
-import Socials from './Socials';
+import Socials from './Socials/Socials';
 
 /** Normal props of the component. */
 type OwnProps = {
