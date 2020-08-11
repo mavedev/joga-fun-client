@@ -1,11 +1,11 @@
-@import '../variables';
+@import '../../variables';
 
 /* Bottom-pressed footer styling. */
-.content {
+.HomeContent__Container {
   min-height: calc(100vh - #{$height-content});
 }
 
 /* Separation of the content from the footer. */
-.row-wrapper {
+.HomeContent__RowWrapper {
   padding-bottom: $spacing-default;
 }

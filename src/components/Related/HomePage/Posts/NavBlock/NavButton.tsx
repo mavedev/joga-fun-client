@@ -17,7 +17,7 @@ const NavButton: React.FC<OwnProps> = ({ text, disabled, action }) => (
   <BButton
     variant='light'
     disabled={disabled}
-    className='NavButton__BButton'
+    styleName='NavButton__BButton'
     onClick={action}
   >
     {text}
