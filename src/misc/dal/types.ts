@@ -10,7 +10,7 @@ export type CategoriesDTO = {
 
 /** Post info that is to be recieved from the server. */
 export type PostDTO = {
-  id: string;
+  id: string | null;
   title: string;
   imageURL: string;
   body: string;
@@ -40,7 +40,8 @@ export const isCategoriesDTO = (obj: any): obj is CategoriesDTO => (
 /** Check PostDTO type. */
 export const isPostDTO = (obj: any): obj is PostDTO => (
   obj === Object(obj)
-  && 'title' in obj && typeof obj.title === 'string'
+  && 'title' in obj && (typeof obj.title === 'string'
+  || typeof obj.title === 'object') // means null.
   && 'imageURL' in obj && typeof obj.imageURL === 'string'
   && 'body' in obj && typeof obj.body === 'string'
   && 'created' in obj && typeof obj.created === 'string'

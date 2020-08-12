@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 
 type APIResponse = Promise<AxiosResponse<any>>;
 
-/* The main API to communicate with the server.  */
+/** The main API to communicate with the server.  */
 export default class API {
   private static instance = axios.create({
     baseURL: process.env.REACT_APP_API_URL

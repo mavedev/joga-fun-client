@@ -35,8 +35,8 @@ export const createSetChunksLeft = (quantity: number): PAType => ({
   payload: quantity
 });
 
-const setDefaultPost = (dispatch: Dispatch<AppActionType>) => {
-  dispatch(createSetCurrentPost(defaultPost));
+const setEmptyPost = (dispatch: Dispatch<AppActionType>) => {
+  dispatch(createSetCurrentPost({ ...defaultPost, id: null }));
 };
 
 export const createSetPostThunk = (postID: Maybe<string>) => (
@@ -49,8 +49,8 @@ export const createSetPostThunk = (postID: Maybe<string>) => (
           dispatch(createSetCurrentPost(response.data['post'] as Post));
           break;
         default:
-          setDefaultPost(dispatch);
+          setEmptyPost(dispatch);
       }
     })
-    .catch(() => { setDefaultPost(dispatch); });
+    .catch(() => { setEmptyPost(dispatch); });
 };
