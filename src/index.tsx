@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import services from 'misc/services';
-import App from './components/App';
+import App from './components/basic/App';
 
 services.translations.configTranslations();
 

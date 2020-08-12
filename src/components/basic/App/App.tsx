@@ -8,12 +8,12 @@ import PostPage from 'pages/PostPage';
 import LoginPage from 'pages/LoginPage';
 import NewPostPage from 'pages/NewPostPage';
 import SuspensePage from 'pages/SuspensePage';
-import Preloader from './Preloading';
+import Preloader from 'components/basic/Preloading';
 
 import 'styles/vendors/extensions/bootstrap.scss';
 import 'styles/vendors/extensions/quill.scss';
 import 'styles/vendors/react-calendar.scss';
-import 'styles/components/App/App.scss';
+import 'styles/vendors/font-awesome.scss';
 
 /** The main component of the app. */
 const App: React.FC<{}> = () => (
