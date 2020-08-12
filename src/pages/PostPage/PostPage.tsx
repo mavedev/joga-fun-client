@@ -4,7 +4,7 @@ import cx from 'classnames';
 import Navbar from 'components/common/Navbar';
 import Header from 'components/common/Header';
 import Footer from 'components/common/Footer';
-import PostPageContent from 'components/Related/PostPage';
+import PostPageContent from 'components/related/PostPage';
 
 import cn from 'styles/View.module.scss';
 

@@ -15,5 +15,7 @@
   "AdminEntrance": "Вхід адміністратора",
   "Entrance": "Вхід",
   "Login": "Логін",
-  "Password": "Пароль"
+  "Password": "Пароль",
+  "SetCategory": "Додати до категорії",
+  "Publish": "Опубілкувати"
 }

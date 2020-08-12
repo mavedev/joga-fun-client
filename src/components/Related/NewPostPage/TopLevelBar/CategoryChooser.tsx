@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import withCSSModules from 'react-css-modules';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 
-import cn from 'styles/NewPostView/TopLevelBar/CategoryChooser.module.scss';
+import { NewPostBoxCategoryChooserStyles as styles } from 'styles';
 
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = {
   categories: string[];
   currentCategory: string;
@@ -14,17 +16,19 @@ const CategoryChooser: React.FC<OwnProps> = ({
   categories,
   currentCategory,
   setCurrentCategory
-}: OwnProps) => {
+}) => {
+  const { t: translator } = useTranslation();
+
   const onSelectCategory = (eventKey: number): void => {
     setCurrentCategory(categories[eventKey]);
   };
 
   return (
-    <div className={cn['MainWrapper']}>
-      <div className={cn['Body']}>
-        <div className={cn['CategoryTextHintWrapper']}>
-          <p className={cn['CategoryTextHint']}>
-            Определить в категорию:
+    <div styleName='CategoryChooser__MainWrapper'>
+      <div styleName='CategoryChooser__Body'>
+        <div styleName='CategoryChooser__TextHintWrapper'>
+          <p styleName='CategoryChooser__TextHint'>
+            {`${translator('SetCategory')}:`}
           </p>
         </div>
 
@@ -48,4 +52,4 @@ const CategoryChooser: React.FC<OwnProps> = ({
   );
 };
 
-export default CategoryChooser;
+export default withCSSModules(CategoryChooser, styles);

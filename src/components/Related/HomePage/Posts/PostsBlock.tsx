@@ -3,8 +3,8 @@ import withCSSModule from 'react-css-modules';
 import { Col as BCol } from 'react-bootstrap';
 
 import { PostDTO } from 'misc/dal';
-import 'components/common/Navbar/LangSwitcher/node_modules/bootstrap/dist/css/bootstrap.min.css';
-import styles from 'styles/Related/HomePage/Posts/PostsBlock.module.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { PostsBlockStyles as styles } from 'styles';
 import Post from './Post';
 import PostsBlockTitleContainer from './PostsBlockTitleContainer';
 import NavBlockContainer from './NavBlock';

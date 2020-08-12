@@ -9,7 +9,7 @@ import { withCSSModulePartiallyApplied } from 'misc/hoc';
 
 import CategoryItem from './CategoryItem';
 
-/* Normal component's props that are to be passed. */
+/** Normal component's props that are to be passed. */
 type OwnProps = {
   categories: string[];
   setCurrentFilteredCategory: (category: string | null) => void;

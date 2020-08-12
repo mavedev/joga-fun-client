@@ -2,7 +2,7 @@ import React from 'react';
 import withCSSModule from 'react-css-modules';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from 'styles/Related/LoginPage/LoginBox.module.scss';
+import { LoginBoxStyles as styles } from 'styles';
 import LoginForm from './LoginForm';
 import BoxTitle from './BoxTitle';
 

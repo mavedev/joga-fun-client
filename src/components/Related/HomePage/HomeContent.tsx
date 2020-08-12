@@ -2,7 +2,7 @@ import React from 'react';
 import withCSSModule from 'react-css-modules';
 import { Container as BContainer, Row as BRow } from 'react-bootstrap';
 
-import styles from 'styles/Related/HomePage/HomeContent.module.scss';
+import { HomeContentStyles as styles } from 'styles';
 import ScrollAnchor from 'components/common/ScrollAnchor';
 import SidebarContainer from 'components/common/Sidebar';
 import PostsContainer from './Posts';

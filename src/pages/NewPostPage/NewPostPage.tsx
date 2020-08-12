@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import Navbar from 'components/common/Navbar';
-import NewPostBox from 'components/Related/NewPostPage';
+import NewPostBox from 'components/related/NewPostPage';
 
 import styles from 'styles/View.module.scss';
 

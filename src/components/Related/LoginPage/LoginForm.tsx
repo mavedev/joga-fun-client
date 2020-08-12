@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import LoginButton from './LoginButton';
 
-import 'components/common/Navbar/LangSwitcher/node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 /** Normal component's props that are to be passed. */
 type OwnProps = {

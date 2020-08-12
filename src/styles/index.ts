@@ -11,3 +11,15 @@ export { default as LangSwitcherStyles } from './components/common/Navbar/LangSw
 export { default as SidebarStyles } from './components/common/Sidebar/Sidebar.module.scss';
 export { default as SocialLinkStyles } from './components/common/Sidebar/Socials/SocialLink.module.scss';
 export { default as SocialsStyles } from './components/common/Sidebar/Socials/Socials.module.scss';
+export { default as HomeContentStyles } from './components/related/HomePage/HomeContent.module.scss';
+export { default as PostsBlockStyles } from './components/related/HomePage/Posts/PostsBlock.module.scss';
+export { default as PostsBlockTitleStyles } from './components/related/HomePage/Posts/PostsBlockTitle.module.scss';
+export { default as PostsNavBlockStyles } from './components/related/HomePage/Posts/NavBlock/NavBlock.module.scss';
+export { default as PostsNavButtonStyles } from './components/related/HomePage/Posts/NavBlock/NavButton.module.scss';
+export { default as LoginBoxStyles } from './components/related/LoginPage/LoginBox.module.scss';
+export { default as LoginButtonStyles } from './components/related/LoginPage/LoginButton.module.scss';
+export { default as BoxTitleStyles } from './components/related/LoginPage/BoxTitle.module.scss';
+export { default as NewPostBoxStyles } from './components/related/NewPostPage/NewPostBox.module.scss';
+export { default as NewPostBoxCategoryChooserStyles } from './components/related/NewPostPage/TopLevelBar/CategoryChooser.module.scss';
+export { default as NewPostBoxTopLevelBarStyles } from './components/related/NewPostPage/TopLevelBar/TopLevelBar.module.scss';
+export { default as PostPageContantStyles } from './components/related/PostPage/PostPageContent.module.scss';

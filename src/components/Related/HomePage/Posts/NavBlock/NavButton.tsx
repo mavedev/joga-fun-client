@@ -2,8 +2,8 @@ import React from 'react';
 import withCSSModule from 'react-css-modules';
 import { Button as BButton } from 'react-bootstrap';
 
-import 'components/common/Navbar/LangSwitcher/node_modules/bootstrap/dist/css/bootstrap.min.css';
-import styles from 'styles/Related/HomePage/Posts/NavBlock/NavButton.module.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { PostsNavButtonStyles as styles } from 'styles';
 
 /** Normal component's props that are to be passed. */
 type OwnProps = {

@@ -2,8 +2,8 @@ import React from 'react';
 import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
-import 'components/common/Navbar/LangSwitcher/node_modules/bootstrap/dist/css/bootstrap.min.css';
-import styles from 'styles/Related/HomePage/Posts/PostsBlockTitle.module.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { PostsBlockTitleStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 
 /** Normal component's props that are to be passed. */

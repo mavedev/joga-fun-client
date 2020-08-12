@@ -1,1 +1,1 @@
-export { default } from './PostViewContent';
+export { default } from './PostPageContent';

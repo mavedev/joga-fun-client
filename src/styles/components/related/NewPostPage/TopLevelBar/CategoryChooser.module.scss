@@ -1,12 +1,12 @@
-@import '../../variables';
+@import '~styles/variables';
 
-.MainWrapper {
+.CategoryChooser__MainWrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-.Body {
+.CategoryChooser__Body {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
@@ -15,10 +15,10 @@
   border-radius: $border-radius-default;
 }
 
-.CategoryTextHintWrapper {
+.CategoryChooser__TextHintWrapper {
   margin: auto $spacing-default;
 }
 
-.CategoryTextHint {
+.CategoryChooser__TextHint {
   margin: 0;
 }

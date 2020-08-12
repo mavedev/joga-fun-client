@@ -1,6 +1,6 @@
-@import '../variables';
+@import '~styles/variables';
 
-.MainWrapper {
+.NewPostBox__MainWrapper {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -8,6 +8,6 @@
   margin-top: $spacing-default;
 }
 
-.EditorWrapper {
+.NewPostBox__EditorWrapper {
   margin-top: $spacing-default;
 }

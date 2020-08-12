@@ -2,7 +2,7 @@ import React from 'react';
 import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
-import styles from 'styles/Related/HomePage/Posts/NavBlock/NavBlock.module.scss';
+import { PostsNavBlockStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import NavButton from './NavButton';
 

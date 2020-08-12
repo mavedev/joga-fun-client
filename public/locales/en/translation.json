@@ -15,5 +15,7 @@
   "AdminEntrance": "Admin entrance",
   "Entrance": "Login",
   "Login": "Login",
-  "Password": "Password"
+  "Password": "Password",
+  "SetCategory": "Set category",
+  "Publish": "Publish"
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import Navbar from 'components/common/Navbar';
-import LoginBoxContainer from 'components/Related/LoginPage';
+import LoginBoxContainer from 'components/related/LoginPage';
 
 import styles from 'styles/View.module.scss';
 
