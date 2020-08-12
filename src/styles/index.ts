@@ -24,3 +24,4 @@ export { default as NewPostBoxCategoryChooserStyles } from './components/related
 export { default as NewPostBoxTopLevelBarStyles } from './components/related/NewPostPage/TopLevelBar/TopLevelBar.module.scss';
 export { default as PostPageContantStyles } from './components/related/PostPage/PostPageContent.module.scss';
 export { default as HomePageStyles } from './pages/HomePage/HomePage.module.scss';
+export { default as PostPageStyles } from './pages/PostPage/PostPage.module.scss';

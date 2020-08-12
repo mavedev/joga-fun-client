@@ -1,0 +1,9 @@
+@import '~styles/abstracts/mixins';
+
+.PostPage__MainWrapper {
+  @include ViewArea--WithHotColdGranient;
+}
+
+.PostPage__FooterWrapper {
+  @include FooterWrapper;
+}
