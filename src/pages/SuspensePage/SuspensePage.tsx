@@ -2,7 +2,7 @@ import React from 'react';
 
 import loader from 'assets/svg/loader.svg';
 
-import cn from 'styles/Suspense/SuspenseView.module.scss';
+import cn from 'styles/pages/Suspense/SuspensePage.module.scss';
 
 /* A component to display while loading. */
 const SuspensePage: React.FC<{}> = () => (

@@ -1,3 +1,33 @@
+@import './variables';
+
+@mixin ViewArea {}
+
+/* The main background for the webpage. */
+@mixin ViewArea--WithHotColdGranient {
+  @include ViewArea;
+
+  background: linear-gradient(
+    to left, $color-background-colder, $color-background-hotter
+  );
+}
+
+/* Full-height view styles (for footerless views). */
+@mixin ViewArea--WithFullHeight {
+  @include ViewArea;
+  
+  min-height: 100vh;
+}
+
+/*
+  Chrome has a bug with a space below the footer at 100% scale.
+  A workaround for that bug is to wrap the footer separately
+  so that it has its own background and then give it background color
+  same as its lower part background color. 
+*/
+@mixin FooterWrapper {
+  background-color: $color-blackout-darker;
+}
+
 /* The card mixin. */
 @mixin FooterTopPane__Card {
   color: white;
