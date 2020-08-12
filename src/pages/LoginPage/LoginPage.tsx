@@ -7,12 +7,12 @@ import LoginBoxContainer from 'components/related/LoginPage';
 
 /** A page where the administrator can login. */
 const LoginPage: React.FC<{}> = () => (
-  <div>
+  <>
     <div styleName='LoginPage__MainWrapper--FullHeight'>
       <Navbar />
       <LoginBoxContainer />
     </div>
-  </div>
+  </>
 );
 
 export default withCSSModule(LoginPage, styles);

@@ -8,7 +8,7 @@ import Footer from 'components/common/Footer';
 import HomeContent from 'components/related/HomePage';
 
 const HomePage: React.FC<{}> = () => (
-  <div>
+  <>
     <div styleName='HomePage__MainWrapper'>
       <Navbar />
       <Header />
@@ -17,7 +17,7 @@ const HomePage: React.FC<{}> = () => (
     <div styleName='HomePage__FooterWrapper'>
       <Footer />
     </div>
-  </div>
+  </>
 );
 
 export default withCSSModule(HomePage, styles);

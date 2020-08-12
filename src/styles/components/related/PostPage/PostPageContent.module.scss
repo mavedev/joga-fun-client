@@ -1,7 +1,7 @@
 @import '~styles/abstracts/variables';
 
 /* Bottom-pressed footer styling. */
-.PostPageContent__MainContainer {
+.PostPageContent__MainWrapper {
   min-height: calc(100vh - #{$height-content});
 }
 
