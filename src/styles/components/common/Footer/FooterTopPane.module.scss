@@ -1,4 +1,5 @@
-@import '~styles/variables';
+@import '~styles/abstracts/variables';
+@import '~styles/abstracts/mixins';
 
 /* The main part of the footer content. */
 .FooterTopPane__MainWrapper {
@@ -8,11 +9,6 @@
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-}
-
-/* The card mixin. */
-@mixin FooterTopPane__Card {
-  color: white;
 }
 
 /* The main part text styling. */

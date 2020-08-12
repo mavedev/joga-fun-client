@@ -6,7 +6,7 @@ import { NewPostBoxStyles as styles } from 'styles';
 import TopLevelContainer from './TopLevelBar';
 
 import 'react-quill/dist/quill.snow.css';
-import 'styles/overrides/Quill.scss';
+import 'styles/vendors/extensions/Quill.scss';
 
 const NewPostBox: React.FC<{}> = () => {
   const quillInstance = React.createRef<ReactQuill>();

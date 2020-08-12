@@ -5,7 +5,7 @@ import i18next from 'i18next';
 
 import * as constants from 'invariants';
 
-import 'styles/overrides/bootstrap.scss';
+import 'styles/vendors/extensions/bootstrap.scss';
 import { NavbarStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import NavbarList from './NavbarList';

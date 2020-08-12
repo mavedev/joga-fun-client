@@ -3,7 +3,7 @@ import withCSSModule from 'react-css-modules';
 import { Link } from 'react-router-dom';
 import { NavbarBrand as BNavbarBrand } from 'react-bootstrap';
 
-import 'styles/overrides/bootstrap.scss';
+import 'styles/vendors/extensions/bootstrap.scss';
 import { NavbarBrandStyles as styles } from 'styles';
 
 /** Bootstrap logo-like site name. */

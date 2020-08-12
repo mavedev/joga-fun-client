@@ -1,5 +1,12 @@
+/* Custom font for the header. */
+@font-face {
+  font-family: 'Lobster-Regular';
+  src: url(~assets/fonts/Lobster-Regular.ttf) format('truetype');
+}
+
 /* Custom font for the brand text. */
 @font-face {
   font-family: 'Pacifico-Regular';
   src: url(~assets/fonts/Pacifico-Regular.ttf) format('truetype');
 }
+

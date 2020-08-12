@@ -1,7 +1,5 @@
 import React from 'react';
 
-import 'styles/overrides/bootstrap.scss';
-
 /** Normal component props with children.
    Needed for static type check. */
 type OwnProps = { children: React.ReactNode; };

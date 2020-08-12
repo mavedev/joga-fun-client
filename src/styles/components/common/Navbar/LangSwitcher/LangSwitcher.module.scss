@@ -1,10 +1,10 @@
-@import '~styles/variables';
+@import '~styles/abstracts/variables';
 
-.MainWrapper {
+.LangSwitcher__MainWrapper {
   display: flex;
   flex-flow: row nowrap;
 }
 
-.BButtonWrapper {
+.LangSwitcher__BButtonWrapper {
   margin: $width-minimum;
 }

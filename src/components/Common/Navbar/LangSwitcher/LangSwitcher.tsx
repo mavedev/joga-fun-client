@@ -21,9 +21,9 @@ const LangSwitcher: React.FC<OwnProps> = ({ langs, switcher, setLocale }) => {
   }, [switcher, setLocale]);
 
   return (
-    <div styleName='MainWrapper'>
+    <div styleName='LangSwitcher__MainWrapper'>
       {langs.map((value) => (
-        <div key={value} styleName='BButtonWrapper'>
+        <div key={value} styleName='LangSwitcher__BButtonWrapper'>
           <BButton
             variant='light'
             onClick={() => { switchLanguage(value); }}

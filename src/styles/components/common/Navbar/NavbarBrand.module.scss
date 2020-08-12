@@ -1,12 +1,4 @@
-/* Links in Bootstrap navbar. */
-@mixin NavbarBrand__link {
-  font-size: 2rem !important; // Override Font Awesome styles.
-
-  &, &:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-}
+@import '~styles/abstracts/mixins';
 
 /* Default links style. */
 .NavbarBrand__Link--Simple {

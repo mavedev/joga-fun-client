@@ -38,7 +38,7 @@ const CategoriesList: React.FC<OwnProps> = ({
     <div>
       <BCard className='my-4'>
         <h5 className='card-header'>{translator('Categories')}</h5>
-        <BCard.Body styleName='ListWrapper--Centered'>
+        <BCard.Body styleName='CategoriesList__MainWrapper'>
           <BRow>
             <div className='col-lg-12'>
               <ul className='list-unstyled mb-0'>
