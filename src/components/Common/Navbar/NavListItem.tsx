@@ -14,7 +14,7 @@ type OwnProps = {
 const NavListItem: React.FC<OwnProps> = ({ link, className }) => (
   <li className='nav-item'>
     <BNav.Link href={link}>
-      <i styleName='NavListItem__link' className={className} />
+      <i styleName='NavListItem__Link' className={className} />
     </BNav.Link>
   </li>
 );
