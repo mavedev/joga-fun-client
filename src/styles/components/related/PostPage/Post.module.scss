@@ -1,5 +1,8 @@
+@import '~styles/abstracts/variables';
+
 .Post__BCard {
   min-width: 80vw !important; // Override Bootstrap style.
+  max-width: 80vw;
 }
 
 .Post__TitleAndImageWrapper {
@@ -7,9 +10,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.Post__ImageWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: $spacing-default;
 }
 
 .Post__Image {
   width: fit-content !important; // Override Bootstrap style.
-  max-width: 100%;
+  max-width: 80%;
 }
