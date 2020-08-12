@@ -35,7 +35,7 @@ const CategoriesContainer: React.FC<AllProps> = ({
   setCurrentFilteredCategory,
   setCurrentPostChunkNumber,
   scrollAction
-}: AllProps) => (
+}) => (
   <CategoriesList
     categories={categories}
     setCurrentFilteredCategory={setCurrentFilteredCategory}

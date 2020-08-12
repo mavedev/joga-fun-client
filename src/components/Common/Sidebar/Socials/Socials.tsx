@@ -14,30 +14,28 @@ const Socials: React.FC<{}> = () => {
   const linkVK = process.env.REACT_APP_LINK_VK || '/';
 
   return (
-    <div>
-      <BColumn>
-        <h3 className='my-4' styleName='Socials__Title'>
-          {translator('OurSocials')}
-        </h3>
-        <BRow className='justify-content-center align-items-center'>
-          <SocialLink
-            href={linkFB}
-            className='fa fa-facebook'
-            ownStyleName='SocialLink--OfFacebook'
-          />
-          <SocialLink
-            href={linkTW}
-            className='fa fa-twitter'
-            ownStyleName='SocialLink--OfTwitter'
-          />
-          <SocialLink
-            href={linkVK}
-            className='fa fa-vk'
-            ownStyleName='SocialLink--OfVk'
-          />
-        </BRow>
-      </BColumn>
-    </div>
+    <BColumn>
+      <h3 className='my-4' styleName='Socials__Title'>
+        {translator('OurSocials')}
+      </h3>
+      <BRow className='justify-content-center align-items-center'>
+        <SocialLink
+          href={linkFB}
+          className='fa fa-facebook'
+          ownStyleName='SocialLink--OfFacebook'
+        />
+        <SocialLink
+          href={linkTW}
+          className='fa fa-twitter'
+          ownStyleName='SocialLink--OfTwitter'
+        />
+        <SocialLink
+          href={linkVK}
+          className='fa fa-vk'
+          ownStyleName='SocialLink--OfVk'
+        />
+      </BRow>
+    </BColumn>
   );
 };
 

@@ -8,7 +8,7 @@ import { withCSSModulePartiallyApplied } from 'misc/hoc';
 type OwnProps = { name: string; action: () => void; };
 
 /** List item with name and action to do on clicking the link within. */
-const CategoryItem: React.FC<OwnProps> = ({ name, action }: OwnProps) => (
+const CategoryItem: React.FC<OwnProps> = ({ name, action }) => (
   <li>
     <div styleName='CategoryItem__ButtonWrapper'>
       <button

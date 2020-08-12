@@ -21,7 +21,7 @@ const CategoriesList: React.FC<OwnProps> = ({
   setCurrentFilteredCategory,
   setCurrentPostChunkNumber,
   scrollAction
-}: OwnProps) => {
+}) => {
   const { t: translator } = useTranslation();
   const filterCategories = React.useCallback((category: string | null) => {
     setCurrentFilteredCategory(category);
@@ -34,30 +34,28 @@ const CategoriesList: React.FC<OwnProps> = ({
   ]);
 
   return (
-    <div>
-      <BCard className='my-4'>
-        <h5 className='card-header'>{translator('Categories')}</h5>
-        <BCard.Body styleName='CategoriesList__MainWrapper'>
-          <BRow>
-            <div className='col-lg-12'>
-              <ul className='list-unstyled mb-0'>
+    <BCard className='my-4'>
+      <h5 className='card-header'>{translator('Categories')}</h5>
+      <BCard.Body styleName='CategoriesList__MainWrapper'>
+        <BRow>
+          <div className='col-lg-12'>
+            <ul className='list-unstyled mb-0'>
+              <CategoryItem
+                action={() => { filterCategories(null); }}
+                name={translator('CategoriesAll')}
+              />
+              {categories.map((value: string) => (
                 <CategoryItem
-                  action={() => { filterCategories(null); }}
-                  name={translator('CategoriesAll')}
+                  action={() => { filterCategories(value); }}
+                  key={value}
+                  name={value}
                 />
-                {categories.map((value: string) => (
-                  <CategoryItem
-                    action={() => { filterCategories(value); }}
-                    key={value}
-                    name={value}
-                  />
-                ))}
-              </ul>
-            </div>
-          </BRow>
-        </BCard.Body>
-      </BCard>
-    </div>
+              ))}
+            </ul>
+          </div>
+        </BRow>
+      </BCard.Body>
+    </BCard>
   );
 };
 

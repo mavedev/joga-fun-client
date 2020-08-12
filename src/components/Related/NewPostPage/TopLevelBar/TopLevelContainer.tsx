@@ -35,7 +35,7 @@ const TopLevelContainer: React.FC<AllProps> = ({
   categories,
   currentCategory,
   setCurrentCategory
-}: AllProps) => (
+}) => (
   <TopLevelBar
     categories={categories}
     currentCategory={currentCategory}

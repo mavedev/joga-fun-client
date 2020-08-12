@@ -39,13 +39,11 @@ const CategoryChooser: React.FC<OwnProps> = ({
           id='dropdown-menu-align-right'
           onSelect={onSelectCategory}
         >
-          {
-            categories.map((value: string, index: number) => (
-              <Dropdown.Item key={value} eventKey={`${index}`}>
-                {value}
-              </Dropdown.Item>
-            ))
-          }
+          {categories.map((value: string, index: number) => (
+            <Dropdown.Item key={value} eventKey={`${index}`}>
+              {value}
+            </Dropdown.Item>
+          ))}
         </DropdownButton>
       </div>
     </div>
