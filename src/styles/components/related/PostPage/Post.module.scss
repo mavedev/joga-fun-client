@@ -1,0 +1,15 @@
+.Post__BCard {
+  min-width: 80vw !important; // Override Bootstrap style.
+}
+
+.Post__TitleAndImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Post__Image {
+  width: fit-content !important; // Override Bootstrap style.
+  max-width: 100%;
+}

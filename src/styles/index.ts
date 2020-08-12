@@ -23,6 +23,7 @@ export { default as NewPostBoxStyles } from './components/related/NewPostPage/Ne
 export { default as NewPostBoxCategoryChooserStyles } from './components/related/NewPostPage/TopLevelBar/CategoryChooser.module.scss';
 export { default as NewPostBoxTopLevelBarStyles } from './components/related/NewPostPage/TopLevelBar/TopLevelBar.module.scss';
 export { default as PostPageContentStyles } from './components/related/PostPage/PostPageContent.module.scss';
+export { default as PostPagePostStyles } from './components/related/PostPage/Post.module.scss';
 export { default as HomePageStyles } from './pages/HomePage/HomePage.module.scss';
 export { default as PostPageStyles } from './pages/PostPage/PostPage.module.scss';
 export { default as NewPostPageStyles } from './pages/NewPostPage/NewPostPage.module.scss';
