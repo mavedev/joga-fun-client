@@ -2,7 +2,6 @@ import React from 'react';
 import withCSSModule from 'react-css-modules';
 import { Button as BButton } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { PostsNavButtonStyles as styles } from 'styles';
 
 /** Normal component's props that are to be passed. */

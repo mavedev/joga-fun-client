@@ -10,6 +10,9 @@ import NewPostPage from 'pages/NewPostPage';
 import SuspensePage from 'pages/SuspensePage';
 import Preloader from './Preloading';
 
+import 'styles/vendors/extensions/bootstrap.scss';
+import 'styles/vendors/extensions/quill.scss';
+import 'styles/vendors/react-calendar.scss';
 import 'styles/components/App/App.scss';
 
 /** The main component of the app. */

@@ -3,7 +3,6 @@ import withCSSModule from 'react-css-modules';
 import { Col as BColumn, Row as BRow } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { SocialsStyles as styles } from 'styles';
 import SocialLink from './SocialLink';
 

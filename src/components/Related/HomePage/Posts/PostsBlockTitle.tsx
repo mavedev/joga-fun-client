@@ -2,7 +2,6 @@ import React from 'react';
 import { compose } from 'redux';
 import { useTranslation } from 'react-i18next';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { PostsBlockTitleStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 

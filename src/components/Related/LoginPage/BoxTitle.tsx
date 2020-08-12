@@ -2,7 +2,6 @@ import React from 'react';
 import withCSSModule from 'react-css-modules';
 import { useTranslation } from 'react-i18next';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { BoxTitleStyles as styles } from 'styles';
 
 /** The title for the login box. */

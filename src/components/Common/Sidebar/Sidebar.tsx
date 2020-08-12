@@ -2,8 +2,6 @@ import React from 'react';
 import { compose } from 'redux';
 import { Col as BCol } from 'react-bootstrap';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'react-calendar/dist/Calendar.css';
 import { SidebarStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 import Calendar from 'react-calendar';

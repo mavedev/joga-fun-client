@@ -3,7 +3,6 @@ import withCSSModule from 'react-css-modules';
 import { Button as BButton } from 'react-bootstrap';
 import { i18n } from 'i18next';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { LangSwitcherStyles as styles } from 'styles';
 
 /** Normal props of the component. */

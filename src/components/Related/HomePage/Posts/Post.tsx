@@ -5,8 +5,6 @@ import { useTranslation } from 'react-i18next';
 
 import { PostDTO } from 'misc/dal';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 /** Normal component's props that are to be passed. */
 type OwnProps = { data: PostDTO; };
 

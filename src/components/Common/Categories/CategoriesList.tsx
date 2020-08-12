@@ -3,7 +3,6 @@ import { compose } from 'redux';
 import { Card as BCard, Row as BRow } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { CategoriesListStyles as styles } from 'styles';
 import { withCSSModulePartiallyApplied } from 'misc/hoc';
 

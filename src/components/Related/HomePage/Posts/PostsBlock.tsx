@@ -3,7 +3,6 @@ import withCSSModule from 'react-css-modules';
 import { Col as BCol } from 'react-bootstrap';
 
 import { PostDTO } from 'misc/dal';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { PostsBlockStyles as styles } from 'styles';
 import Post from './Post';
 import PostsBlockTitleContainer from './PostsBlockTitleContainer';

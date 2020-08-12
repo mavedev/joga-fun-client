@@ -1,8 +1,6 @@
 import React from 'react';
 import { Navbar as BNavbar, Nav as BNav } from 'react-bootstrap';
 
-import 'styles/vendors/extensions/bootstrap.scss';
-
 /** Normal component props with children.
    Needed for static type check. */
 type OwnProps = { children: React.ReactNode; };
