@@ -1,22 +1,18 @@
 import React from 'react';
-import cx from 'classnames';
+import withCSSModule from 'react-css-modules';
+
+import { LoginPageStyles as styles } from 'styles';
 import Navbar from 'components/common/Navbar';
 import LoginBoxContainer from 'components/related/LoginPage';
 
-import styles from 'styles/View.module.scss';
-
+/** A page where the administrator can login. */
 const LoginPage: React.FC<{}> = () => (
   <div>
-    <div className={cx(
-      styles['view-area'],
-      styles['view-area--gradient-hot-cold'],
-      styles['view-area--full-height']
-    )}
-    >
+    <div styleName='LoginPage__MainWrapper--FullHeight'>
       <Navbar />
       <LoginBoxContainer />
     </div>
   </div>
 );
 
-export default LoginPage;
+export default withCSSModule(LoginPage, styles);

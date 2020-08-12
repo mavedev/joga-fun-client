@@ -1,0 +1,11 @@
+@import '~styles/abstracts/mixins';
+
+.LoginPage__MainWrapper {
+  @include ViewArea--WithHotColdGranient;
+}
+
+.LoginPage__MainWrapper--FullHeight {
+  @extend .LoginPage__MainWrapper;
+  @include ViewArea--WithFullHeight;
+}
+

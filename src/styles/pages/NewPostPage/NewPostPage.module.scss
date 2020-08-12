@@ -1,0 +1,11 @@
+@import '~styles/abstracts/mixins';
+
+.NewPostPage__MainWrapper {
+  @include ViewArea--WithHotColdGranient;
+}
+
+.NewPostPage__MainWrapper--FullHeight {
+  @extend .NewPostPage__MainWrapper;
+  @include ViewArea--WithFullHeight;
+}
+

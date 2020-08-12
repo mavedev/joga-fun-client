@@ -1,22 +1,17 @@
 import React from 'react';
-import cx from 'classnames';
+import withCSSModule from 'react-css-modules';
+
+import { NewPostPageStyles as styles } from 'styles';
 import Navbar from 'components/common/Navbar';
 import NewPostBox from 'components/related/NewPostPage';
 
-import styles from 'styles/View.module.scss';
-
 const NewPostPage: React.FC<{}> = () => (
   <div>
-    <div className={cx(
-      styles['view-area'],
-      styles['view-area--gradient-hot-cold'],
-      styles['view-area--full-height']
-    )}
-    >
+    <div styleName='NewPostPage__MainWrapper--FullHeight'>
       <Navbar />
       <NewPostBox />
     </div>
   </div>
 );
 
-export default NewPostPage;
+export default withCSSModule(NewPostPage, styles);

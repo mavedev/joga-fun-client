@@ -25,3 +25,5 @@ export { default as NewPostBoxTopLevelBarStyles } from './components/related/New
 export { default as PostPageContantStyles } from './components/related/PostPage/PostPageContent.module.scss';
 export { default as HomePageStyles } from './pages/HomePage/HomePage.module.scss';
 export { default as PostPageStyles } from './pages/PostPage/PostPage.module.scss';
+export { default as NewPostPageStyles } from './pages/NewPostPage/NewPostPage.module.scss';
+export { default as LoginPageStyles } from './pages/LoginPage/LoginPage.module.scss';
