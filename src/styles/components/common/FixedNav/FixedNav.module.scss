@@ -1,0 +1,54 @@
+@import '~styles/abstracts/variables';
+
+.FixedNav__MainWrapper {
+  position: fixed;
+  left: 10vw;
+  bottom: 10vh;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background-empty;
+  color: $color-background-empty;
+  width: 10vh;
+  height: 10vh;
+  border: 1px solid $color-background-scroll-button;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    border-color: change-color(
+      $color: $color-background-scroll-button,
+      $alpha: .6
+    );
+  }
+
+  &:active {
+    border-color: change-color(
+      $color: $color-background-scroll-button,
+      $alpha: .3
+    );
+  }
+}
+
+.FixedNav__Arrow {
+  width: 10vh;
+  height: 10vh;
+  opacity: 1;
+  transition: .1s;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .3;
+  }
+}
