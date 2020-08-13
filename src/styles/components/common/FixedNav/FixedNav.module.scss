@@ -1,9 +1,10 @@
 @import '~styles/abstracts/variables';
+@import '~styles/abstracts/functions';
 
 .FixedNav__MainWrapper {
   position: fixed;
-  left: 10vw;
-  bottom: 10vh;
+  left: .5vw;
+  bottom: 5vh;
   padding: 0;
   display: flex;
   flex-flow: row wrap;
@@ -18,37 +19,25 @@
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  opacity: .3;
+  transition: .1s;
 
   &:focus {
     outline: none;
   }
 
   &:hover {
-    border-color: change-color(
-      $color: $color-background-scroll-button,
-      $alpha: .6
-    );
+    opacity: .6;
+    border-color: fade($color-background-scroll-button, .6);
   }
 
   &:active {
-    border-color: change-color(
-      $color: $color-background-scroll-button,
-      $alpha: .3
-    );
+    opacity: 1;
+    border-color: fade($color-background-scroll-button, 1);
   }
 }
 
 .FixedNav__Arrow {
   width: 10vh;
   height: 10vh;
-  opacity: 1;
-  transition: .1s;
-
-  &:hover {
-    opacity: .6;
-  }
-
-  &:active {
-    opacity: .3;
-  }
 }

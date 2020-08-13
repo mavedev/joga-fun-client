@@ -1,0 +1,3 @@
+@function fade($color, $alpha) {
+  @return change-color($color: $color, $alpha: $alpha);
+}
