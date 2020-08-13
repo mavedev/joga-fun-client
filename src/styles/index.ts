@@ -28,4 +28,5 @@ export { default as HomePageStyles } from './pages/HomePage/HomePage.module.scss
 export { default as PostPageStyles } from './pages/PostPage/PostPage.module.scss';
 export { default as NewPostPageStyles } from './pages/NewPostPage/NewPostPage.module.scss';
 export { default as LoginPageStyles } from './pages/LoginPage/LoginPage.module.scss';
+export { default as LoginFormStyles } from './pages/LoginPage/LoginForm.module.scss';
 export { default as FixedNav } from './components/common/FixedNav/FixedNav.module.scss';

@@ -1,0 +1,9 @@
+@import '~styles/abstracts/variables';
+
+.LoginForm__Input--Simple {
+  border-color: initial;
+}
+
+.LoginForm__Input--Error {
+  border-color: $color-highlight !important; // Bootstrap override.
+}
