@@ -32,6 +32,7 @@ export const createLoginThunk = (
     .then((response) => {
       dispatch(createSetLoggedIn());
       dispatch(createSetJWT(response.data['token']));
+      dispatch(createSetNoFailStatus(true));
       services.cookies.set('access-token', response.data['token'], { path: '/' });
     })
     .catch(() => {
