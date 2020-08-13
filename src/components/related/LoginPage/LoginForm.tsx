@@ -7,6 +7,7 @@ import LoginButton from './LoginButton';
 
 /** Normal component's props that are to be passed. */
 type OwnProps = {
+  noFailStatus: boolean;
   doLoginCallback: (username: string, password: string) => void;
 };
 
@@ -14,7 +15,7 @@ type OwnProps = {
 type KeyEvent = React.KeyboardEvent<HTMLInputElement>;
 
 /** The form containing auth fields. */
-const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }) => {
+const LoginForm: React.FC<OwnProps> = ({ noFailStatus, doLoginCallback }) => {
   const { t: translator } = useTranslation();
   const usernameRef = React.useRef<HTMLInputElement>(null);
   const passwordRef = React.useRef<HTMLInputElement>(null);
@@ -53,7 +54,7 @@ const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }) => {
           className='form-control'
           placeholder={translator('Login')}
           onKeyPress={handleKey}
-          styleName={areInputsValid
+          styleName={noFailStatus && areInputsValid
             ? 'LoginForm__Input--Simple' : 'LoginForm__Input--Error'}
         />
       </div>
@@ -64,7 +65,7 @@ const LoginForm: React.FC<OwnProps> = ({ doLoginCallback }) => {
           className='form-control'
           placeholder={translator('Password')}
           onKeyPress={handleKey}
-          styleName={areInputsValid
+          styleName={noFailStatus && areInputsValid
             ? 'LoginForm__Input--Simple' : 'LoginForm__Input--Error'}
         />
       </div>
