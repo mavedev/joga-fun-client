@@ -2,10 +2,7 @@ import React from 'react';
 import ReactQuill from 'react-quill';
 import { connect } from 'react-redux';
 
-import {
-  AppState,
-  createSetCurrentManagedCategory
-} from 'store';
+import { AppState, createSetCurrentManagedCategory } from 'store';
 import API from 'misc/api';
 import TopLevelBar from './TopLevelBar';
 
@@ -22,6 +19,7 @@ type MapDispatchPropsType = {
 /** Normal component's props that are to be passed. */
 type OwnPropsType = {
   titleInput: React.RefObject<HTMLInputElement>;
+  imageInput: React.RefObject<HTMLInputElement>;
   editor: React.RefObject<ReactQuill>;
 };
 /** All props type. */
@@ -44,18 +42,20 @@ const TopLevelContainer: React.FC<AllProps> = ({
   setCurrentCategory,
   adminToken,
   titleInput,
+  imageInput,
   editor
 }) => {
   const publishAction = React.useCallback(() => {
     const body = editor.current ? editor.current.getEditor().root.innerHTML : '';
     const title = titleInput.current ? titleInput.current.value : '';
+    const imageURL = imageInput.current ? imageInput.current.value : '';
     API.createPost({
       body,
       title,
-      imageURL: 'https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg',
+      imageURL,
       category: currentCategory
     }, adminToken);
-  }, [adminToken, currentCategory, editor, titleInput]);
+  }, [adminToken, currentCategory, editor, titleInput, imageInput]);
 
   return (
     <TopLevelBar
