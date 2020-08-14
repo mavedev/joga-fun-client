@@ -36,7 +36,7 @@ export default class API {
     return API.instance.get('posts/quantity', {});
   }
 
-  public static createPost = (post: Post): APIResponse => {
+  public static createPost = (post: Omit<Post, 'id' | 'created'>): APIResponse => {
     return API.instance.post('posts/create', post, {});
   }
 }

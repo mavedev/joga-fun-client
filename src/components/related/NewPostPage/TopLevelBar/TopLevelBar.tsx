@@ -10,13 +10,15 @@ type OwnProps = {
   categories: string[],
   currentCategory: string,
   setCurrentCategory: (category: string) => void;
+  publishAction: () => void;
 };
 
 /** A bar containing the categories chooser and the publish button. */
 const TopLevelBar: React.FC<OwnProps> = ({
   categories,
   currentCategory,
-  setCurrentCategory
+  setCurrentCategory,
+  publishAction
 }) => (
   <div styleName='TopLevelBar__MainWrapper'>
     <div styleName='TopLevelBar__CategoryChooserWrapper'>
@@ -27,7 +29,7 @@ const TopLevelBar: React.FC<OwnProps> = ({
       />
     </div>
     <div styleName='TopLevelBar__PublishButtonWrapper'>
-      <PublishButton />
+      <PublishButton action={publishAction} />
     </div>
   </div>
 );

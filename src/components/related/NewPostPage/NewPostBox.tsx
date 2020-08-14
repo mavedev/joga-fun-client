@@ -10,7 +10,7 @@ const NewPostBox: React.FC<{}> = () => {
 
   return (
     <div styleName='NewPostBox__MainWrapper'>
-      <TopLevelContainer />
+      <TopLevelContainer editor={quillInstance} />
       <div styleName='NewPostBox__EditorWrapper'>
         <ReactQuill ref={quillInstance} />
       </div>
