@@ -20,7 +20,10 @@ type MapDispatchPropsType = {
   setCurrentCategory: (category: string) => void;
 }
 /** Normal component's props that are to be passed. */
-type OwnPropsType = { editor: React.RefObject<ReactQuill>; };
+type OwnPropsType = {
+  titleInput: React.RefObject<HTMLInputElement>;
+  editor: React.RefObject<ReactQuill>;
+};
 /** All props type. */
 type AllProps = MapStatePropsType & MapDispatchPropsType & OwnPropsType;
 
@@ -40,17 +43,19 @@ const TopLevelContainer: React.FC<AllProps> = ({
   currentCategory,
   setCurrentCategory,
   adminToken,
+  titleInput,
   editor
 }) => {
   const publishAction = React.useCallback(() => {
-    const body = editor.current ? editor.current.getEditor().getText() : '';
+    const body = editor.current ? editor.current.getEditor().root.innerHTML : '';
+    const title = titleInput.current ? titleInput.current.value : '';
     API.createPost({
       body,
-      title: 'Title',
+      title,
       imageURL: 'https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg',
       category: currentCategory
     }, adminToken);
-  }, [adminToken, currentCategory, editor]);
+  }, [adminToken, currentCategory, editor, titleInput]);
 
   return (
     <TopLevelBar

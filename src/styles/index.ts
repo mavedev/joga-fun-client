@@ -22,6 +22,7 @@ export { default as BoxTitleStyles } from './components/related/LoginPage/BoxTit
 export { default as NewPostBoxStyles } from './components/related/NewPostPage/NewPostBox.module.scss';
 export { default as NewPostBoxCategoryChooserStyles } from './components/related/NewPostPage/TopLevelBar/CategoryChooser.module.scss';
 export { default as NewPostBoxTopLevelBarStyles } from './components/related/NewPostPage/TopLevelBar/TopLevelBar.module.scss';
+export { default as NewPostBoxTitleInputStyles } from './components/related/NewPostPage/TitleInput/TitleInput.module.scss';
 export { default as PostPageContentStyles } from './components/related/PostPage/PostPageContent.module.scss';
 export { default as PostPagePostStyles } from './components/related/PostPage/Post.module.scss';
 export { default as HomePageStyles } from './pages/HomePage/HomePage.module.scss';

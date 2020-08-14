@@ -4,16 +4,17 @@ import withCSSModule from 'react-css-modules';
 
 import { NewPostBoxStyles as styles } from 'styles';
 import TopLevelContainer from './TopLevelBar';
+import TitleInput from './TitleInput';
 
 const NewPostBox: React.FC<{}> = () => {
-  const quillInstance = React.createRef<ReactQuill>();
+  const quillInstance = React.useRef<ReactQuill>(null);
+  const titleInputRef = React.useRef<HTMLInputElement>(null);
 
   return (
     <div styleName='NewPostBox__MainWrapper'>
-      <TopLevelContainer editor={quillInstance} />
-      <div styleName='NewPostBox__EditorWrapper'>
-        <ReactQuill ref={quillInstance} />
-      </div>
+      <TopLevelContainer titleInput={titleInputRef} editor={quillInstance} />
+      <TitleInput ref={titleInputRef} />
+      <ReactQuill ref={quillInstance} />
     </div>
   );
 };
