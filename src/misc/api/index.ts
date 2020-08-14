@@ -1,5 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 
+import { PostDTO as Post } from 'misc/dal';
+
 type APIResponse = Promise<AxiosResponse<any>>;
 
 /** The main API to communicate with the server.  */
@@ -32,5 +34,9 @@ export default class API {
 
   public static getPostsQuantity = (): APIResponse => {
     return API.instance.get('posts/quantity', {});
+  }
+
+  public static createPost = (post: Post): APIResponse => {
+    return API.instance.post('posts/create', post, {});
   }
 }
