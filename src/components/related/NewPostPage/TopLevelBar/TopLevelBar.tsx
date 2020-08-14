@@ -1,5 +1,6 @@
 import React from 'react';
 import withCSSModule from 'react-css-modules';
+import { useTranslation } from 'react-i18next';
 
 import { NewPostBoxTopLevelBarStyles as styles } from 'styles';
 import CategoryChooser from './CategoryChooser';
@@ -19,19 +20,23 @@ const TopLevelBar: React.FC<OwnProps> = ({
   currentCategory,
   setCurrentCategory,
   publishAction
-}) => (
-  <div styleName='TopLevelBar__MainWrapper'>
-    <div styleName='TopLevelBar__CategoryChooserWrapper'>
-      <CategoryChooser
-        categories={categories}
-        currentCategory={currentCategory}
-        setCurrentCategory={setCurrentCategory}
-      />
+}) => {
+  const { t: translator } = useTranslation();
+
+  return (
+    <div styleName='TopLevelBar__MainWrapper'>
+      <div styleName='TopLevelBar__CategoryChooserWrapper'>
+        <CategoryChooser
+          categories={[...categories, translator('NoCategory')]}
+          currentCategory={currentCategory}
+          setCurrentCategory={setCurrentCategory}
+        />
+      </div>
+      <div styleName='TopLevelBar__PublishButtonWrapper'>
+        <PublishButton action={publishAction} />
+      </div>
     </div>
-    <div styleName='TopLevelBar__PublishButtonWrapper'>
-      <PublishButton action={publishAction} />
-    </div>
-  </div>
-);
+  );
+};
 
 export default withCSSModule(TopLevelBar, styles);

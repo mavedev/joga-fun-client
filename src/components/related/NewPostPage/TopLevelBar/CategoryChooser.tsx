@@ -20,7 +20,11 @@ const CategoryChooser: React.FC<OwnProps> = ({
   const { t: translator } = useTranslation();
 
   const onSelectCategory = (eventKey: number): void => {
-    setCurrentCategory(categories[eventKey]);
+    setCurrentCategory(
+      categories[eventKey] !== translator('NoCategory')
+        ? categories[eventKey]
+        : ''
+    );
   };
 
   return (
@@ -35,7 +39,7 @@ const CategoryChooser: React.FC<OwnProps> = ({
         <DropdownButton
           variant='light'
           alignRight
-          title={currentCategory}
+          title={currentCategory || translator('NoCategory')}
           id='dropdown-menu-align-right'
           onSelect={onSelectCategory}
         >

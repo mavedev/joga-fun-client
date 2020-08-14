@@ -13,6 +13,7 @@ import TopLevelBar from './TopLevelBar';
 type MapStatePropsType = {
   categories: string[];
   currentCategory: string;
+  adminToken: string;
 }
 /** Store dispatch props type. */
 type MapDispatchPropsType = {
@@ -25,7 +26,8 @@ type AllProps = MapStatePropsType & MapDispatchPropsType & OwnPropsType;
 
 const mapStateToProps = (state: AppState): MapStatePropsType => ({
   categories: state.categories.categoriesList,
-  currentCategory: state.categories.currentManagedCategory
+  currentCategory: state.categories.currentManagedCategory,
+  adminToken: state.auth.jwt
 });
 
 const mapDispatchToProps: MapDispatchPropsType = ({
@@ -37,6 +39,7 @@ const TopLevelContainer: React.FC<AllProps> = ({
   categories,
   currentCategory,
   setCurrentCategory,
+  adminToken,
   editor
 }) => {
   const publishAction = React.useCallback(() => {
@@ -46,8 +49,8 @@ const TopLevelContainer: React.FC<AllProps> = ({
       title: 'Title',
       imageURL: 'https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg',
       category: currentCategory
-    });
-  }, []);
+    }, adminToken);
+  }, [adminToken, currentCategory, editor]);
 
   return (
     <TopLevelBar

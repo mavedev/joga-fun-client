@@ -36,7 +36,11 @@ export default class API {
     return API.instance.get('posts/quantity', {});
   }
 
-  public static createPost = (post: Omit<Post, 'id' | 'created'>): APIResponse => {
-    return API.instance.post('posts/create', post, {});
+  public static createPost = (
+    post: Omit<Post, 'id' | 'created'>,
+    token: string
+  ): APIResponse => {
+    const config = { headers: { 'x-access-token': token } };
+    return API.instance.post('posts/create', post, config);
   }
 }
