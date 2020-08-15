@@ -28,7 +28,7 @@ const Post: React.FC<OwnProps> = ({ data }) => {
           modules={{ toolbar: false }}
           readOnly
         />
-        <NavLink to='/login' className='btn btn-primary'>
+        <NavLink to={`/post/${data.id}`} className='btn btn-primary'>
           {`${translator('ReadFull')} `}
           &rarr;
         </NavLink>
