@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactQuill from 'react-quill';
 import withCSSModule from 'react-css-modules';
 import { Card as BCard } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
@@ -24,7 +25,12 @@ const getActualPost = (data: PostDTO) => (
         />
       </div>
     </div>
-    <p className='card-text'>{`${data.body}`}</p>
+    <ReactQuill
+      className='Quill--Observing'
+      value={data.body}
+      modules={{ toolbar: false }}
+      readOnly
+    />
   </>
 );
 
