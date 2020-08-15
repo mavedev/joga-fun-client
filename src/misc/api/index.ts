@@ -43,4 +43,9 @@ export default class API {
     const config = { headers: { 'x-access-token': token } };
     return API.instance.post('posts/create', post, config);
   }
+
+  public static createCategory = (name: string, token: string): APIResponse => {
+    const config = { headers: { 'x-access-token': token } };
+    return API.instance.post('categories/create', { name }, config);
+  }
 }

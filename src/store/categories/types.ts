@@ -1,4 +1,5 @@
 export const SET_CATEGORIES = 'SET_CATEGORIES';
+export const ADD_CATEGORY = 'ADD_CATEGORY';
 export const MANAGE_SET_CURRENT_CATEGORY = 'SET_CURRENT_CATEGORY';
 export const FILTER_SET_CURRENT_CATEGORY = 'FILTER_SET_CURRENT_CATEGORY';
 
@@ -13,6 +14,11 @@ type SetCategoriesActionType = {
   payload: string[];
 };
 
+type AddCategoryActionType = {
+  type: typeof ADD_CATEGORY;
+  payload: string;
+};
+
 type SetManageCurrentCategoryActionType = {
   type: typeof MANAGE_SET_CURRENT_CATEGORY;
   payload: string;
@@ -25,5 +31,6 @@ type SetFilterCurrentCategoryActionType = {
 
 export type CategoriesActionType =
   SetCategoriesActionType
+  | AddCategoryActionType
   | SetManageCurrentCategoryActionType
   | SetFilterCurrentCategoryActionType;

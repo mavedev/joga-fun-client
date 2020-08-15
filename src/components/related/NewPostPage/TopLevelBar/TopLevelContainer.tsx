@@ -11,11 +11,11 @@ type MapStatePropsType = {
   categories: string[];
   currentCategory: string;
   adminToken: string;
-}
+};
 /** Store dispatch props type. */
 type MapDispatchPropsType = {
   setCurrentCategory: (category: string) => void;
-}
+};
 /** Normal component's props that are to be passed. */
 type OwnPropsType = {
   titleInput: React.RefObject<HTMLInputElement>;

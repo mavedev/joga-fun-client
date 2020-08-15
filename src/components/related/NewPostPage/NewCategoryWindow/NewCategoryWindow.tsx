@@ -5,7 +5,10 @@ import { Button as BButton } from 'react-bootstrap';
 
 import { NewPostCategoryWindow as styles } from 'styles';
 
-const NewCategoryWindow: React.FC<{}> = () => {
+/** Normal component's props. */
+type OwnProps = { createCategoryCallback: (category: string) => void; };
+
+const NewCategoryWindow: React.FC<OwnProps> = ({ createCategoryCallback }) => {
   const categoryInputRef = React.useRef<HTMLInputElement>(null);
   const { t: translation } = useTranslation();
 
@@ -18,7 +21,11 @@ const NewCategoryWindow: React.FC<{}> = () => {
         className='form-control'
         styleName='NewCategoryWindow__Input'
       />
-      <BButton>
+      <BButton onClick={() => {
+        categoryInputRef.current!.toggleAttribute('disabled');
+        createCategoryCallback(categoryInputRef.current?.value || '');
+      }}
+      >
         {translation('AddCategory')}
       </BButton>
     </div>

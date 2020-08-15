@@ -1,5 +1,6 @@
 import {
   SET_CATEGORIES,
+  ADD_CATEGORY,
   MANAGE_SET_CURRENT_CATEGORY,
   FILTER_SET_CURRENT_CATEGORY,
   CategoriesState,
@@ -21,6 +22,11 @@ export const categoriesChooserReducer = (
       return {
         ...state,
         categoriesList: action.payload
+      };
+    case ADD_CATEGORY:
+      return {
+        ...state,
+        categoriesList: [...state.categoriesList, action.payload]
       };
     case MANAGE_SET_CURRENT_CATEGORY:
       return {

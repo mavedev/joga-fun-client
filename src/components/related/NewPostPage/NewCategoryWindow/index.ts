@@ -1,1 +1,1 @@
-export { default } from './NewCategoryWindow';
+export { default } from './NewCategoryWindowContainer';

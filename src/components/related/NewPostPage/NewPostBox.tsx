@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { NewPostBoxStyles as styles } from 'styles';
 import TopLevelContainer from './TopLevelBar';
 import PostInput from './PostInput';
-import NewCategoryWindow from './NewCategoryWindow';
+import NewCategoryWindowContainer from './NewCategoryWindow';
 
 const NewPostBox: React.FC<{}> = () => {
   const quillInstance = React.useRef<ReactQuill>(null);
@@ -31,7 +31,15 @@ const NewPostBox: React.FC<{}> = () => {
         ref={imageInputRef}
       />
       <ReactQuill ref={quillInstance} />
-      {categoryAddingNow ? <NewCategoryWindow /> : null}
+      {
+      categoryAddingNow
+        ? (
+          <NewCategoryWindowContainer
+            doAfter={() => { setCategoryAddingNow(false); }}
+          />
+        )
+        : null
+      }
     </div>
   );
 };
