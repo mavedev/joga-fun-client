@@ -6,11 +6,13 @@ import { useTranslation } from 'react-i18next';
 import { NewPostBoxStyles as styles } from 'styles';
 import TopLevelContainer from './TopLevelBar';
 import PostInput from './PostInput';
+import NewCategoryWindow from './NewCategoryWindow';
 
 const NewPostBox: React.FC<{}> = () => {
   const quillInstance = React.useRef<ReactQuill>(null);
   const titleInputRef = React.useRef<HTMLInputElement>(null);
   const imageInputRef = React.useRef<HTMLInputElement>(null);
+  const [categoryAddingNow, setCategoryAddingNow] = React.useState(true);
   const { t: translator } = useTranslation();
 
   return (
@@ -29,6 +31,7 @@ const NewPostBox: React.FC<{}> = () => {
         ref={imageInputRef}
       />
       <ReactQuill ref={quillInstance} />
+      {categoryAddingNow ? <NewCategoryWindow /> : null}
     </div>
   );
 };

@@ -20,6 +20,7 @@ export { default as LoginBoxStyles } from './components/related/LoginPage/LoginB
 export { default as LoginButtonStyles } from './components/related/LoginPage/LoginButton.module.scss';
 export { default as BoxTitleStyles } from './components/related/LoginPage/BoxTitle.module.scss';
 export { default as NewPostBoxStyles } from './components/related/NewPostPage/NewPostBox.module.scss';
+export { default as NewPostCategoryWindow } from './components/related/NewPostPage/NewCategoryWindow/NewCategoryWindow.module.scss';
 export { default as NewPostBoxCategoryChooserStyles } from './components/related/NewPostPage/TopLevelBar/CategoryChooser.module.scss';
 export { default as NewPostBoxTopLevelBarStyles } from './components/related/NewPostPage/TopLevelBar/TopLevelBar.module.scss';
 export { default as NewPostBoxPublishButtonStyles } from './components/related/NewPostPage/TopLevelBar/PublishButton.module.scss';

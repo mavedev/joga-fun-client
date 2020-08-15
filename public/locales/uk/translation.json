@@ -9,6 +9,7 @@
   "NoCategory": "Без категорії",
   "PostTitlePlaceholder": "Заголовок",
   "PostImagePlaceholder": "URL зображення",
+  "NewCategoryPlaceholder": "Назва категорії",
   "CategoriesAll": "Усі",
   "Feedback": "Зворотній зв'язок",
   "ReadFull": "Читати повністю",
@@ -20,6 +21,7 @@
   "Login": "Логін",
   "Password": "Пароль",
   "SetCategory": "Додати до категорії",
+  "AddCategory": "Створити категорію",
   "Publish": "Опубілкувати",
   "NoPostFound": "Перепрошуємо, але публікацію не було знайдено :("
 }

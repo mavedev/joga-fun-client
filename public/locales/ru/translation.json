@@ -9,6 +9,7 @@
   "NoCategory": "Без категории",
   "PostTitlePlaceholder": "Заголовок",
   "PostImagePlaceholder": "URL изображения",
+  "NewCategoryPlaceholder": "Название категории",
   "CategoriesAll": "Все",
   "Feedback": "Обратная связь",
   "ReadFull": "Читать полностью",
@@ -20,6 +21,7 @@
   "Login": "Логин",
   "Password": "Пароль",
   "SetCategory": "Определить в категорию",
+  "AddCategory": "Создать категорию",
   "Publish": "Опубликовать",
   "NoPostFound": "Простите, похоже, запрашиваемой публикации нет :("
 }
