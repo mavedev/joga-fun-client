@@ -1,6 +1,7 @@
 import React from 'react';
 import withCSSModule from 'react-css-modules';
 import { useTranslation } from 'react-i18next';
+import { Button as BButton } from 'react-bootstrap';
 
 import { APIResponse } from 'misc/api';
 import { NewPostBoxTopLevelBarStyles as styles } from 'styles';
@@ -13,6 +14,7 @@ type OwnProps = {
   currentCategory: string,
   setCurrentCategory: (category: string) => void;
   publishAction: () => APIResponse;
+  doBefore: () => void;
 };
 
 /** A bar containing the categories chooser and the publish button. */
@@ -20,7 +22,8 @@ const TopLevelBar: React.FC<OwnProps> = ({
   categories,
   currentCategory,
   setCurrentCategory,
-  publishAction
+  publishAction,
+  doBefore
 }) => {
   const { t: translator } = useTranslation();
 
@@ -32,6 +35,11 @@ const TopLevelBar: React.FC<OwnProps> = ({
           currentCategory={currentCategory}
           setCurrentCategory={setCurrentCategory}
         />
+      </div>
+      <div styleName='TopLevelBar__PublishButtonWrapper'>
+        <BButton variant='light' onClick={doBefore}>
+          {translator('AddCategory')}
+        </BButton>
       </div>
       <div styleName='TopLevelBar__PublishButtonWrapper'>
         <PublishButton action={publishAction} />

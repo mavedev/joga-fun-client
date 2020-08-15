@@ -12,7 +12,7 @@ const NewPostBox: React.FC<{}> = () => {
   const quillInstance = React.useRef<ReactQuill>(null);
   const titleInputRef = React.useRef<HTMLInputElement>(null);
   const imageInputRef = React.useRef<HTMLInputElement>(null);
-  const [categoryAddingNow, setCategoryAddingNow] = React.useState(true);
+  const [categoryAddingNow, setCategoryAddingNow] = React.useState(false);
   const { t: translator } = useTranslation();
 
   return (
@@ -21,6 +21,7 @@ const NewPostBox: React.FC<{}> = () => {
         titleInput={titleInputRef}
         imageInput={imageInputRef}
         editor={quillInstance}
+        doBefore={() => { setCategoryAddingNow(true); }}
       />
       <PostInput
         placeholder={translator('PostTitlePlaceholder')}

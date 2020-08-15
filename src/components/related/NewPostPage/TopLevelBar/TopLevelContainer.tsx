@@ -21,6 +21,7 @@ type OwnPropsType = {
   titleInput: React.RefObject<HTMLInputElement>;
   imageInput: React.RefObject<HTMLInputElement>;
   editor: React.RefObject<ReactQuill>;
+  doBefore: () => void;
 };
 /** All props type. */
 type AllProps = MapStatePropsType & MapDispatchPropsType & OwnPropsType;
@@ -43,7 +44,8 @@ const TopLevelContainer: React.FC<AllProps> = ({
   adminToken,
   titleInput,
   imageInput,
-  editor
+  editor,
+  doBefore
 }) => {
   const publishAction = React.useCallback(() => {
     let body = '';
@@ -77,6 +79,7 @@ const TopLevelContainer: React.FC<AllProps> = ({
       currentCategory={currentCategory}
       setCurrentCategory={setCurrentCategory}
       publishAction={publishAction}
+      doBefore={doBefore}
     />
   );
 };
