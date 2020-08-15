@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 
 import { PostDTO as Post } from 'misc/dal';
 
-type APIResponse = Promise<AxiosResponse<any>>;
+export type APIResponse = Promise<AxiosResponse<any>>;
 
 /** The main API to communicate with the server.  */
 export default class API {

@@ -49,7 +49,7 @@ const TopLevelContainer: React.FC<AllProps> = ({
     const body = editor.current ? editor.current.getEditor().root.innerHTML : '';
     const title = titleInput.current ? titleInput.current.value : '';
     const imageURL = imageInput.current ? imageInput.current.value : '';
-    API.createPost({
+    return API.createPost({
       body,
       title,
       imageURL,

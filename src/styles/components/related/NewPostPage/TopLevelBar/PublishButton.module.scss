@@ -1,0 +1,16 @@
+@import '~styles/abstracts/variables';
+
+.PublishButton__MainWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.PublishButton__LoaderWrapper {
+  margin-left: $spacing-default;
+}
+
+.PublishButton__Loader {
+  max-height: $size-inputs-height;
+}

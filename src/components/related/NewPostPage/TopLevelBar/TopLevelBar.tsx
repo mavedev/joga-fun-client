@@ -2,6 +2,7 @@ import React from 'react';
 import withCSSModule from 'react-css-modules';
 import { useTranslation } from 'react-i18next';
 
+import { APIResponse } from 'misc/api';
 import { NewPostBoxTopLevelBarStyles as styles } from 'styles';
 import CategoryChooser from './CategoryChooser';
 import PublishButton from './PublishButton';
@@ -11,7 +12,7 @@ type OwnProps = {
   categories: string[],
   currentCategory: string,
   setCurrentCategory: (category: string) => void;
-  publishAction: () => void;
+  publishAction: () => APIResponse;
 };
 
 /** A bar containing the categories chooser and the publish button. */
