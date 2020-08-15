@@ -6,12 +6,10 @@ import Navbar from 'components/common/Navbar';
 import NewPostBox from 'components/related/NewPostPage';
 
 const NewPostPage: React.FC<{}> = () => (
-  <>
-    <div styleName='NewPostPage__MainWrapper--FullHeight'>
-      <Navbar />
-      <NewPostBox />
-    </div>
-  </>
+  <div styleName='NewPostPage__MainWrapper--FullHeight'>
+    <Navbar />
+    <NewPostBox />
+  </div>
 );
 
 export default withCSSModule(NewPostPage, styles);

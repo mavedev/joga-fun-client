@@ -8,6 +8,7 @@ import PostPage from 'pages/PostPage';
 import LoginPage from 'pages/LoginPage';
 import NewPostPage from 'pages/NewPostPage';
 import SuspensePage from 'pages/SuspensePage';
+import NotFoundPage from 'pages/NotFoundPage';
 import Preloader from 'components/basic/Preloading';
 
 import 'styles/vendors/extensions/bootstrap.scss';
@@ -27,6 +28,7 @@ const App: React.FC<{}> = () => (
               <Route path='/post/:postID' component={PostPage} />
               <Route path='/login' exact component={LoginPage} />
               <Route path='/manage' exact component={NewPostPage} />
+              <Route path='*' component={NotFoundPage} />
             </Switch>
           </div>
         </HashRouter>

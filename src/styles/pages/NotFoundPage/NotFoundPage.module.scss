@@ -1,0 +1,21 @@
+@import '~styles/abstracts/variables';
+@import '~styles/abstracts/mixins';
+
+.NotFoundPage__MainWrapper {
+  @include ViewArea--WithHotColdGranient;
+}
+
+.NotFoundPage__MainWrapper--FullHeight {
+  @extend .NotFoundPage__MainWrapper;
+  @include ViewArea--WithFullHeight;
+}
+
+.NotFoundPage__ContentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: $spacing-default;
+  font-size: calc(#{$size-font-title} * 1.5);
+  color: $color-empty;
+}

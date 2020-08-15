@@ -53,7 +53,7 @@ const Post: React.FC<OwnProps> = ({ data }) => {
     setTimeout(() => {
       setDummyBlock(() => getFilledDummy);
     }, 6000);
-  }, [setDummyBlock, getFilledDummy]);
+  }, [setDummyBlock]);
 
   return (
     <BCard styleName='Post__BCard'>

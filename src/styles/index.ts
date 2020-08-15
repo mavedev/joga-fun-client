@@ -33,3 +33,4 @@ export { default as NewPostPageStyles } from './pages/NewPostPage/NewPostPage.mo
 export { default as LoginPageStyles } from './pages/LoginPage/LoginPage.module.scss';
 export { default as LoginFormStyles } from './pages/LoginPage/LoginForm.module.scss';
 export { default as FixedNav } from './components/common/FixedNav/FixedNav.module.scss';
+export { default as NotFoundPageStyles } from './pages/NotFoundPage/NotFoundPage.module.scss';
