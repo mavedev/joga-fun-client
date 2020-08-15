@@ -1,5 +1,6 @@
 import React from 'react';
 import withCSSModule from 'react-css-modules';
+import { useHistory } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button as BButton } from 'react-bootstrap';
 
@@ -13,6 +14,7 @@ type OwnProps = { action: () => APIResponse; };
 
 /** A button which main purpose is to call publish action. */
 const PublishButton: React.FC<OwnProps> = ({ action }) => {
+  const history = useHistory();
   const { t: translator } = useTranslation();
   const [isPending, setIsPending] = React.useState(false);
 
@@ -22,7 +24,11 @@ const PublishButton: React.FC<OwnProps> = ({ action }) => {
         variant='light'
         onClick={() => {
           setIsPending(true);
-          action().finally(() => { setIsPending(false); });
+          action().then(() => {
+            setIsPending(false);
+            history.replace('/empty');
+            history.replace('/manage');
+          });
         }}
       >
         {translator('Publish')}
