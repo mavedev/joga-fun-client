@@ -21,4 +21,9 @@
 
 .NewCategoryWindow__Input {
   width: 70% !important; // Bootstrap override.
+  text-align: center;
+}
+
+.NewCategoryWindow__Button--Cut {
+  max-width: 90%;
 }

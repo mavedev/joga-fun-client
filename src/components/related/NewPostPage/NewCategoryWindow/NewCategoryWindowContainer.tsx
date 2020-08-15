@@ -30,10 +30,15 @@ const NewCategoryWindowContainer: React.FC<AllProps> = ({
       addCategory(category);
       doAfter();
     });
-  }, []);
+  }, [addCategory, adminToken, doAfter]);
+
+  const cancelOperation = React.useCallback(() => { doAfter(); }, [doAfter]);
 
   return (
-    <NewCategoryWindow createCategoryCallback={createNewCategory} />
+    <NewCategoryWindow
+      createCategoryCallback={createNewCategory}
+      cancelCallback={cancelOperation}
+    />
   );
 };
 

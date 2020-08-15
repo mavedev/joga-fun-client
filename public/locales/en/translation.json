@@ -22,6 +22,7 @@
   "Password": "Password",
   "SetCategory": "Set category",
   "AddCategory": "Add category",
+  "Cancel": "Cancel",
   "Publish": "Publish",
   "NoPostFound": "Sorry, it seems the requested post does not exist :("
 }
