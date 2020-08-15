@@ -46,9 +46,23 @@ const TopLevelContainer: React.FC<AllProps> = ({
   editor
 }) => {
   const publishAction = React.useCallback(() => {
-    const body = editor.current ? editor.current.getEditor().root.innerHTML : '';
-    const title = titleInput.current ? titleInput.current.value : '';
-    const imageURL = imageInput.current ? imageInput.current.value : '';
+    let body = '';
+    let title = '';
+    let imageURL = '';
+
+    if (editor.current) {
+      body = editor.current.getEditor().root.innerHTML;
+      editor.current.getEditor().enable(false);
+    }
+    if (titleInput.current) {
+      title = titleInput.current.value;
+      titleInput.current.toggleAttribute('disabled');
+    }
+    if (imageInput.current) {
+      imageURL = imageInput.current.value;
+      imageInput.current.toggleAttribute('disabled');
+    }
+
     return API.createPost({
       body,
       title,
