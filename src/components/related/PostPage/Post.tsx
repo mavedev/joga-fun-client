@@ -35,20 +35,30 @@ const getActualPost = (data: PostDTO) => (
 );
 
 /** Not found message. */
-const getDummy = ({ t: translator }: ReturnType<typeof useTranslation>) => (
+const getFilledDummy = ({ t: translator }: ReturnType<typeof useTranslation>) => (
   <div styleName='Post__TitleAndImageWrapper'>
     <h2 className='card-title'>{translator('NoPostFound')}</h2>
   </div>
 );
 
+/** Empty block. */
+const getEmptyDummy = (..._: any[]) => (<></>);
+
 /** The post component itself. */
 const Post: React.FC<OwnProps> = ({ data }) => {
   const translationResponse = useTranslation();
+  const [dummyBlock, setDummyBlock] = React.useState(() => getEmptyDummy);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setDummyBlock(() => getFilledDummy);
+    }, 6000);
+  }, [setDummyBlock, getFilledDummy]);
 
   return (
     <BCard styleName='Post__BCard'>
       <div className='card-body'>
-        {data.id ? getActualPost(data) : getDummy(translationResponse)}
+        {data.id ? getActualPost(data) : dummyBlock(translationResponse)}
       </div>
       <div className='card-footer text-muted'>
         <p>{data.created}</p>
