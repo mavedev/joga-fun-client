@@ -1,4 +1,5 @@
 @import 'react-quill/dist/quill.snow';
+@import '~styles/abstracts/variables';
 
 .quill {
   width: 70vw;
@@ -6,9 +7,20 @@
 }
 
 .ql-editor {
-  min-height: 40vh !important;
+  min-height: 40vh !important; // Override Quill styles.
   max-height: 40vh;
   overflow: hidden;
   overflow-y: scroll;
   overflow-x: scroll;
+}
+
+.Quill--Observing {
+  margin-bottom: $spacing-default;
+  width: unset;
+  
+  * {
+    border: none !important; // Override Quill styles.
+    overflow: hidden;
+    max-height: 10vh;
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactQuill from 'react-quill';
 import { NavLink } from 'react-router-dom';
 import { Card as BCard } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
@@ -21,7 +22,12 @@ const Post: React.FC<OwnProps> = ({ data }) => {
       />
       <div className='card-body'>
         <h2 className='card-title'>{data.title}</h2>
-        <p className='card-text'>{`${data.body.slice(0, 100)} ...`}</p>
+        <ReactQuill
+          className='Quill--Observing'
+          value={`${data.body.slice(0, 100)} ...`}
+          modules={{ toolbar: false }}
+          readOnly
+        />
         <NavLink to='/login' className='btn btn-primary'>
           {`${translator('ReadFull')} `}
           &rarr;
