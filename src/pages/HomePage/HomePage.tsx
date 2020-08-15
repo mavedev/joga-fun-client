@@ -11,6 +11,7 @@ import FixedNav from 'components/common/FixedNav';
 
 const HomePage: React.FC<{}> = () => {
   const anchorReference = React.useRef<HTMLDivElement>(null);
+
   const scrollToTop = React.useCallback(() => {
     window.scrollTo(0, anchorReference.current?.offsetTop || 0);
   }, []);
