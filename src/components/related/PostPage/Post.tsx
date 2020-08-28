@@ -26,7 +26,7 @@ const getActualPost = (data: PostDTO) => (
       </div>
     </div>
     <ReactQuill
-      className='Quill--Observing'
+      className='Quill--Full'
       value={data.body}
       modules={{ toolbar: false }}
       readOnly
